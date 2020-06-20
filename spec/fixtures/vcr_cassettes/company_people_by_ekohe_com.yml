@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.sourcescrub.com/companies/ekohe.com/people
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 20 Jun 2020 13:54:03 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Server:
+      - Kestrel
+      Content-Length:
+      - '552'
+      Request-Context:
+      - appId=cid-v1:68001f3b-51a8-49d3-9e10-8bd96680dce8
+      Strict-Transport-Security:
+      - max-age=2592000
+      X-Ratelimit-Limit:
+      - '200'
+      X-Ratelimit-Remaining:
+      - '79'
+      X-Ratelimit-Reset:
+      - '900355.5522634999'
+    body:
+      encoding: UTF-8
+      string: '{"totalPeople":2,"peopleAllocations":[{"personId":"LWMK5XGD","firstName":"Maxime","middleName":null,"lastName":"Guilbot","linkedIn":"https://www.linkedin.com/in/maximeguilbot","startDate":"2007-01-01","endDate":null,"email":"maxime@ekohe.com","emailConfirmed":true,"title":"CEO","role":"Founder"},{"personId":"WO65ME4L","firstName":"Maggie","middleName":null,"lastName":"Meng","linkedIn":"https://www.linkedin.com/in/mengmaggie","startDate":"2016-05-01","endDate":null,"email":"maggie@ekohe.com","emailConfirmed":true,"title":"COO","role":"Employee"}]}'
+  recorded_at: Sat, 20 Jun 2020 13:54:03 GMT
+recorded_with: VCR 6.0.0

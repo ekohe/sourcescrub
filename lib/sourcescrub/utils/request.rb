@@ -21,43 +21,48 @@ module Sourcescrub
       #
       #
       def get(uri, *args)
-        response = Faraday.new(url: API_URI) do |faraday|
-          faraday.headers = headers
-          faraday.request   :json
-          faraday.response  :json
-          faraday.response  :logger, ::Logger.new(STDOUT), bodies: true if debug_mode?
+        response = Faraday.new(
+          url: API_URI,
+          headers: headers,
+          request: {
+            timeout: 10,
+            open_timeout: 5
+          }
+        ) do |faraday|
+          faraday.response :json
+          faraday.response :logger, ::Logger.new(STDOUT), bodies: true if debug_mode?
         end.get(uri, *args)
 
-        return response.body if response.status == 200
+        return response.body.merge('headers' => response.headers) if response.status == 200
 
         raise Error, response.body
       end
 
-      def put(uri, args)
-        response = Faraday.new(url: API_URI) do |faraday|
-          faraday.headers = headers
-          faraday.request   :json
-          faraday.response  :json
-          faraday.response :logger, ::Logger.new(STDOUT), bodies: true if debug_mode?
-        end.put(uri, args)
+      # def put(uri, args)
+      #   response = Faraday.new(url: API_URI) do |faraday|
+      #     faraday.headers = headers
+      #     faraday.request   :json
+      #     faraday.response  :json
+      #     faraday.response :logger, ::Logger.new(STDOUT), bodies: true if debug_mode?
+      #   end.put(uri, args)
 
-        return response.body if response.status == 200
+      #   return response.body if response.status == 200
 
-        raise Error, response.body
-      end
+      #   raise Error, response.body
+      # end
 
-      def delete(uri, args)
-        response = Faraday.new(url: API_URI) do |faraday|
-          faraday.headers = headers
-          faraday.request   :json
-          faraday.response  :json
-          faraday.response :logger, ::Logger.new(STDOUT), bodies: true if debug_mode?
-        end.delete(uri, args)
+      # def delete(uri, args)
+      #   response = Faraday.new(url: API_URI) do |faraday|
+      #     faraday.headers = headers
+      #     faraday.request   :json
+      #     faraday.response  :json
+      #     faraday.response :logger, ::Logger.new(STDOUT), bodies: true if debug_mode?
+      #   end.delete(uri, args)
 
-        return response.body if response.status == 200
+      #   return response.body if response.status == 200
 
-        raise Error, response.body
-      end
+      #   raise Error, response.body
+      # end
 
       # Authentication Token
       #
@@ -73,18 +78,19 @@ module Sourcescrub
       def authenticate
         body = "grant_type=password&username=#{Sourcescrub.account.username}&password=#{Sourcescrub.account.password}&scope=client_api"
 
-        response = Faraday.new(url: TOKEN_URL) do |faraday|
-          faraday.headers = {
+        response = Faraday.new(
+          url: TOKEN_URL,
+          headers: {
             'Content-Type' => 'application/x-www-form-urlencoded',
             'Authorization' => Sourcescrub.account.basic
           }
-          faraday.adapter   Faraday.default_adapter
-          faraday.request   :json
-          faraday.response  :json
+        ) do |faraday|
+          faraday.adapter Faraday.default_adapter
+          faraday.response :json
           faraday.response :logger, ::Logger.new(STDOUT), bodies: true if debug_mode?
         end.post(TOKEN_URI, body)
 
-        raise 'Apptopia error: Service Unavailable' unless response.status == 200
+        raise 'Sourcescrub error: Service Unavailable' unless response.status == 200
 
         @token = response.body['access_token']
       end

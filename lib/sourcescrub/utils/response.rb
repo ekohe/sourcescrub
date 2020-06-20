@@ -8,6 +8,25 @@ module Sourcescrub
       module_function
 
       def dynamic_attributes(object, attribute_names, response)
+        # Retrieve request limit data from header
+        #
+        #   .date
+        #   .content_type
+        #   .server
+        #   .content_length
+        #   .request_context
+        #   .strict_transport_security
+        #   .x_ratelimit_limit
+        #   .x_ratelimit_remaining
+        #   .x_ratelimit_reset
+        headers = response.dig('headers')
+        headers&.keys&.each do |attr_name|
+          object.class.send(:define_method, attr_name.gsub('-', '_').to_sym) do
+            headers[attr_name]
+          end
+        end
+
+        # Setup attributes
         attribute_names.each do |attr_name|
           attr_value = response.dig(attr_name)
 

@@ -23,6 +23,9 @@ module Sourcescrub
           companyCount
           companiesCrmCount
           companiesTaggedCount
+          boothNumber
+          affiliation
+          rank
         ]
       end
     end

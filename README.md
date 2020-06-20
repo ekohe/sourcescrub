@@ -4,6 +4,9 @@ Sourcescrub is a ruby wrapper based on Source Scrub API, Here is API documentati
 
 However, we need to request an access account from Sourcescrub.
 
+[![Gem Version](https://badge.fury.io/rb/sourcescrub.svg)](https://badge.fury.io/rb/sourcescrub)
+[![Build Status](https://travis-ci.org/ekohe/sourcescrub.svg?branch=master)](https://travis-ci.org/ekohe/sourcescrub)
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -59,6 +62,7 @@ pry(main)> client.headers
 ```ruby
 <!-- Company -->
 response = client.companies('ekohe.com')
+response = client.company_cards('ekohe.com', { card_id: 'sources' })
 
 <!-- Get the JSON response of Company -->
 
@@ -71,6 +75,27 @@ response.as_json
 
 ```ruby
 pry(main)> response = client.companies('ekohe.com')
+pry(main)> #<Sourcescrub::Models::Company:0x00007fcd31bcd238
+ @city="Xinzhuang",
+ @companyType="Private",
+ @country="China",
+ @crunchbase=nil,
+ @currentEmployeeCount=41,
+ @currentEmployeeRange="11-50",
+ @currentJobOpenings=0,
+ @description=
+  "Ekohe, Ltd. is a cutting-edge web and mobile design and development agency. It specialize in digital strategy, innovative technology and user-centered design experiences from conceptualization to market launch.",
+ @domain="ekohe.com",
+ @facebook=nil,
+ @firmTags=[],
+ @foundingYear=2007,
+ @id="LZ281NVD",
+ @informalName="Ekohe",
+ @investors=nil,
+ @linkedIn="https://www.linkedin.com/company/ekohe",
+ @location="Xinzhuang, Shanghai Shi, China",
+ @name="Ekohe, Ltd.",
+ .....>
 pry(main)> response.name
 => "Ekohe, Ltd."
 pry(main)> response.domain
@@ -85,7 +110,7 @@ After checking out the repo, run `bin/setup` to install dependencies. Then, run 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/sourcescrub. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/sourcescrub/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/ekohe/sourcescrub. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/ekohe/sourcescrub/blob/master/CODE_OF_CONDUCT.md).
 
 
 ## License
@@ -94,4 +119,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Sourcescrub project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/sourcescrub/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Sourcescrub project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/ekohe/sourcescrub/blob/master/CODE_OF_CONDUCT.md).

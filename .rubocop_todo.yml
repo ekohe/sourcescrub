@@ -22,3 +22,6 @@ Metrics/MethodLength:
 # URISchemes: http, https
 Layout/LineLength:
   Max: 135
+
+Metrics/BlockLength:
+  Max: 500

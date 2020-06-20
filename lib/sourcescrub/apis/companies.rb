@@ -21,7 +21,7 @@ module Sourcescrub
 
       def request_url
         [
-          kclass_name::ENDPOINT,
+          Models::Company::ENDPOINT,
           @domain,
           @card_id
         ].compact.join('/')
