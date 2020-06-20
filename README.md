@@ -1,6 +1,8 @@
 # Sourcescrub
 
-Sourcescrub is a ruby wrapper based on Source Scrub API, Here is API documentation: https://api.sourcescrub.com/index.html, you need to request access account from Sourcescrub.
+Sourcescrub is a ruby wrapper based on Source Scrub API, Here is API documentation: https://api.sourcescrub.com/index.html.
+
+However, we need to request an access account from Sourcescrub.
 
 ## Installation
 
