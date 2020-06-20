@@ -9,6 +9,8 @@ module Sourcescrub
   class Client
     include Utils::Request
 
+    attr_accessor :token
+
     def headers
       @token || authenticate
 

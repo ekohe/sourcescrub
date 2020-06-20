@@ -18,15 +18,68 @@ Or install it yourself as:
 
     $ gem install sourcescrub
 
+## Getting Started
+
+#### Configure your certificate for API
+
+```ruby
+require 'sourcescrub'
+
+account = YAML.load(File.read('sourcescrub.yml'))
+Sourcescrub.account do |config|
+  config.username = account['username']
+  config.password = account['password']
+  config.basic    = account['basic']
+  config.debug    = false # Default is false, If you want to know the request information, can set the debug = true
+end
+```
+
 ## Usage
 
-TODO: Write usage instructions here
+#### Class: `Client` for API
+
+```
+pry(main)> client = Sourcescrub::Client.new
+```
+
+#### Request your token
+
+```
+pry(main)> client.headers
+=> {"Authorization"=>"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI........"}
+```
+
+#### API request for endpoint we completed
+
+- [Companies](https://github.com/ekohe/sourcescrub#companies)
+- [Searches](https://github.com/ekohe/sourcescrub#searches)
+
+```ruby
+<!-- Company -->
+response = client.companies('ekohe.com')
+
+<!-- Get the JSON response of Company -->
+
+response.as_json
+```
+
+### Companies
+
+####  Get the company data
+
+```ruby
+pry(main)> response = client.companies('ekohe.com')
+pry(main)> response.name
+=> "Ekohe, Ltd."
+pry(main)> response.domain
+=> "ekohe.com"
+```
+
+### Searches
 
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 ## Contributing
 

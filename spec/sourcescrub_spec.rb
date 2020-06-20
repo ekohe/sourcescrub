@@ -5,7 +5,7 @@ RSpec.describe Sourcescrub do
     expect(Sourcescrub::VERSION).not_to be nil
   end
 
-  it 'does something useful' do
-    expect(false).to eq(true)
+  it 'release 0.0.1' do
+    expect(Sourcescrub::VERSION).to eq('0.0.1')
   end
 end
