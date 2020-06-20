@@ -1,8 +1,6 @@
 # Sourcescrub
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/sourcescrub`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Sourcescrub is a ruby wrapper based on Source Scrub API, Here is API documentation: https://api.sourcescrub.com/index.html, you need to request access account from Sourcescrub.
 
 ## Installation
 

@@ -7,5 +7,7 @@
 /spec/reports/
 /tmp/
 
+/spec/sourcescrub.yml
+
 # rspec failure tracking
 .rspec_status
