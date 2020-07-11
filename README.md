@@ -61,8 +61,7 @@ pry(main)> client.headers
 
 ```ruby
 <!-- Company -->
-response = client.companies('ekohe.com')
-response = client.company_cards('ekohe.com', { card_id: 'sources' })
+response = client.company('ekohe.com')
 
 <!-- Get the JSON response of Company -->
 
@@ -74,8 +73,8 @@ response.as_json
 ####  Get the company data
 
 ```ruby
-pry(main)> response = client.companies('ekohe.com')
-pry(main)> #<Sourcescrub::Models::Company:0x00007fcd31bcd238
+pry(main)> response = client.company('ekohe.com')
+=> #<Sourcescrub::Models::Company:0x00007f9e915161c0
  @city="Xinzhuang",
  @companyType="Private",
  @country="China",
@@ -87,19 +86,87 @@ pry(main)> #<Sourcescrub::Models::Company:0x00007fcd31bcd238
   "Ekohe, Ltd. is a cutting-edge web and mobile design and development agency. It specialize in digital strategy, innovative technology and user-centered design experiences from conceptualization to market launch.",
  @domain="ekohe.com",
  @facebook=nil,
+=> #<Sourcescrub::Models::Company:0x00007f9e915161c0
+ @city="Xinzhuang",
+ @companyType="Private",
+ @country="China",
+ @crunchbase=nil,
+ @currentEmployeeCount=41,
+ @currentEmployeeRange="11-50",
+ @currentJobOpenings=0,
+ @description=
+  "Ekohe, Ltd. is a cutting-edge web and mobile design and development agency. It specialize in digital strategy, innovative technology and user-centered design experiences from conceptualization to market la
+unch.",
+ @domain="ekohe.com",
+ @facebook=nil,
  @firmTags=[],
  @foundingYear=2007,
  @id="LZ281NVD",
  @informalName="Ekohe",
- @investors=nil,
+ @investors="",
  @linkedIn="https://www.linkedin.com/company/ekohe",
  @location="Xinzhuang, Shanghai Shi, China",
  @name="Ekohe, Ltd.",
- .....>
+ @parentCompanyDomain=nil,
+ @personalTags=[],
+ @phoneNumber="",
+ @postalCode=nil,
+ @specialties=
+  ["IT & Startup Consulting",
+   "Ruby on Rails leaders",
+   "Intelligent Web & Mobile Development",
+   "Usable Web & Mobile design",
+   "UX or UI Design",
+   "Artificial Intelligence",
+   "Machine Learning",
+   "Data Sourcing",
+   "FinTech Tools"],
+ @state="Shanghai Shi",
+ @totalAmountInvested=0,
+ @twitter=nil,
+ @website="https://ekohe.com">
 pry(main)> response.name
 => "Ekohe, Ltd."
 pry(main)> response.domain
 => "ekohe.com"
+pry(main)> response.as_json
+=> {:id=>"LZ281NVD",
+ :companyType=>"Private",
+ :name=>"Ekohe, Ltd.",
+ :informalName=>"Ekohe",
+ :website=>"https://ekohe.com",
+ :domain=>"ekohe.com",
+ :description=>
+  "Ekohe, Ltd. is a cutting-edge web and mobile design and development agency. It specialize in digital strategy, innovative technology and user-centered design experiences from conceptualization to market launch.",
+ :foundingYear=>2007,
+ :location=>"Xinzhuang, Shanghai Shi, China",
+ :city=>"Xinzhuang",
+ :state=>"Shanghai Shi",
+ :postalCode=>nil,
+ :country=>"China",
+ :parentCompanyDomain=>nil,
+ :phoneNumber=>"",
+ :specialties=>
+  ["IT & Startup Consulting",
+   "Ruby on Rails leaders",
+   "Intelligent Web & Mobile Development",
+   "Usable Web & Mobile design",
+   "UX or UI Design",
+   "Artificial Intelligence",
+   "Machine Learning",
+   "Data Sourcing",
+   "FinTech Tools"],
+ :facebook=>nil,
+ :twitter=>nil,
+ :crunchbase=>nil,
+ :linkedIn=>"https://www.linkedin.com/company/ekohe",
+ :totalAmountInvested=>0,
+ :currentEmployeeCount=>41,
+ :currentEmployeeRange=>"11-50",
+ :currentJobOpenings=>0,
+ :investors=>"",
+ :personalTags=>[],
+ :firmTags=>[]}
 ```
 
 ### Searches
