@@ -12,7 +12,7 @@ module Sourcescrub
     attr_accessor :token
 
     def headers
-      @token || authenticate
+      authenticate if @token.nil?
 
       { 'Authorization' => "Bearer #{@token}" }
     end
