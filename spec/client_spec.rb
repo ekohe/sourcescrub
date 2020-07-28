@@ -3,13 +3,7 @@
 RSpec.describe Sourcescrub::Client do
   let(:client) { described_class.new }
 
-  context 'Companies API' do
-    let!(:headers) do
-      VCR.use_cassette('client_headers') do
-        client.headers
-      end
-    end
-
+  describe 'Companies API' do
     it 'be able to get company data' do
       response = VCR.use_cassette('company_domain_by_ekohe_com') do
         client.company('ekohe.com')
@@ -42,9 +36,17 @@ RSpec.describe Sourcescrub::Client do
       expect(company_people.items[0].firstName).to eq('Maxime')
       expect(company_people.items[0].title).to eq('CEO')
 
-      expect(company_people.x_ratelimit_reset).to eq('900355.5522634999')
-      expect(company_people.x_ratelimit_limit).to eq('200')
-      expect(company_people.x_ratelimit_remaining).to eq('79')
+      expect(company_people.x_ratelimit_limit).to eq('10000')
+    end
+
+    it 'be able to get company\'s financials data' do
+      company_financials = VCR.use_cassette('company_financials_by_monday_com') do
+        client.company_cards('monday.com', { card_id: 'financials' })
+      end
+
+      expect(company_financials.total).to eq(0)
+      expect(company_financials.type).to eq(Sourcescrub::Models::Financial)
+      expect(company_financials.items.size).to eq(0)
     end
   end
 end

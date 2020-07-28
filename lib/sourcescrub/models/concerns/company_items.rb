@@ -17,8 +17,8 @@ module Sourcescrub
 
         dynamic_define_method(self, 'domain', domain)
         dynamic_define_method(self, 'type', kclass_name)
-        dynamic_define_method(self, 'total', response.dig(total_key))
-        dynamic_define_method(self, 'items', company_items(kclass_name, response.dig(items_key)))
+        dynamic_define_method(self, 'total', response.dig(total_key) || 0)
+        dynamic_define_method(self, 'items', company_items(kclass_name, response.dig(items_key) || []))
         self
       end
 

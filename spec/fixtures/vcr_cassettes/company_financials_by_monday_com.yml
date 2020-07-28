@@ -21,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 28 Jul 2020 13:29:29 GMT
+      - Tue, 28 Jul 2020 13:31:09 GMT
       Content-Type:
       - application/json; charset=UTF-8
       Server:
@@ -39,10 +39,10 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"access_token":"......","expires_in":28800,"token_type":"Bearer","scope":"client_api"}'
-  recorded_at: Tue, 28 Jul 2020 13:29:30 GMT
+  recorded_at: Tue, 28 Jul 2020 13:31:09 GMT
 - request:
     method: get
-    uri: https://api.sourcescrub.com/companies/ekohe.com
+    uri: https://api.sourcescrub.com/companies/monday.com/financials
     body:
       encoding: US-ASCII
       string: ''
@@ -59,13 +59,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 28 Jul 2020 13:29:30 GMT
+      - Tue, 28 Jul 2020 13:31:10 GMT
       Content-Type:
       - application/json; charset=utf-8
       Server:
       - Kestrel
       Content-Length:
-      - '1129'
+      - '2'
       Request-Context:
       - appId=cid-v1:68001f3b-51a8-49d3-9e10-8bd96680dce8
       Strict-Transport-Security:
@@ -73,18 +73,11 @@ http_interactions:
       X-Ratelimit-Limit:
       - '10000'
       X-Ratelimit-Remaining:
-      - '8605'
+      - '8602'
       X-Ratelimit-Reset:
-      - '297028.1936918'
+      - '296928.3708153'
     body:
       encoding: UTF-8
-      string: '{"id":"LZ281NVD","companyType":"Private","name":"Ekohe, Ltd.","informalName":"Ekohe","website":"https://ekohe.com","domain":"ekohe.com","description":"Ekohe,
-        Ltd. is a cutting-edge web and mobile design and development agency. It specialize
-        in digital strategy, innovative technology and user-centered design experiences
-        from conceptualization to market launch.","foundingYear":2007,"location":"Xinzhuang,
-        Shanghai Shi, China","city":"Xinzhuang","state":"Shanghai Shi","postalCode":null,"country":"China","parentCompanyDomain":null,"phoneNumber":"","specialties":["IT
-        & Startup Consulting","Ruby on Rails leaders","Intelligent Web & Mobile Development","Usable
-        Web & Mobile design","UX or UI Design","Artificial Intelligence","Machine
-        Learning","Data Sourcing","FinTech Tools"],"facebook":"https://www.facebook.com/ekohe.co","twitter":"https://twitter.com/ekohe","crunchbase":"https://www.crunchbase.com/organization/ekohe","linkedIn":"https://www.linkedin.com/company/ekohe","totalAmountInvested":0,"currentEmployeeCount":41,"currentEmployeeRange":"11-50","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]}'
-  recorded_at: Tue, 28 Jul 2020 13:29:30 GMT
+      string: "[]"
+  recorded_at: Tue, 28 Jul 2020 13:31:10 GMT
 recorded_with: VCR 6.0.0

@@ -9,5 +9,6 @@ module Sourcescrub
     autoload :Source,           'sourcescrub/models/source'
     autoload :Tag,              'sourcescrub/models/tag'
     autoload :Person,           'sourcescrub/models/person'
+    autoload :Financial,        'sourcescrub/models/financial'
   end
 end

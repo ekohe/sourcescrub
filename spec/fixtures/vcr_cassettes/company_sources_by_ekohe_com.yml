@@ -1,6 +1,46 @@
 ---
 http_interactions:
 - request:
+    method: post
+    uri: https://identity.sourcescrub.com/connect/token
+    body:
+      encoding: UTF-8
+      string: grant_type=password&username=username&password=password&scope=client_api
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 28 Jul 2020 13:31:05 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Server:
+      - Kestrel
+      Cache-Control:
+      - no-store, no-cache, max-age=0
+      Pragma:
+      - no-cache
+      Transfer-Encoding:
+      - chunked
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Request-Context:
+      - appId=cid-v1:68001f3b-51a8-49d3-9e10-8bd96680dce8
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"......","expires_in":28800,"token_type":"Bearer","scope":"client_api"}'
+  recorded_at: Tue, 28 Jul 2020 13:31:06 GMT
+- request:
     method: get
     uri: https://api.sourcescrub.com/companies/ekohe.com/sources
     body:
@@ -19,34 +59,34 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 20 Jun 2020 12:46:22 GMT
+      - Tue, 28 Jul 2020 13:31:06 GMT
       Content-Type:
       - application/json; charset=utf-8
       Server:
       - Kestrel
       Content-Length:
-      - '1791'
+      - '1781'
       Request-Context:
       - appId=cid-v1:68001f3b-51a8-49d3-9e10-8bd96680dce8
       Strict-Transport-Security:
       - max-age=2592000
       X-Ratelimit-Limit:
-      - '200'
+      - '10000'
       X-Ratelimit-Remaining:
-      - '80'
+      - '8604'
       X-Ratelimit-Reset:
-      - '904415.7543763999'
+      - '296932.128797'
     body:
       encoding: UTF-8
-      string: '{"total":5,"items":[{"id":"QL9V52ED","officialTitle":"Artificial Intelligence
-        Exhibition & Conference (AI EXPO) 2020","nickname":"AIEXPO2020","sourceType":"Industry
-        Conference","city":"Mihama","state":"Chiba-ken","country":"Japan","startDate":"2020-10-28","endDate":"2020-10-30","companyCount":175,"companiesCrmCount":0,"companiesTaggedCount":0,"boothNumber":null,"affiliation":"Exhibitor","rank":null},{"id":"QL9Y6YVD","officialTitle":"Big
-        Data and AI Toronto 2019","nickname":"BigDataAIToronto2019","sourceType":"Industry
-        Conference","city":"Toronto","state":"Ontario","country":"Canada","startDate":"2019-06-12","endDate":"2019-06-13","companyCount":125,"companiesCrmCount":0,"companiesTaggedCount":0,"boothNumber":null,"affiliation":"Speaker","rank":null},{"id":"ED47XN8D","officialTitle":"Clutch:
+      string: '{"total":5,"items":[{"id":"QL9Y6YVD","officialTitle":"Big Data and
+        AI Toronto 2019","nickname":"BigDataAIToronto2019","sourceType":"Industry
+        Conference","city":"Toronto","state":"Ontario","country":"Canada","startDate":"2019-06-12","endDate":"2019-06-13","companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0,"boothNumber":null,"affiliation":"Speaker","rank":null},{"id":"ED47XN8D","officialTitle":"Clutch:
         Top New York iOS App Developers 2019","nickname":"Clutch:TopNYiOSAppDevelopers2019","sourceType":"Top
-        List","city":null,"state":null,"country":null,"startDate":"2019-10-21","endDate":"2019-10-21","companyCount":237,"companiesCrmCount":0,"companiesTaggedCount":0,"boothNumber":null,"affiliation":null,"rank":null},{"id":"6O2W454D","officialTitle":"Angel
+        List","city":null,"state":null,"country":null,"startDate":"2019-10-21","endDate":"2019-10-21","companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0,"boothNumber":null,"affiliation":null,"rank":null},{"id":"QL9V52ED","officialTitle":"Artificial
+        Intelligence Exhibition & Conference (AI EXPO) 2020","nickname":"AIEXPO2020","sourceType":"Industry
+        Conference","city":"Mihama","state":"Chiba-ken","country":"Japan","startDate":"2020-10-28","endDate":"2020-10-30","companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0,"boothNumber":null,"affiliation":"Exhibitor","rank":null},{"id":"6O2W454D","officialTitle":"Angel
         List: China Startups","nickname":"Angelco_ChinaStartups","sourceType":"Buyers
-        Guide","city":null,"state":null,"country":null,"startDate":"2018-08-14","endDate":"2018-08-14","companyCount":261,"companiesCrmCount":0,"companiesTaggedCount":0,"boothNumber":null,"affiliation":null,"rank":null},{"id":"NLJ9Y04O","officialTitle":"Viva
-        Technology 2020","nickname":"VivaTech2020","sourceType":"Industry Conference","city":"Paris","state":"Ile-de-France","country":"France","startDate":"2020-06-11","endDate":"2020-06-13","companyCount":567,"companiesCrmCount":0,"companiesTaggedCount":0,"boothNumber":null,"affiliation":"Partner","rank":null}]}'
-  recorded_at: Sat, 20 Jun 2020 12:46:23 GMT
+        Guide","city":null,"state":null,"country":null,"startDate":"2018-08-14","endDate":"2018-08-14","companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0,"boothNumber":null,"affiliation":null,"rank":null},{"id":"NLJ9Y04O","officialTitle":"Viva
+        Technology 2020","nickname":"VivaTech2020","sourceType":"Industry Conference","city":"Paris","state":"Ile-de-France","country":"France","startDate":"2020-06-11","endDate":"2020-06-13","companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0,"boothNumber":null,"affiliation":"Partner","rank":null}]}'
+  recorded_at: Tue, 28 Jul 2020 13:31:07 GMT
 recorded_with: VCR 6.0.0

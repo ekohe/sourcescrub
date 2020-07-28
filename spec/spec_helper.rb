@@ -35,6 +35,7 @@ VCR.configure do |vcr|
   # Removes all private data (Basic Auth, Set-Cookie headers...)
   vcr.before_record do |interaction|
     interaction.response.headers.delete('Set-Cookie')
+    interaction.response.body.delete('access_token')
     interaction.request.headers.delete('Authorization')
   end
 end

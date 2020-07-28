@@ -33,9 +33,14 @@ module Sourcescrub
           faraday.response :logger, ::Logger.new(STDOUT), bodies: true if debug_mode?
         end.get(uri, *args)
 
-        return response.body.merge('headers' => response.headers) if response.status == 200
+        response_body = response.body
+        if response.status == 200
+          response_body = {} if response_body.is_a?(Array) && response_body.empty?
 
-        raise Error, response.body
+          return response_body.merge('headers' => response.headers)
+        end
+
+        raise Error, response_body
       end
 
       # def put(uri, args)
