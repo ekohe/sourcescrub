@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 require 'faraday'
-require 'faraday_middleware'
-require 'logger'
 
 module Sourcescrub
   # Utils
@@ -28,12 +26,9 @@ module Sourcescrub
             timeout: 10,
             open_timeout: 5
           }
-        ) do |faraday|
-          faraday.response :json
-          faraday.response :logger, ::Logger.new(STDOUT), bodies: true if debug_mode?
-        end.get(uri, *args)
+        ).get(uri, *args)
 
-        response_body = response.body
+        response_body = JSON.parse(response.body)
         if response.status == 200
           response_body = {} if response_body.is_a?(Array) && response_body.empty?
 
@@ -89,15 +84,11 @@ module Sourcescrub
             'Content-Type' => 'application/x-www-form-urlencoded',
             'Authorization' => Sourcescrub.account.basic
           }
-        ) do |faraday|
-          faraday.adapter Faraday.default_adapter
-          faraday.response :json
-          faraday.response :logger, ::Logger.new(STDOUT), bodies: true if debug_mode?
-        end.post(TOKEN_URI, body)
+        ).post(TOKEN_URI, body)
 
         raise 'Sourcescrub error: Service Unavailable' unless response.status == 200
 
-        @token = response.body['access_token']
+        @token = JSON.parse(response.body)['access_token']
       end
 
       private
