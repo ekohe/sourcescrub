@@ -1,0 +1,280 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://identity.sourcescrub.com/connect/token
+    body:
+      encoding: UTF-8
+      string: grant_type=password&username=username&password=password&scope=client_api
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Aug 2020 09:08:25 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Server:
+      - Kestrel
+      Cache-Control:
+      - no-store, no-cache, max-age=0
+      Pragma:
+      - no-cache
+      Transfer-Encoding:
+      - chunked
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Request-Context:
+      - appId=cid-v1:68001f3b-51a8-49d3-9e10-8bd96680dce8
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"....","expires_in":28800,"token_type":"Bearer","scope":"client_api"}'
+  recorded_at: Tue, 04 Aug 2020 09:08:26 GMT
+- request:
+    method: get
+    uri: https://api.sourcescrub.com/sources/sources?limit=100&offset=0&sourceStatus=None
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Aug 2020 09:08:26 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Server:
+      - Kestrel
+      Content-Length:
+      - '34296'
+      Request-Context:
+      - appId=cid-v1:68001f3b-51a8-49d3-9e10-8bd96680dce8
+      Strict-Transport-Security:
+      - max-age=2592000
+      X-Ratelimit-Limit:
+      - '10000'
+      X-Ratelimit-Remaining:
+      - '9982'
+      X-Ratelimit-Reset:
+      - '2386291.7749626'
+    body:
+      encoding: UTF-8
+      string: '{"total":10000,"items":[{"id":"VDM8K99D","officialTitle":"Vancouver
+        BC CISO Virtual Town Hall 2020","nickname":"CISOVancouverBC2020","sourceType":"Virtual
+        Conference","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"NLJ9XPGO","officialTitle":"Asia
+        Pacific Initiative on Reproduction (ASPIRE) 2020","nickname":"ASPIRE2020","sourceType":"Industry
+        Conference","city":"Pasay","state":"National Capital Region","country":"Philippines","startDate":"2020-08-04","endDate":"2020-08-07","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"4OVVKQ6O","officialTitle":"Symposium
+        on Counterfeit Parts and Materials 2020","nickname":"SCPM2020","sourceType":"Industry
+        Conference","city":"Silver Spring","state":"Maryland","country":"United States","startDate":"2020-08-04","endDate":"2020-08-06","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"GL3RGKQO","officialTitle":"SimGHOSTS
+        2020","nickname":"SimGHOSTS2020","sourceType":"Industry Conference","city":"Dallas","state":"Texas","country":"United
+        States","startDate":"2020-08-04","endDate":"2020-08-07","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"ZLG4Z20D","officialTitle":"Association
+        for Healthcare Foodservice (AHF) Annual Conference 2020","nickname":"AHF2020","sourceType":"Industry
+        Conference","city":"Citrus Ridge","state":"Florida","country":"United States","startDate":"2020-08-04","endDate":"2020-08-07","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"ZDKYM47O","officialTitle":"Washington
+        DC CDO Virtual Town Hall 2020","nickname":"CDOWashingtonDC2020","sourceType":"Virtual
+        Conference","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"NLJ5ZYGL","officialTitle":"Community
+        Bankers Association of Ohio (CBAO) Annual Convention & Tradeshow 2020","nickname":"CBAO2020","sourceType":"Industry
+        Conference","city":"Columbus","state":"Ohio","country":"United States","startDate":"2020-08-04","endDate":"2020-08-06","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"ED4RN8WD","officialTitle":"Venture
+        Summit Virtual Connect Global 2020","nickname":"VentureSummitVirtualConnectGlobal2020","sourceType":"Industry
+        Conference","city":"Staten Island","state":"New York","country":"United States","startDate":"2020-08-04","endDate":"2020-08-06","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"VDM8KYED","officialTitle":"Summer
+        Digitalization Virtual Summit 2020","nickname":"SummerDigital2020","sourceType":"Virtual
+        Conference","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-06","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"ZDKYX8XO","officialTitle":"Software
+        Advice: Mobile BI Software","nickname":"SoftwareAdvice:MobileBISoftware","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"PLW0930L","officialTitle":"Software
+        Advice: Commercial Real Estate CRM","nickname":"SoftwareAdvice:CommercialRealEstateCRM","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"0L5N836O","officialTitle":"Software
+        Advice: Financial CRM Software","nickname":"SoftwareAdvice:FinancialCRMSoftware","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"VD15PQWL","officialTitle":"Software
+        Advice: Healthcare BI Software","nickname":"SoftwareAdvice:HealthcareBISoftware","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"ML07MQ6O","officialTitle":"Software
+        Advice: Self-Service BI Tools","nickname":"SoftwareAdvice:Self-ServiceBITools","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"7LN7MNJO","officialTitle":"Software
+        Advice: Ecommerce CRM Software","nickname":"SoftwareAdvice:EcommerceCRMSoftware","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"KOYKY5XD","officialTitle":"Software
+        Advice: HR Analytics Software","nickname":"SoftwareAdvice:HRAnalyticsSoftware","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"MDR3659O","officialTitle":"Software
+        Advice: Visual Analytics Tools","nickname":"SoftwareAdvice:VisualAnalyticsTools","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"ELPZKY1O","officialTitle":"Software
+        Advice: Hotel CRM Software","nickname":"SoftwareAdvice:HotelCRMSoftware","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"VDM82EKD","officialTitle":"Software
+        Advice: Text Analysis Software","nickname":"SoftwareAdvice:TextAnalysisSoftware","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"ML07MM6O","officialTitle":"BusinessFinancing:
+        Top Female Founder In Every Country","nickname":"BusinessFinancing_TFFEC","sourceType":"Top
+        List","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"MDR3669O","officialTitle":"FinancesOnline:
+        Top 12 Document Management Software","nickname":"FinancesOnline_12DocumentManagementSoftware","sourceType":"Top
+        List","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"4OVNEE0D","officialTitle":"FinancesOnline:
+        Top 12 Field Service Management Software - FSM","nickname":"FinancesOnline_12FSM","sourceType":"Top
+        List","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"7LN7MMJO","officialTitle":"MultiLingual:
+        Technical Writing","nickname":"MultiLingual_TW","sourceType":"Buyers Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"NLJ7YKGD","officialTitle":"Software
+        Advice: Predictive Analytics Tools","nickname":"SoftwareAdvice:PredictiveAnalyticsTools","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"ZLG3E20O","officialTitle":"Software
+        Advice: Quoting Software","nickname":"SoftwareAdvice:QuotingSoftware","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"JOXK159L","officialTitle":"Software
+        Advice: KPI Software","nickname":"SoftwareAdvice:KPISoftware","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"WO620Q6L","officialTitle":"Software
+        Advice: Auto Dealership CRM Software","nickname":"SoftwareAdvice:AutoDealershipCRMSoftware","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"ED4R6KWD","officialTitle":"Software
+        Advice: Healthcare CRM","nickname":"SoftwareAdvice:HealthcareCRM","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"ED4R6MWD","officialTitle":"Aluminum
+        Association Online Buyers Guide: Foil","nickname":"AAOBG_Foil","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"GL373ZZO","officialTitle":"Aluminum
+        Association Online Buyers Guide: Category Plate - Heat Treatable","nickname":"AAOBG_CategoryPlate-HeatTreatable","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"PLW09N0L","officialTitle":"Aluminum
+        Association Online Buyers Guide: Primary Aluminum Ingot","nickname":"AAOBG:PrimaryAluminumIngot","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"6O20KMXD","officialTitle":"Aluminum
+        Association Online Buyers Guide: Logistics","nickname":"AAOBG_Logistics","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"VD15P6WL","officialTitle":"Aluminum
+        Association Online Buyers Guide: Chemicals","nickname":"AAOBG_Chemicals","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"NDE58N0O","officialTitle":"Aluminum
+        Association Online Buyers Guide: Alumina","nickname":"AAOBG_Alumina","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"ED4R6QWD","officialTitle":"Software
+        Advice: Data Warehouse Software","nickname":"Software Advice:DataWarehouseSoftware","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"9DQN36ND","officialTitle":"Software
+        Advice: Content Marketing Platforms","nickname":"SoftwareAdvice_Content Marketing
+        Platforms","sourceType":"Buyers Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"ML07M4RO","officialTitle":"Aluminum
+        Association Online Buyers Guide: Services - Engineering Services","nickname":"AAOBG_ServicesEngineeringServices","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"MDR367KO","officialTitle":"Software
+        Advice: Campaign Management Software","nickname":"SoftwareAdvice_CampaignManagement","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"9DQN3MQD","officialTitle":"Aluminum
+        Association Online Buyers Guide: Master Alloys","nickname":"AAOBG:MasterAlloys","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"4O8J2WQO","officialTitle":"PAY360
+        Conference 2020","nickname":"PAY360 _2020","sourceType":"Virtual Conference","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-05","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"ZDKQZ8XD","officialTitle":"BSides
+        Las Vegas 2020","nickname":"BSidesLV2020","sourceType":"Industry Conference","city":"Las
+        Vegas","state":"Nevada","country":"United States","startDate":"2020-08-04","endDate":"2020-08-05","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"6O20KZQD","officialTitle":"Aluminum
+        Association Online Buyers Guide: Furnace / Foundry Clothing","nickname":"AAOBG_Furnace/FoundryClothing","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"ZDKYX66O","officialTitle":"Aluminum
+        Association Online Buyers Guide: Permanent Mold Casting","nickname":"AAOBG_PermanentMoldCasting","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"ED4R6Y0D","officialTitle":"Software
+        Advice: Online CRM Software","nickname":"SoftwareAdvice:OnlineCRMSoftware","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"VDM82MED","officialTitle":"Aluminum
+        Association Online Buyers Guide: Services - Machining","nickname":"AAOBG_Services_Machining","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"NLJ78R4D","officialTitle":"Minnesota
+        Farmfest 2020","nickname":"MinnesotaFarmfest2020","sourceType":"Industry Conference","city":"Redwood
+        Falls","state":"Minnesota","country":"United States","startDate":"2020-08-04","endDate":"2020-08-06","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"9DQN37ND","officialTitle":"Aluminum
+        Association Online Buyers Guide: Pipe & Tube - Extruded or Drawn","nickname":"AAOBG_Pipe&Tube-ExtrudedorDrawn","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"PLW092ZL","officialTitle":"Software
+        Advice: PBX Phone Systems","nickname":"Software Advice:PBXPhoneSystems","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"YLZ6XKVL","officialTitle":"Software
+        Advice: SIP Clients","nickname":"Software Advice:SIPClients","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"QL9R07XO","officialTitle":"Aluminum
+        Association Online Buyers Guide: Aluminum - Silicon (400 Series)","nickname":"AAOBG_Aluminum-Silicon(400
+        Series)","sourceType":"Buyers Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"6O20KNQD","officialTitle":"Software
+        Advice: Small Business Phone Systems","nickname":"SoftwareAdvice:SmallBusinessPhoneSystems","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"VDM82QED","officialTitle":"Software
+        Advice: Marketing Automation Software","nickname":"SoftwareAdvice_MarketingAutomation","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"GL373JZO","officialTitle":"Software
+        Advice: VoIP Phone Systems","nickname":"SoftwareAdvice:VoIPPhoneSystems","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"ZDKYX06O","officialTitle":"Software
+        Advice: UCaaS Providers","nickname":"SoftwareAdvice:UCaaSProviders","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"4L7Y8QQO","officialTitle":"Software
+        Advice: Production Scheduling Software","nickname":"SoftwareAdvice_ProductionScheduling","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"YLZ6XRVL","officialTitle":"Substack:
+        Vertical-Specific Platforms","nickname":"Substack:VSP","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"PLW096GL","officialTitle":"Software
+        Advice: Self Storage Software","nickname":"SoftwareAdvice_SelfStorageSoftware","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"NDE58W1O","officialTitle":"Software
+        Advice: Rental Property Management Software","nickname":"Software Advice_RentalPropertyManagementSoftware","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"ED4R638D","officialTitle":"Software
+        Advice: Pediatric EMR Software","nickname":"SoftwareAdvice_PediatricEMRSoftware","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"VD15PXQL","officialTitle":"Software
+        Advice: Podiatry EMR Software","nickname":"SoftwareAdvice_PodiatryEMRSoftware","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"KOYKYV7D","officialTitle":"Software
+        Advice: Practice Analytics Software","nickname":"SoftwareAdvice_PracticeAnalyticsSoftware","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"KOYRWX7L","officialTitle":"Connections:
+        The Digital Living Conference & Showcase 2020","nickname":"Connection2020","sourceType":"Industry
+        Conference","city":"Burlingame","state":"California","country":"United States","startDate":"2020-08-04","endDate":"2020-08-06","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"6O2R9G4L","officialTitle":"Phocuswright
+        Europe 2020","nickname":"PhocuswrightEU2020","sourceType":"Industry Conference","city":"Amsterdam","state":"Provincie
+        Noord-Holland","country":"Netherlands","startDate":"2020-08-04","endDate":"2020-08-06","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"0L5RR60D","officialTitle":"IMN
+        Single Family Rental Investment Conference (East) 2020","nickname":"IMNSFRIEast2020","sourceType":"Industry
+        Conference","city":"Miami","state":"Florida","country":"United States","startDate":"2020-08-04","endDate":"2020-08-06","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"7LNR5MJO","officialTitle":"Identity
+        Conference and Expo 2020","nickname":"ICExpo2020","sourceType":"Industry Conference","city":"Canberra","state":"Australian
+        Capital Territory","country":"Australia","startDate":"2020-08-04","endDate":"2020-08-05","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"ML070QRO","officialTitle":"Ladyboss
+        Digital Summit 2020","nickname":"LDS2020","sourceType":"Industry Conference","city":"Fargo","state":"North
+        Dakota","country":"United States","startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"KOY046XD","officialTitle":"NAS
+        Pensacola Tech Expo 2020","nickname":"NASPTE2020","sourceType":"Industry Conference","city":"Pensacola","state":"Florida","country":"United
+        States","startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"4OVNJQJD","officialTitle":"Denver
+        CISO Virtual Boardroom 2020","nickname":"CISODenver2020","sourceType":"Virtual
+        Conference","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"ML072VWO","officialTitle":"Philadelphia
+        CHRO Virtual Boardroom 2020","nickname":"CHROPhiladelphia2020","sourceType":"Virtual
+        Conference","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"JOXK0YZL","officialTitle":"UK
+        CDO Virtual Town Hall 2020","nickname":"CDOUK2020","sourceType":"Virtual Conference","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"ZLG3YPJO","officialTitle":"Vancouver
+        BC CIO Virtual Town Hall 2020","nickname":"CIOVancouver2020","sourceType":"Virtual
+        Conference","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"WO624Y8L","officialTitle":"Dallas
+        CHRO Virtual Town Hall 2020","nickname":"CHRODallas2020","sourceType":"Virtual
+        Conference","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"NDE58K0O","officialTitle":"Aluminum
+        Association Online Buyers Guide: Environmental Services","nickname":"AAOBG_EnvironmentalServices","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"QL9R0JXO","officialTitle":"Aluminum
+        Association Online Buyers Guide: Facility Services","nickname":"AAOBG_FacilityServices","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"4O8J0NPO","officialTitle":"Aluminum
+        Association Online Buyers Guide: Engineering Services","nickname":"AAOBG_EngineeringServices","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"NDE58G0O","officialTitle":"Aluminum
+        Association Online Buyers Guide: Heat Treating Furnaces / Ovens","nickname":"AAOBG_HeatTreatingFurnaces/Ovens","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"YLZ6XN7L","officialTitle":"Software
+        Advice: Channel Management Software","nickname":"SoftwareAdvice:ChannelManagementSoftware","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"0L5N8P6O","officialTitle":"Aluminum
+        Association Online Buyers Guide: Converting - Packaging","nickname":"AAOBG_ConvertingPackaging","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"ML07M36O","officialTitle":"Aluminum
+        Association Online Buyers Guide: Services - Consulting Services","nickname":"AAOBG_Services_ConsultingServices","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"ML07MG6O","officialTitle":"Aluminum
+        Association Online Buyers Guide: Grain Refiners","nickname":"AAOBG:GrainRefiners","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"4L7Y874O","officialTitle":"Aluminum
+        Association Online Buyers Guide: Product Development","nickname":"AAOBG_ProductDevelopment","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"WO62066L","officialTitle":"Aluminum
+        Association Online Buyers Guide: Marketing","nickname":"AAOBG_Marketing","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"KOYKY2JD","officialTitle":"Aluminum
+        Association Online Buyers Guide: Hard Alloy - Extruded Shapes","nickname":"AAOBG_HardAlloy-ExtrudedShapes","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"ELPZK02O","officialTitle":"Aluminum
+        Association Online Buyers Guide: Rolling Mill Equipment","nickname":"AAOBG_RollingMillEquipment","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"GL3732ZO","officialTitle":"Aluminum
+        Association Online Buyers Guide: Impacts","nickname":"AAOBG_Impacts","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"4L7Y83QO","officialTitle":"Aluminum
+        Association Online Buyers Guide: Tooling","nickname":"AAOBG_Tooling","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"YLZ6X9VL","officialTitle":"Aluminum
+        Association Online Buyers Guide: Pipe & Tube (Extruded or Drawn)","nickname":"AAOBG_Pipe&Tube(ExtrudedorDrawn)","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"ZLG3E8EO","officialTitle":"Software
+        Advice: IT Ticketing Systems","nickname":"SoftwareAdvice:ITTicketingSystems","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"JOXK1J9L","officialTitle":"Aluminum
+        Association Online Buyers Guide: Industrial Gases","nickname":"AAOBG_IndustrialGases","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"YLZ6XW7L","officialTitle":"Aluminum
+        Association Online Buyers Guide: Analysis / Testing","nickname":"AAOBG_Analysis/Testing","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"7LN7MXJO","officialTitle":"Aluminum
+        Association Online Buyers Guide: Cut to Length / Material Optimization","nickname":"AAOBG_CuttoLength/MaterialOptimization","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"GL373NQO","officialTitle":"Aluminum
+        Association Online Buyers Guide: Protective Apparel","nickname":"AAOBG_ProtectiveApparel","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"ZLG3EV0O","officialTitle":"Aluminum
+        Association Online Buyers Guide: Lubricants / Fluids","nickname":"AluAAOBG_Lubricants/Fluids","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"ELPZK21O","officialTitle":"Aluminum
+        Association Online Buyers Guide: Casting Machines","nickname":"AAOBG_CastingMachines","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"6O20K7XD","officialTitle":"Aluminum
+        Association Online Buyers Guide: Oil / Gas","nickname":"AAOBG_Oil/Gas","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"ED4R6Z0D","officialTitle":"Aluminum
+        Association Online Buyers Guide: Rod & Bar - Extruded or Drawn","nickname":"AAOBG_Rod&Bar-ExtrudedorDrawn","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"GL373QQO","officialTitle":"Software
+        Advice: OLAP Tools","nickname":"SoftwareAdvice:OLAPTools","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"4OVNE70D","officialTitle":"Aluminum
+        Association Online Buyers Guide: Dross Handling","nickname":"AAOBG_Dross Handling","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"VDM827KD","officialTitle":"Software
+        Advice: Manufacturing BI Software","nickname":"SoftwareAdvice:ManufacturingBISoftware","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"JOXK143L","officialTitle":"Software
+        Advice: iPad CRM","nickname":"SoftwareAdvice:iPadCRM","sourceType":"Buyers
+        Guide","city":null,"state":null,"country":null,"startDate":"2020-08-04","endDate":"2020-08-04","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0}]}'
+  recorded_at: Tue, 04 Aug 2020 09:08:27 GMT
+recorded_with: VCR 6.0.0

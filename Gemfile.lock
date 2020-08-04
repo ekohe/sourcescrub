@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    sourcescrub (0.0.5)
+    sourcescrub (0.0.6)
       faraday
 
 GEM

@@ -1,0 +1,84 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://identity.sourcescrub.com/connect/token
+    body:
+      encoding: UTF-8
+      string: grant_type=password&username=username&password=password&scope=client_api
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 03 Aug 2020 15:44:53 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Server:
+      - Kestrel
+      Cache-Control:
+      - no-store, no-cache, max-age=0
+      Pragma:
+      - no-cache
+      Transfer-Encoding:
+      - chunked
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Request-Context:
+      - appId=cid-v1:68001f3b-51a8-49d3-9e10-8bd96680dce8
+    body:
+      encoding: UTF-8
+      string: '{"access_token":".....","expires_in":28800,"token_type":"Bearer","scope":"client_api"}'
+  recorded_at: Mon, 03 Aug 2020 15:44:53 GMT
+- request:
+    method: get
+    uri: https://api.sourcescrub.com/sources/7LNWERLR
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 03 Aug 2020 15:44:57 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Server:
+      - Kestrel
+      Content-Length:
+      - '310'
+      Request-Context:
+      - appId=cid-v1:68001f3b-51a8-49d3-9e10-8bd96680dce8
+      Strict-Transport-Security:
+      - max-age=2592000
+      X-Ratelimit-Limit:
+      - '10000'
+      X-Ratelimit-Remaining:
+      - '9997'
+      X-Ratelimit-Reset:
+      - '2448901.023762'
+    body:
+      encoding: UTF-8
+      string: '{"id":"7LNWERLR","officialTitle":"Software Magazine 2014 Software 500","nickname":"Softmag14top500","sourceType":"Top
+        List","city":null,"state":null,"country":null,"startDate":"2014-12-31","endDate":"2014-12-31","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0}'
+  recorded_at: Mon, 03 Aug 2020 15:44:58 GMT
+recorded_with: VCR 6.0.0

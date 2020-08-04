@@ -28,14 +28,12 @@ module Sourcescrub
           }
         ).get(uri, *args)
 
-        response_body = JSON.parse(response.body)
-        if response.status == 200
-          response_body = {} if response_body.is_a?(Array) && response_body.empty?
+        response_body = response.body
+        raise Error, response_body unless response.status == 200
 
-          return response_body.merge('headers' => response.headers)
-        end
-
-        raise Error, response_body
+        response_body = JSON.parse(response_body)
+        response_body = {} if response_body.is_a?(Array) && response_body.empty?
+        response_body.merge('headers' => response.headers)
       end
 
       # def put(uri, args)

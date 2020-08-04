@@ -6,6 +6,7 @@ module Sourcescrub
     autoload :Entity,           'sourcescrub/models/concerns/entity'
     autoload :Company,          'sourcescrub/models/company'
     autoload :CompanyItems,     'sourcescrub/models/concerns/company_items'
+    autoload :SourceItems,      'sourcescrub/models/concerns/source_items'
     autoload :Source,           'sourcescrub/models/source'
     autoload :Tag,              'sourcescrub/models/tag'
     autoload :Person,           'sourcescrub/models/person'
