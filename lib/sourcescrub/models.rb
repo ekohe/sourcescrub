@@ -11,5 +11,8 @@ module Sourcescrub
     autoload :Tag,              'sourcescrub/models/tag'
     autoload :Person,           'sourcescrub/models/person'
     autoload :Financial,        'sourcescrub/models/financial'
+    autoload :Investment,       'sourcescrub/models/investment'
+    autoload :Employee,         'sourcescrub/models/employee'
+    autoload :EmployeeRange,    'sourcescrub/models/employee_range'
   end
 end

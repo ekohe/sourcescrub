@@ -1,0 +1,88 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://identity.sourcescrub.com/connect/token
+    body:
+      encoding: UTF-8
+      string: grant_type=password&username=username&password=password&scope=client_api
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 11 Aug 2020 14:26:16 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Server:
+      - Kestrel
+      Cache-Control:
+      - no-store, no-cache, max-age=0
+      Pragma:
+      - no-cache
+      Transfer-Encoding:
+      - chunked
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Request-Context:
+      - appId=cid-v1:68001f3b-51a8-49d3-9e10-8bd96680dce8
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"....","expires_in":28800,"token_type":"Bearer","scope":"client_api"}'
+  recorded_at: Tue, 11 Aug 2020 14:26:16 GMT
+- request:
+    method: get
+    uri: https://api.sourcescrub.com/companies/monday.com/investments
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 11 Aug 2020 14:26:17 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Server:
+      - Kestrel
+      Content-Length:
+      - '716'
+      Request-Context:
+      - appId=cid-v1:68001f3b-51a8-49d3-9e10-8bd96680dce8
+      Strict-Transport-Security:
+      - max-age=2592000
+      X-Ratelimit-Limit:
+      - '10000'
+      X-Ratelimit-Remaining:
+      - '9962'
+      X-Ratelimit-Reset:
+      - '1762420.6559116999'
+    body:
+      encoding: UTF-8
+      string: '[{"amount":50000000.0,"dateOfRaise":"2018-07-11","round":"Series C","investors":"3","valuation":null},{"amount":25000000.0,"dateOfRaise":"2017-04-06","round":"Series
+        B","investors":"3","valuation":null},{"amount":7600000.0,"dateOfRaise":"2015-12-15","round":"Series
+        A","investors":"2","valuation":null},{"amount":1500000.0,"dateOfRaise":"2012-08-02","round":"Seed","investors":"2","valuation":null},{"amount":150000000.0,"dateOfRaise":"2019-07-30","round":"Series
+        D","investors":"5","valuation":null},{"amount":0.0,"dateOfRaise":"2020-05-21","round":"Venture
+        Round Unknown","investors":"-","valuation":null},{"amount":7600000.0,"dateOfRaise":"2016-06-24","round":"Series
+        A","investors":"0","valuation":1900000000.0}]'
+  recorded_at: Tue, 11 Aug 2020 14:26:18 GMT
+recorded_with: VCR 6.0.0

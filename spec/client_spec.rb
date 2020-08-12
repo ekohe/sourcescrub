@@ -33,18 +33,18 @@ RSpec.describe Sourcescrub::Client do
     end
 
     it 'be able to get company\'s people data' do
-      company_people = VCR.use_cassette('company_people_by_ekohe_com') do
+      people = VCR.use_cassette('company_people_by_ekohe_com') do
         client.company_cards('ekohe.com', { card_id: 'people' })
       end
 
-      expect(company_people.total).to eq(2)
-      expect(company_people.type).to eq(Sourcescrub::Models::Person)
-      expect(company_people.items.size).to eq(2)
-      expect(company_people.items[0].email).to eq('maxime@ekohe.com')
-      expect(company_people.items[0].firstName).to eq('Maxime')
-      expect(company_people.items[0].title).to eq('CEO')
+      expect(people.total).to eq(2)
+      expect(people.type).to eq(Sourcescrub::Models::Person)
+      expect(people.items.size).to eq(2)
+      expect(people.items[0].email).to eq('maxime@ekohe.com')
+      expect(people.items[0].firstName).to eq('Maxime')
+      expect(people.items[0].title).to eq('CEO')
 
-      expect(company_people.x_ratelimit_limit).to eq('10000')
+      expect(people.x_ratelimit_limit).to eq('10000')
     end
 
     it 'be able to get company\'s financials data' do
@@ -55,6 +55,45 @@ RSpec.describe Sourcescrub::Client do
       expect(company_financials.total).to eq(0)
       expect(company_financials.type).to eq(Sourcescrub::Models::Financial)
       expect(company_financials.items.size).to eq(0)
+    end
+
+    it 'be able to get company\'s investments data' do
+      investments = VCR.use_cassette('company_investments_by_monday_com') do
+        client.company_cards('monday.com', { card_id: 'investments' })
+      end
+
+      expect(investments.total).to eq(7)
+      expect(investments.type).to eq(Sourcescrub::Models::Investment)
+      expect(investments.items.size).to eq(7)
+      expect(investments.items[0].amount).to eq(50_000_000)
+      expect(investments.items[0].dateOfRaise).to eq('2018-07-11')
+      expect(investments.items[0].round).to eq('Series C')
+      expect(investments.items[0].investors).to eq('3')
+      expect(investments.items[0].valuation).to eq(nil)
+    end
+
+    it 'be able to get company\'s employees data' do
+      employees = VCR.use_cassette('company_employees_by_monday_com') do
+        client.company_cards('monday.com', { card_id: 'employees' })
+      end
+
+      expect(employees.total).to eq(7)
+      expect(employees.type).to eq(Sourcescrub::Models::Employee)
+      expect(employees.items.size).to eq(7)
+      expect(employees.items[0].count).to eq(337)
+      expect(employees.items[0].date).to eq('2019-12-27')
+    end
+
+    it 'be able to get company\'s employeerange data' do
+      employeeranges = VCR.use_cassette('company_employeerange_by_monday_com') do
+        client.company_cards('monday.com', { card_id: 'employeerange' })
+      end
+
+      expect(employeeranges.total).to eq(7)
+      expect(employeeranges.type).to eq(Sourcescrub::Models::EmployeeRange)
+      expect(employeeranges.items.size).to eq(7)
+      expect(employeeranges.items[0].employeeRange).to eq('201-500')
+      expect(employeeranges.items[0].date).to eq('2019-12-27')
     end
   end
 

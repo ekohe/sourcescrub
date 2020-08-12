@@ -32,7 +32,18 @@ module Sourcescrub
         raise Error, response_body unless response.status == 200
 
         response_body = JSON.parse(response_body)
-        response_body = {} if response_body.is_a?(Array) && response_body.empty?
+        # Processing different cases for investments
+        if response_body.is_a?(Array)
+          response_body = if response_body.empty?
+                            {}
+                          else
+                            {
+                              'total' => response_body.size,
+                              'items' => response_body
+                            }
+                          end
+        end
+
         response_body.merge('headers' => response.headers)
       end
 

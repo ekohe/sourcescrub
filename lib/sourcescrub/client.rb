@@ -90,7 +90,8 @@ module Sourcescrub
         'financials' => 'financial',
         'investments' => 'investment',
         'employees' => 'employee',
-        'tags' => 'tag'
+        'tags' => 'tag',
+        'employeerange' => 'employee_range'
       }
     end
   end
