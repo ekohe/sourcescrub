@@ -123,7 +123,19 @@ RSpec.describe Sourcescrub::Client do
       expect(response.items.size).to eq(100)
       expect(response.total).to eq(10_000)
       expect(response.items[0].id).to eq('VDM8K99D')
-      expect(response.items[0].officialTitle).to eq('Vancouver BC CISO Virtual Town Hall 2020')
+    end
+  end
+
+  describe 'Companies API' do
+    it 'be able to get companies data' do
+      response = VCR.use_cassette('companies_top_100') do
+        client.companies
+      end
+
+      expect(response.items.size).to eq(100)
+      expect(response.total).to eq(10_000)
+      expect(response.items[0].id).to eq('MNDEJO42')
+      expect(response.items[0].name).to eq('AllClear ID, Inc.')
     end
   end
 end

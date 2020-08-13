@@ -26,6 +26,13 @@ module Sourcescrub
           @card_id
         ].compact.join('/')
       end
+
+      def search_url
+        [
+          'search',
+          Models::Company::ENDPOINT
+        ].compact.join('/')
+      end
     end
   end
 end

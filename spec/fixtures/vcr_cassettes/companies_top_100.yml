@@ -1,0 +1,1150 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://identity.sourcescrub.com/connect/token
+    body:
+      encoding: UTF-8
+      string: grant_type=password&username=username&password=password&scope=client_api
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 13 Aug 2020 11:07:36 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Server:
+      - Kestrel
+      Cache-Control:
+      - no-store, no-cache, max-age=0
+      Pragma:
+      - no-cache
+      Transfer-Encoding:
+      - chunked
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Request-Context:
+      - appId=cid-v1:68001f3b-51a8-49d3-9e10-8bd96680dce8
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"...","expires_in":28800,"token_type":"Bearer","scope":"client_api"}'
+  recorded_at: Thu, 13 Aug 2020 11:07:37 GMT
+- request:
+    method: get
+    uri: https://api.sourcescrub.com/search/companies?limit=100&offset=0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 13 Aug 2020 11:07:42 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Server:
+      - Kestrel
+      Content-Length:
+      - '133163'
+      Request-Context:
+      - appId=cid-v1:68001f3b-51a8-49d3-9e10-8bd96680dce8
+      Strict-Transport-Security:
+      - max-age=2592000
+      X-Ratelimit-Limit:
+      - '10000'
+      X-Ratelimit-Remaining:
+      - '9946'
+      X-Ratelimit-Reset:
+      - '1601539.7537174'
+    body:
+      encoding: UTF-8
+      string: '{"total":10000,"items":[{"id":"MNDEJO42","companyType":"Venture Capital","name":"AllClear
+        ID, Inc.","informalName":"AllClear ID","website":"https://www.allclearid.com","domain":"allclearid.com","description":"AllClear
+        ID, Inc. provides identity repair, protection, and monitoring services for
+        customer security to Fortune 500 companies and government agencies. Its identity
+        repair services include expert support, 360-degree Scan, fraud resolution,
+        and preventive measures.","foundingYear":2004,"location":"Austin, Texas, United
+        States, 78701","city":"Austin","state":"Texas","postalCode":"78701","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"855-434-8077","specialties":["identity
+        protection","identity repair","credit monitoring","customer security","digital
+        identity","secure authentication","employee benefits","fraud resolution","dark
+        web monitoring","customer service","fraud alerts","enterprisesoftware","networksolutions",""],"facebook":"https://www.facebook.com/allclearid","twitter":"https://twitter.com/allclearid","crunchbase":"https://www.crunchbase.com/organization/allclear-id","linkedIn":"https://www.linkedin.com/company/allclear-id/about","totalAmountInvested":9300000,"currentEmployeeCount":98,"currentEmployeeRange":"51-200","currentJobOpenings":0,"investors":"Alliance
+        Venture, Experian, Level39, Merus Capital, Runway Growth Capital, LLC, Trellis
+        Partners","personalTags":[],"firmTags":[]},{"id":"0VD15LX3","companyType":"Private
+        Sub","name":"Kroll Associates, Inc.","informalName":"Kroll Associates","website":"https://www.kroll.com","domain":"kroll.com","description":"Kroll
+        Associates, Inc. provides risk mitigation and response intelligence solutions
+        and insights for protecting companies, assets, and people around the world.
+        The company offers investigations in the areas of fraud and internal investigations,
+        financial investigations, cyber investigations, asset searches and recovery,
+        misuse of intellectual property, regulatory investigations, monitorships,
+        and litigation and disputes, business intelligence solutions, including market
+        entry, competitor intelligence, commercial due diligence, proprietary hedge
+        fund research, and corporate contest advisory.","foundingYear":1972,"location":"New
+        York City, New York, United States, 10055","city":"New York City","state":"New
+        York","postalCode":"10055","country":"United States","parentCompanyDomain":null,"phoneNumber":"212-593-1000","specialties":["Investigations","Cyber
+        Security","Identity Theft","Compliance","Security Risk Management","Breach
+        Notification","Due Diligence"],"facebook":"https://www.facebook.com/krollwire","twitter":"https://twitter.com/krollwire","crunchbase":"https://www.crunchbase.com/organization/kroll","linkedIn":"https://www.linkedin.com/company/kroll","totalAmountInvested":0,"currentEmployeeCount":2126,"currentEmployeeRange":"501-1000","currentJobOpenings":0,"investors":"","personalTags":[],"firmTags":[]},{"id":"2ZDK7LNW","companyType":"Private
+        Sub","name":"Nymity, Inc.","informalName":"Nymity","website":"https://www.nymity.com","domain":"nymity.com","description":"Nymity,
+        Inc., provides privacy compliance, research, and risk management solutions
+        for organizations. It offers privaworks, a compliance research tool for privacy
+        and data protection resources. The company''s privaworks product includes
+        a reference library, which provides analyzed documents.","foundingYear":2002,"location":"Toronto,
+        Ontario, Canada, M5J 2S1","city":"Toronto","state":"Ontario","postalCode":"M5J
+        2S1","country":"Canada","parentCompanyDomain":null,"phoneNumber":"647-260-6230","specialties":["tools
+        for the privacy office","privacy management tools","data privacy compliance
+        research","reporting tools","privacy compliance methodology","privacy management
+        accountability framework","data privacy accountability scorecard","gdpr compliance","data
+        privacy","ccpa","gdpr","research","development",""],"facebook":"https://www.facebook.com/nymity","twitter":"https://twitter.com/nymity","crunchbase":"https://www.crunchbase.com/organization/nymity","linkedIn":"https://www.linkedin.com/company/nymity-inc","totalAmountInvested":0,"currentEmployeeCount":32,"currentEmployeeRange":"51-200","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"W4L7GOEX","companyType":"Private","name":"Venable,
+        LLP","informalName":"Venable","website":"venable.com","domain":"venable.com","description":"Venable,
+        LLP provides legal advisory services to corporate and institutional clients.
+        It focuses on areas such as business transactions, employee benefits and executive
+        compensation, appellate litigation, congressional investigations, copyright,
+        and unfair trade and debt settlement counseling services.","foundingYear":1900,"location":"Washington,
+        D.C., District of Columbia, United States, 20001","city":"Washington, D.C.","state":"District
+        of Columbia","postalCode":"20001","country":"United States","parentCompanyDomain":null,"phoneNumber":"202-344-4000","specialties":["Law
+        Practice"],"facebook":"https://www.facebook.com/venable-llp-103456609727427","twitter":"https://twitter.com/venablellp","crunchbase":"https://www.crunchbase.com/organization/venable-llp","linkedIn":"https://www.linkedin.com/company/venable-llp","totalAmountInvested":0,"currentEmployeeCount":1666,"currentEmployeeRange":"1001-5000","currentJobOpenings":10,"investors":"","personalTags":[],"firmTags":[]},{"id":"20L50OXR","companyType":"Private
+        Sub","name":"Sunera, LLC","informalName":"Sunera, LLC","website":"http://www.sunera.com","domain":"sunera.com","description":"Sunera,
+        LLC, provides business, accounting, technology, and risk advisory consulting
+        services for organizations in the United States and Canada. It offers internal
+        audit co-sourcing and outsourcing, controls testing center, IT risk and governance
+        auditing, enterprise risk management, data analytics/continuous controls monitoring,
+        and forensic and fraud auditing; information security solutions, such as PCI
+        compliance and ASV scanning, information security assessment, data privacy
+        and protection, HIPAA/HITECH security, and network infrastructure design/deployment/hardening;
+        and financial advisory services, such as private equity, finance and accounting
+        assistance, acquisition and transactional support.","foundingYear":2005,"location":"Tampa,
+        Florida, United States, 33603","city":"Tampa","state":"Florida","postalCode":"33603","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"813-402-1208","specialties":["risk
+        management","pci qsa","internal audit","accounting & finance","regulatory
+        compliance","cyber security","data privacy","hipaa","erp advisory","data analytics","it
+        audit","sox compliance","business continuity","forensic & fraud auditing","soc
+        reporting","penetration testing","consulting",""],"facebook":null,"twitter":null,"crunchbase":null,"linkedIn":"https://www.linkedin.com/company/sunera-llc","totalAmountInvested":0,"currentEmployeeCount":28,"currentEmployeeRange":"201-500","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"ZKOYN3DN","companyType":"Venture
+        Capital","name":"AlgoSec, Inc.","informalName":"AlgoSec","website":"https://www.algosec.com","domain":"algosec.com","description":"AlgoSec,
+        Inc. provides network security policy management solutions. The company automates
+        and simplifies security policy management across virtual, cloud, and physical
+        environments. Its products include BusinessFlow, a data center application
+        connectivity management solution that engages in the provision maintenance,
+        etc.","foundingYear":2004,"location":"Ridgefield Park, New Jersey, United
+        States, 07660","city":"Ridgefield Park","state":"New Jersey","postalCode":"07660","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"888-358-3696","specialties":["network
+        security","network security policy management","auditing and compliance","risk
+        management","security change management","application connectivity management","firewall
+        policy management","cloud security","hybrid cloud security","pci dss","microsegmentation","cybersecurity","cisco
+        aci","security management","enterprise software","network solutions"],"facebook":"https://www.facebook.com/algosec","twitter":"https://twitter.com/algosec","crunchbase":"https://www.crunchbase.com/organization/algosec","linkedIn":"https://www.linkedin.com/company/algosec","totalAmountInvested":36000000,"currentEmployeeCount":372,"currentEmployeeRange":"201-500","currentJobOpenings":1,"investors":"Claridge
+        Israel","personalTags":[],"firmTags":[]},{"id":"NJOXPZD2","companyType":"Private","name":"Apricorn,
+        Inc.","informalName":"Apricorn","website":"https://apricorn.com","domain":"apricorn.com","description":"Apricorn,
+        Inc. is one of a leader in the design and manufacture of PC storage products,
+        utilities, and accessories. The company provides secure storage innovations
+        to the most prominent companies in the categories of finance, healthcare,
+        education, and government. It offers hardware-based encryption, secure data
+        storage, and data security.","foundingYear":1983,"location":"Poway, California,
+        United States, 92064","city":"Poway","state":"California","postalCode":"92064","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"800-458-5448","specialties":["hardware-based
+        encryption","secure data storage","data security","advertising","marketing","it
+        software","backup","data recovery","online backup","it management","information
+        technology custom manufacturer","custom manufacturer",""],"facebook":"https://www.facebook.com/apricorn-355673447956311","twitter":"https://twitter.com/apricorn_info","crunchbase":"https://www.crunchbase.com/organization/apricorn","linkedIn":"https://www.linkedin.com/company/apricorn","totalAmountInvested":0,"currentEmployeeCount":25,"currentEmployeeRange":"11-50","currentJobOpenings":0,"investors":"","personalTags":[],"firmTags":[]},{"id":"8ZLGGJLE","companyType":"Private","name":"InfoLawGroup
+        LLP","informalName":"InfoLawGroup","website":"https://www.infolawgroup.com","domain":"infolawgroup.com","description":"InfoLawGroup
+        LLP is a national boutique law firm with a laser focus on information governance
+        - including privacy and data security matters - advertising and marketing,
+        evolving media, technology, and intellectual property matters.  It exists
+        to provide exceptional legal services in these core practice areas that constantly
+        intersect.","foundingYear":2009,"location":"Chicago, Illinois, United States,
+        60612","city":"Chicago","state":"Illinois","postalCode":"60612","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"801-953-3858","specialties":["advertising
+        and promotions","cloud computing","information management","information security","intellectual
+        property","outsourcing","privacy","social media","technology"],"facebook":"https://www.facebook.com/infolawgroupllp","twitter":"https://twitter.com/infolawgroup","crunchbase":"https://www.crunchbase.com/organization/infolawgroup-llp","linkedIn":"https://www.linkedin.com/company/infolawgroup-llp","totalAmountInvested":0,"currentEmployeeCount":15,"currentEmployeeRange":"1-10","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"ZELP7VDY","companyType":"Private","name":"McDermott
+        Will and Emery, LLP","informalName":"McDermott Will and Emery","website":"https://www.mwe.com","domain":"mwe.com","description":"McDermott
+        Will and Emery, LLP offers legal advisory services. The company caters to
+        agribusiness, biotechnology, and life sciences, energy, food and beverage,
+        healthcare, hospitality, insurance, sports and entertainment, and telecommunications
+        industries. It''s practice areas include antitrust and competition, bankruptcy,
+        e-business, finance and banking, intellectual property, legislative and government
+        relations, mergers and acquisitions, real estate, securities, and tax issues.","foundingYear":1934,"location":"Chicago,
+        Illinois, United States, 60612","city":"Chicago","state":"Illinois","postalCode":"60612","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"312-372-2000","specialties":["law
+        practice","b2b services","corporate law firms","legal services","intellectual
+        property (ip) law","business services","information technology","legal","consulting
+        and business services",""],"facebook":"https://www.facebook.com/mcdermottwillandemery","twitter":"https://twitter.com/mcdermottlaw","crunchbase":"https://www.crunchbase.com/organization/mcdermott-will-emery-2","linkedIn":"https://www.linkedin.com/company/mcdermott-will-&-emery","totalAmountInvested":0,"currentEmployeeCount":2608,"currentEmployeeRange":"1001-5000","currentJobOpenings":28,"investors":"","personalTags":[],"firmTags":[]},{"id":"0GL3YGDN","companyType":"Private","name":"NCTM
+        Studio Legale Associato","informalName":"NCTM Studio","website":"https://www.nctm.it","domain":"nctm.it","description":"NCTM
+        Studio Legale Associato is an international law firm. The firm''s areas of
+        practice include Italian and European Community administrative law, antitrust,
+        competition, banking, finance, bankruptcy, debt restructuring, corporate,
+        tax, commercial, dispute resolution, arbitration, energy, industrial and intellectual
+        property, international trade, real estate, environmental, health, and safety.","foundingYear":2000,"location":"Milan,
+        Lombardia, Italy, 20121","city":"Milan","state":"Lombardia","postalCode":"20121","country":"Italy","parentCompanyDomain":null,"phoneNumber":"","specialties":["antitrust","ip","competition","banking
+        and finance","corporate and commercial","dispute resolution and arbitration","administrative
+        law","mergers and acquisitions/private equity","employment","capital markets","real
+        estate","tax","privacy and it compliance","restructuring and turnaround","environmental","health
+        and safety","art","insurance","automotive","rail","aviation","china desk","energy","entertainment","financial
+        institution group","food and drink","health care - life sciences","international
+        trade","internazionalizzazione","luxury and fashion","non profit","tmt","shipping
+        and transport","legal","","membershiporganizations"],"facebook":"https://www.facebook.com/nctmstudiolegale","twitter":"https://twitter.com/nctmlawfirm","crunchbase":"https://www.crunchbase.com/organization/nctm-studio-legale-associato","linkedIn":"https://www.linkedin.com/company/nctm---studio-legale-associato","totalAmountInvested":0,"currentEmployeeCount":348,"currentEmployeeRange":"51-200","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"XWO6N4OP","companyType":"Private","name":"nNovation,
+        LLP","informalName":"nNOVATION","website":"https://nnovation.com","domain":"nnovation.com","description":"nNovation,
+        LLP delivers premium Canadian legal services in a refreshingly candid, client-centric
+        and efficient manner. The company provide the clients with top-tier expertise
+        and service. Its practitioners experienced with regulatory authorities and
+        government, they comfortably engage competing perspectives and work creatively
+        toward practical solutions.","foundingYear":2010,"location":"Ottawa, Ontario,
+        Canada, K1P 5J6","city":"Ottawa","state":"Ontario","postalCode":"K1P 5J6","country":"Canada","parentCompanyDomain":null,"phoneNumber":"613-225-2906","specialties":["legal
+        services"],"facebook":"https://www.facebook.com/nnovationllp","twitter":null,"crunchbase":"https://www.crunchbase.com/organization/nnovation#section-overview","linkedIn":"https://www.linkedin.com/company/nnovation-llp","totalAmountInvested":0,"currentEmployeeCount":6,"currentEmployeeRange":"1-10","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"XMDR04O8","companyType":"Venture
+        Capital","name":"Certes Networks, Inc.","informalName":"Certes Networks","website":"https://www.certesnetworks.com","domain":"certesnetworks.com","description":"Certes
+        Networks, Inc. delivers software-defined network encryption solutions for
+        enterprises and governments around the world. The company offers CryptoFlow
+        Creator, a web-based device management software that controls encryptors and
+        encryption policy enforcement points, as well as provides key, policy, and
+        device management for Certes Network encryptors.","foundingYear":2000,"location":"Pittsburgh,
+        Pennsylvania, United States, 15219","city":"Pittsburgh","state":"Pennsylvania","postalCode":"15219","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"888-833-1142","specialties":["software-defined
+        security","software-defined perimeter","enterprise software and network solutions","enterprisesoftware&amp","network
+        solutions","enterprise software","networksolutions","enterprisesoftware",""],"facebook":"https://www.facebook.com/certesnetworks","twitter":"https://twitter.com/certesnetworks","crunchbase":"https://www.crunchbase.com/organization/certes-networks","linkedIn":"https://www.linkedin.com/company/certes-networks","totalAmountInvested":21800000,"currentEmployeeCount":53,"currentEmployeeRange":"51-200","currentJobOpenings":0,"investors":"Blue
+        Heron Capital, LLC","personalTags":[],"firmTags":[]},{"id":"79DQ97DE","companyType":"Public
+        Sub","name":"Axis41, Inc.","informalName":"Axis41","website":"https://www.axis41.com","domain":"axis41.com","description":"Axis41,
+        Inc. is a digital marketing agency, provides services ranging from branding
+        and campaigns to Web development and marketing automation. It offers strategy
+        services, such as market analysis, audience profiling, brand identity, and
+        communication planning services; and brand services, including branding, design,
+        motion, and content services.","foundingYear":2001,"location":"Salt Lake City,
+        Utah, United States, 84115","city":"Salt Lake City","state":"Utah","postalCode":"84115","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"801-303-6300","specialties":["cms
+        architecture & integration (adobe experience manager)","content architecture","content
+        creation (web","digital marketing (social","environment)","message and visual
+        strategy","mobile","motion","persona development","print","sem)","seo","website
+        & mobile app development","advertising&amp","marketing","advertising",""],"facebook":"https://www.facebook.com/axis41","twitter":"https://twitter.com/axis41","crunchbase":"https://www.crunchbase.com/organization/axis41","linkedIn":"https://www.linkedin.com/company/54234","totalAmountInvested":0,"currentEmployeeCount":90,"currentEmployeeRange":"51-200","currentJobOpenings":2,"investors":null,"personalTags":[],"firmTags":[]},{"id":"8ZLGWJOE","companyType":"Private
+        Sub","name":"Click Security, Inc.","informalName":"Click Security","website":"http://www.clicksecurity.com","domain":"clicksecurity.com","description":"Click
+        Security, Inc. provides security analytics services. The company offers real-time
+        security analytics and automates the finding of unknown cyber-attack activity
+        hidden in an organization''s big data haystack. It markets its services to
+        enterprises, higher education, critical infrastructure providers, and government
+        agencies throughout the United States.","foundingYear":2009,"location":"Austin,
+        Texas, United States, 78730","city":"Austin","state":"Texas","postalCode":"78730","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"512-637-8500","specialties":["Computer
+        and Network Security"],"facebook":null,"twitter":null,"crunchbase":"https://www.crunchbase.com/organization/click-security","linkedIn":"https://www.linkedin.com/company/click-security","totalAmountInvested":0,"currentEmployeeCount":3,"currentEmployeeRange":"11-50","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"ZELPMVLY","companyType":"Private
+        Sub","name":"Aosphere, LLP","informalName":"Aosphere","website":"https://www.aosphere.com/","domain":"aosphere.com","description":"Aosphere,
+        LLP specializes in providing user-friendly access to complex legal information
+        for institutions large and small. The company uses the expertise in all aspects
+        of derivatives trading and key compliance issues like shareholding disclosure,
+        marketing restrictions and cross border data transfers to provide subscription
+        products which helps reduce legal, regulatory and operational risk.","foundingYear":2001,"location":"London,
+        England, United Kingdom","city":"London","state":"England","postalCode":null,"country":"United
+        Kingdom","parentCompanyDomain":null,"phoneNumber":"","specialties":["Legal
+        risk management","Commoditisation of legal data","Online legal services","Legal
+        compliance"],"facebook":null,"twitter":"https://twitter.com/aosph","crunchbase":"https://www.crunchbase.com/organization/aosphere","linkedIn":"https://www.linkedin.com/company/aosphere","totalAmountInvested":0,"currentEmployeeCount":31,"currentEmployeeRange":"11-50","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"YML0R3OW","companyType":"Private","name":"Staffing
+        360 Group, Inc. dba Cyber 360 Solutions","informalName":"Cyber 360 Solutions","website":"http://www.cyber360solutions.com","domain":"cyber360solutions.com","description":"Staffing
+        360 Group, Inc. doing business as Cyber 360 Solutions a cyber security professional
+        services company, engages in identifying and hiring skilled cyber security
+        professionals for consulting assignments in the United States. The company
+        offers contract and fulltime placement of cybersecurity professionals into
+        various governments and corporations to secure its systems, and reduce data
+        and privacy risks. It offers a range of jobs, such as senior cyber security
+        analyst, SOC analyst, lead security analyst, systems administrator, security
+        analyst, senior security engineer, senior security analyst, security engineer/developer,
+        InfoSec engineer, security compliance manager, director of security and compliance,
+        cybersecurity manager, and senior security engineer.","foundingYear":2013,"location":"Wakefield,
+        Massachusetts, United States, 01880","city":"Wakefield","state":"Massachusetts","postalCode":"01880","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"781-438-4380","specialties":["cybersecurity","staffing","consulting","recruiting","consulting
+        and business services"],"facebook":"https://www.facebook.com/cyber360solutions","twitter":"https://twitter.com/cyber360","crunchbase":null,"linkedIn":"https://www.linkedin.com/company/cyber-360-inc-","totalAmountInvested":0,"currentEmployeeCount":8,"currentEmployeeRange":"51-200","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"0VD1V5LX","companyType":"Private","name":"AOSware","informalName":null,"website":"http://www.aosware.com","domain":"aosware.com","description":"AOSWare
+        (Advanced Office Software), is technology provider for the Office Supplies,
+        Business Products & Office Furniture Industry. Specializing in custom designed,
+        SEO friendly eCommerce websites and inetgrated back-end business management
+        software systems. AOSWare is focused on bringing the Independent Office Product
+        dealer technology solutions without breaking the budget.","foundingYear":2009,"location":"Freehold,
+        New Jersey, United States, 07728","city":"Freehold","state":"New Jersey","postalCode":"07728","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"888-310-9964","specialties":["computer
+        software","office product"],"facebook":"https://www.facebook.com/aosware","twitter":"https://twitter.com/aosware?lang=en","crunchbase":null,"linkedIn":null,"totalAmountInvested":0,"currentEmployeeCount":6,"currentEmployeeRange":"1-10","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"06O284O2","companyType":"Private","name":"Prism
+        Microsystems, Inc.","informalName":null,"website":"http://www.prismmicrosys.com","domain":"prismmicrosys.com","description":"Prism
+        Microsystems, Inc. provides security information and event management (SIEM)
+        solutions for the midsize enterprises. It offers EventTracker Enterprise,
+        a security, compliance, and operations solution that combines log management,
+        log monitoring, log search, file integrity monitoring, system monitoring,
+        reporting, analytics, and visualization for continuous monitoring of system
+        logs, users, file changes, servers, and desktops.","foundingYear":1999,"location":"Columbia,
+        Maryland, United States, 21045","city":"Columbia","state":"Maryland","postalCode":"21045","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"410-953-6776","specialties":["compliance","log
+        management","security","sem","siem","sim","technology","itservices",""],"facebook":null,"twitter":null,"crunchbase":null,"linkedIn":null,"totalAmountInvested":0,"currentEmployeeCount":5,"currentEmployeeRange":"51-200","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"2ZDKQ7DN","companyType":"Public
+        Sub","name":"AppRiver, LLC","informalName":"AppRiver","website":"https://appriver.com","domain":"appriver.com","description":"AppRiver,
+        LLC provides cloud-based email and cyber security solutions to businesses
+        worldwide. The company offers cloud-based solutions, including spam and virus
+        protection, email encryption, email continuity, Microsoft 365, migration,
+        email threat and intelligence, web protection, secure hosted exchange, Office
+        365, email archiving and compliance, and DNS hosting plus. It serves healthcare,
+        insurance, legal, financial, telecommunications and non-profit and public
+        sectors.","foundingYear":2002,"location":"Gulf Breeze, Florida, United States,
+        32561","city":"Gulf Breeze","state":"Florida","postalCode":"32561","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"850-932-5338","specialties":["email
+        and web security","saas","spam filtering","malware filtering","antiphishing","office
+        365","msp","cybersecurity","secure hosted exchange","reseller","email continuity","email
+        encryption","it software","b2b services","email security","microsoft office
+        365 resellers","email anti-spam","security","value-added resellers (vars)","system
+        security","information technology","microsoft channel partners","cloud email
+        security"],"facebook":"https://www.facebook.com/appriver","twitter":"https://twitter.com/appriver","crunchbase":"https://www.crunchbase.com/organization/appriver","linkedIn":"https://www.linkedin.com/company/appriver","totalAmountInvested":0,"currentEmployeeCount":240,"currentEmployeeRange":"201-500","currentJobOpenings":7,"investors":null,"personalTags":[],"firmTags":[]},{"id":"W4L7PGOE","companyType":"Gov
+        Agency","name":"Privacy Commissioner of Canada","informalName":"Privacy Commissioner
+        of Canada","website":"https://www.ipc.on.ca","domain":"ipc.on.ca","description":"Privacy
+        Commissioner of Canada role of the Information is set out in three statutes:
+        the Freedom of Information and Protection of Privacy Act, the Municipal Freedom
+        of Information and Protection of Privacy Act and the Personal Health Information
+        Protection Act. The IPC acts independently of government to uphold and promote
+        open government and the protection of personal privacy.","foundingYear":1987,"location":"Toronto,
+        Ontario, Canada, M4W 1A8","city":"Toronto","state":"Ontario","postalCode":"M4W
+        1A8","country":"Canada","parentCompanyDomain":null,"phoneNumber":"819-994-5444","specialties":["government
+        administration"],"facebook":"https://www.facebook.com/ipcontario","twitter":"https://twitter.com/ipcinfoprivacy","crunchbase":null,"linkedIn":"https://www.linkedin.com/company/office-of-the-information-and-privacy-commissioner---ontario-canada","totalAmountInvested":0,"currentEmployeeCount":81,"currentEmployeeRange":"51-200","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"07LNRMOR","companyType":"Private","name":"G2
+        Deployment Advisors, LLC","informalName":"G2","website":"http://g2da.com","domain":"g2da.com","description":"G2
+        Deployment Advisors, LLC is an authoritative source for network security,
+        security policy automation, firewall, and network change management and security
+        intelligence. It is a full-service provider including enterprise solution
+        sales, implementation, and process design, deployment and training of fully
+        vetted solutions.","foundingYear":2014,"location":"Westborough, Massachusetts,
+        United States, 01581","city":"Westborough","state":"Massachusetts","postalCode":"01581","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"617-834-5365","specialties":["customer
+        facing outside sales","design and deployment experience","executive level
+        and down","extensive","information security","investmentbanking","assetmanagement"],"facebook":null,"twitter":null,"crunchbase":null,"linkedIn":"https://www.linkedin.com/company/g2-deployment-advisors-llc","totalAmountInvested":0,"currentEmployeeCount":6,"currentEmployeeRange":"1-10","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"YML0E3LW","companyType":"Private
+        Sub","name":"Arlington Industries, Inc.","informalName":"Arlington Industries,","website":"https://arli.com","domain":"arli.com","description":"Arlington
+        Industries, Inc. is a wholesale distributor, engages in distributing OEM imaging
+        supplies for resellers in the United States. The company offers office consumables,
+        including laser, fax, copier, and ribbons supplies, as well as toner and inkjet
+        cartridges.","foundingYear":1972,"location":"Waukegan, Illinois, United States,
+        60087","city":"Waukegan","state":"Illinois","postalCode":"60087","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"800-887-3040","specialties":["oem
+        & compatible imaging supplies and new and refurbished office machines","wholesale"],"facebook":"https://www.facebook.com/arlingtonindustries","twitter":"https://twitter.com/arlidotcom","crunchbase":null,"linkedIn":"https://www.linkedin.com/company/arlington-industries","totalAmountInvested":0,"currentEmployeeCount":86,"currentEmployeeRange":"201-500","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"XMDRK4O8","companyType":"Private
+        Sub","name":"Privacy Analytics, Inc.","informalName":"Privacy Analytics","website":"https://privacy-analytics.com","domain":"privacy-analytics.com","description":"Privacy
+        Analytics, Inc. provides data anonymization software solutions for healthcare
+        organizations, insurance, and medical claims providers, and medical device
+        manufacturers to safeguard and enable data for secondary purposes. It offers
+        PARAT, an integrated de-identification and data masking software that de-identifies
+        structured and unstructured personal data, clinical databases, and health
+        claims databases for various secondary usage activities, such as analysis,
+        research, quality and safety measurement, public health, payment, provider
+        certification or accreditation, marketing, and other business applications
+        for privacy officers.","foundingYear":2007,"location":"Ottawa, Ontario, Canada,
+        K1S 5J9","city":"Ottawa","state":"Ontario","postalCode":"K1S 5J9","country":"Canada","parentCompanyDomain":null,"phoneNumber":"613-369-4313","specialties":["hipaa
+        compliant de-identification and masking of health data and hipaa certification
+        services including re-identification risk assessment","enterprisesoftware&amp;networksolutions","enterprisesoftware","networksolutions",""],"facebook":null,"twitter":"https://twitter.com/privacyanalytic","crunchbase":"https://www.crunchbase.com/organization/privacy-analytics","linkedIn":"https://www.linkedin.com/company/privacy-analytics-inc-","totalAmountInvested":4900000,"currentEmployeeCount":126,"currentEmployeeRange":"11-50","currentJobOpenings":0,"investors":"BDC
+        Venture Capital, Business Development Bank of Canada, MaRS Investment Accelerator
+        Fund, Ontario Institute for Cancer Research, Vanedge Capital, Vanedge Capital,
+        Inc.","personalTags":[],"firmTags":[]},{"id":"79DQ07DE","companyType":"Private","name":"GuidePoint
+        Security, LLC","informalName":"GuidePoint Security","website":"https://www.guidepointsecurity.com","domain":"guidepointsecurity.com","description":"GuidePoint
+        Security, LLC provides cybersecurity solutions to commercial and federal organizations.
+        The company offers application security, cloud security, governance, risk,
+        and compliance, security risk analytics, security architecture and threat
+        and attack stimulation services. It provides identity and access management
+        and insider threat solutions.","foundingYear":2011,"location":"Herndon, Virginia,
+        United States, 20171","city":"Herndon","state":"Virginia","postalCode":"20171","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"877-889-0132","specialties":["application
+        security","cloud security","data security & privacy","dlp","grc","identity
+        & access management","ips & ids","ir","mobile security","pci","penetration
+        testing","risk assessments","siem","vpn","vulnerability assessments","vulnerability
+        management","wireless security","it services"],"facebook":"https://www.facebook.com/guidepointsec","twitter":"https://twitter.com/guidepointsec","crunchbase":"https://www.crunchbase.com/organization/guidepoint-security","linkedIn":"https://www.linkedin.com/company/guidepoint-security","totalAmountInvested":0,"currentEmployeeCount":336,"currentEmployeeRange":"201-500","currentJobOpenings":109,"investors":"ABS
+        Capital Partners, Inc.","personalTags":[],"firmTags":[]},{"id":"ZYLZ84D4","companyType":"Non-Profit","name":"High
+        Technology Crime Investigation Association, Inc. (HTCIA)","informalName":"HTCIA","website":"https://htcia.org","domain":"htcia.org","description":"High
+        Technology Crime Investigation Association, Inc. (HTCIA) is a leader in professional
+        organizations devoted to the prevention, investigation, and prosecution of
+        crimes involving advanced technologies. Protecting Critical Infrastructure,
+        which includes the generation of electricity, water, sewer, food production,
+        and transportation is one of the association''s primary focuses.","foundingYear":1986,"location":"Roseville,
+        California, United States, 95747","city":"Roseville","state":"California","postalCode":"95747","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"916-408-1751","specialties":["list
+        serve","international conference and training expo","38 domestic and international
+        chapters","government"],"facebook":"https://www.facebook.com/htcia","twitter":"https://twitter.com/htcia","crunchbase":"https://www.crunchbase.com/organization/high-technology-crime-investigators-association","linkedIn":"https://www.linkedin.com/company/htcia","totalAmountInvested":0,"currentEmployeeCount":58,"currentEmployeeRange":"1-10","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"20L5R0DX","companyType":"Private
+        Sub","name":"Rust Consulting","informalName":"Rust Consulting","website":"http://www.rustconsulting.com","domain":"rustconsulting.com","description":"Rust
+        provides consulting and administration services to clients such as law firms,
+        companies across all industries, and governmental agencies at all levels.
+        With a deep history in legal settlement administration, Rust also assists
+        clients with other complex and time-sensitive matters such as data breach
+        responses, recalls, and internal compliance remediation programs. Organized
+        into practice areas, our structure, expertise, and experience aligns with
+        our clients'' needs. Further, our practice-area leaders include some of the
+        most experienced and knowledgeable professionals in the industry.","foundingYear":1976,"location":"Minneapolis,
+        Minnesota, United States, 55405","city":"Minneapolis","state":"Minnesota","postalCode":"55405","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"800-999-7940","specialties":["claims
+        processing and adjudication","contact centers","data management","fund distribution","legal
+        notification","preliminary consultation","proactive client service","accounting",""],"facebook":null,"twitter":"https://twitter.com/RustConsulting","crunchbase":null,"linkedIn":"https://www.linkedin.com/company/rust-consulting","totalAmountInvested":0,"currentEmployeeCount":237,"currentEmployeeRange":"201-500","currentJobOpenings":1,"investors":null,"personalTags":[],"firmTags":[]},{"id":"1QL9RXO4","companyType":"Private","name":"Kinesis
+        Identity Security System dba URQUi","informalName":"URQUi","website":"https://urqui.com","domain":"urqui.com","description":"Kinesis
+        Identity Security System doing business as URQUi, a wholly owned product and
+        trademark of Kinesis Identity Security System Inc.  has been developed to
+        meet the needs of identity security and privacy throughout the world. URQUi
+        is based on ephemeral numbers, that are used as keys to identify individuals.
+        URQUi is a free app that protects software hacking,fraud and identity theft.","foundingYear":2012,"location":"Vancouver,
+        British Columbia, Canada, V5Y 2C3","city":"Vancouver","state":"British Columbia","postalCode":"V5Y
+        2C3","country":"Canada","parentCompanyDomain":null,"phoneNumber":"877-640-5477","specialties":["hacking
+        prevention","identity theft prevention","on-line security for individuals","otp
+        (one time passwords)","tfa (two factor autentication)","user login autentication"],"facebook":"https://www.facebook.com/pages/urqui/492619754097515","twitter":"https://twitter.com/urqui","crunchbase":null,"linkedIn":"https://www.linkedin.com/company/2715789","totalAmountInvested":0,"currentEmployeeCount":4,"currentEmployeeRange":"1-10","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"ZKOYKXDN","companyType":"Private","name":"21st
+        Century Transport, Ltd.","informalName":"21st Century Transport","website":"http://www.21stcenturytransport.co.uk","domain":"21stcenturytransport.co.uk","description":"21st
+        Century Transport, Ltd. offers technology logistics services. It offers movement
+        and placement of technology and other sensitive equipment. The company''s
+        services include technology migration, specialist final placement, data centre
+        decommissioning, collection, warehousing, and storage.","foundingYear":1925,"location":"Raleigh,
+        North Carolina, United States, 27603","city":"Raleigh","state":"North Carolina","postalCode":"27603","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"","specialties":["and storage","collection","data
+        centre decommissioning","specialist final placement","technology migration","warehousing"],"facebook":null,"twitter":null,"crunchbase":null,"linkedIn":"https://www.linkedin.com/company/21st-century-transportation","totalAmountInvested":0,"currentEmployeeCount":3,"currentEmployeeRange":"1-10","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"NJOXK9L2","companyType":"Private","name":"2BM
+        A/S","informalName":"2BM","website":"https://2bm.com","domain":"2bm.com","description":"2BM
+        A/S operates as an SAP and mobility consultancy. The company specializes in
+        SAP Human Capital Management (HCM) and mobility technologies. It provides
+        services for SAP, Microsoft, Dynamics AX, Dynamics NAV, and Oracle products;
+        and project management and delivery services.","foundingYear":2000,"location":"Copenhagen,
+        Region Hovedstaden, Denmark","city":"Copenhagen","state":"Region Hovedstaden","postalCode":null,"country":"Denmark","parentCompanyDomain":null,"phoneNumber":"","specialties":["SAP
+        Human Capital Management","Enterprise Mobility","Business Process Outsourcing","Freelance
+        Consulting","Project Management and Delivery"],"facebook":"https://www.facebook.com/2bm.dk","twitter":"https://twitter.com/2bm_as","crunchbase":"https://www.crunchbase.com/organization/2bm-a-s","linkedIn":"https://www.linkedin.com/company/2bm","totalAmountInvested":0,"currentEmployeeCount":82,"currentEmployeeRange":"51-200","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"06O20XD2","companyType":"Private
+        Sub","name":"4Energy, Ltd.","informalName":"4Energy","website":"http://www.4energy.co.uk","domain":"4energy.co.uk","description":"4energy,
+        Ltd. develops energy cooling systems and platforms for telecommunications
+        and equipment rooms, data centers, and monitoring and control systems in equipment
+        rooms. The company develops SMARTset, which is a IoT platform that offers
+        connectivity, analysis, and control across industrial and commercial asset
+        types and focuses on the industrial and commercial built environment such
+        as communication rooms, base stations, data centers and demand side response
+        initiatives. It develops a patent protected free air cooling system COOLflow
+        that contains a maintenance free air filter for unattended equipment rooms.","foundingYear":2005,"location":"London,
+        England, United Kingdom","city":"London","state":"England","postalCode":null,"country":"United
+        Kingdom","parentCompanyDomain":null,"phoneNumber":"","specialties":["controlling","intelligent
+        energy management solutions","low energy cooling","monitoring","optimising
+        energy and functionality of cooling equipment"],"facebook":null,"twitter":"https://twitter.com/4energygroup","crunchbase":"https://www.crunchbase.com/organization/4energy","linkedIn":"https://www.linkedin.com/company/4energy","totalAmountInvested":9719920,"currentEmployeeCount":24,"currentEmployeeRange":"51-200","currentJobOpenings":0,"investors":"British
+        Gas, Catapult Ventures, ETF Partners, ETF Partners, LLP","personalTags":[],"firmTags":[]},{"id":"ZELPZ1OY","companyType":"Public
+        Sub","name":"Acal BFi, Ltd.","informalName":"Acal BFi","website":"http://www.acalbfi.com","domain":"acalbfi.com","description":"Acal
+        BFi, Ltd. distributes electronic components, computer and storage products,
+        and printed circuit boards. The company is a supplier of lasers; galvanometric,
+        acousto-optic and polygon scanners; Ultra-Violet, and Infrared (IR) spectroscopy
+        systems; wavemeters; IR cameras; power meters; imaging systems; optical surface
+        measurement systems; laser diodes; fiber optic components including, laser
+        systems and measuring equipment; optical components including lenses, diffusers,
+        and laser goggles.","foundingYear":1978,"location":"Dietzenbach, Germany","city":"Dietzenbach","state":null,"postalCode":null,"country":"Germany","parentCompanyDomain":null,"phoneNumber":"","specialties":["specialist
+        electronic component distributor","custom service","design capabilities","enterprisesoftware","networksolutions"],"facebook":"https://www.facebook.com/acalbfi","twitter":"https://twitter.com/acalbfi","crunchbase":"https://www.crunchbase.com/organization/acal-technology","linkedIn":"https://www.linkedin.com/company/acalbfi","totalAmountInvested":0,"currentEmployeeCount":214,"currentEmployeeRange":"501-1000","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"W4L7Y4OE","companyType":"Public
+        Sub","name":"Adaptec, Inc.","informalName":"Adaptec","website":"https://www.adaptec.com","domain":"adaptec.com","description":"Adaptec,
+        Inc., provides trusted storage solutions that reliably move, manage, and protect
+        critical data and digital content. Its software and hardware-based solutions
+        are delivered through leading Original Equipment Manufacturers (OEMs) and
+        channel partners to provide storage connectivity, data protection, and networked
+        storage to enterprises, government organizations, medium and small businesses
+        worldwide.","foundingYear":1984,"location":"Sunnyvale, California, United
+        States, 94085","city":"Sunnyvale","state":"California","postalCode":"94085","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"408-239-8000","specialties":["sas","sata","scsi
+        raid controllers and hbas","storage software","enterprise software","network
+        solutions","enterprisesoftware","networksolutions",""],"facebook":null,"twitter":"https://twitter.com/adaptec_by_pmc","crunchbase":"https://www.crunchbase.com/organization/adaptec#section-overview","linkedIn":"https://www.linkedin.com/company/adaptec","totalAmountInvested":0,"currentEmployeeCount":183,"currentEmployeeRange":"51-200","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"07LN7JOR","companyType":"Private
+        Equity","name":"Adler and Allan, Ltd.","informalName":"Adler and Allan","website":"https://www.adlerandallan.co.uk","domain":"adlerandallan.co.uk","description":"Adler
+        and Allan, Ltd. provides oil and environmental services in the United Kingdom.
+        The company offers environmental response services; environmental waste services,
+        including commercial and industrial waste collection, treatment, and disposal
+        services; tankering services; environmental consulting services, including
+        maintaining and testing storage tanks and pollution control equipment, and
+        cleaning up of contaminated sites and spill response and training services.","foundingYear":1926,"location":"Harrogate,
+        England, United Kingdom","city":"Harrogate","state":"England","postalCode":null,"country":"United
+        Kingdom","parentCompanyDomain":null,"phoneNumber":"","specialties":["environmental
+        services","mechanical and electrical services","specialist fuel services","forecourt
+        services","flood defence and mitigation","asset resilience","environmental
+        protection","emergency response","flood risk management","spill response","building","personnel
+        services","personnelservices",""],"facebook":"https://www.facebook.com/adler-allan-221060141594530","twitter":"https://twitter.com/adlerandallan","crunchbase":"https://www.crunchbase.com/organization/adler-allan-group","linkedIn":"https://www.linkedin.com/company/adler-and-allan-ltd","totalAmountInvested":0,"currentEmployeeCount":274,"currentEmployeeRange":"501-1000","currentJobOpenings":0,"investors":"LDC
+        (Managers) Ltd","personalTags":[],"firmTags":[]},{"id":"4NLJ7GD0","companyType":"Private","name":"Clarity
+        Group","informalName":"Clarity Group","website":"http://www.claritygroupinc.com","domain":"claritygroupinc.com","description":"Clarity
+        Group operates as a private company. The Company works to provide its clients
+        with consulting services. It specializes in working with non-profit and faith-based
+        organization as well as consumer-facing companies of all sizes.","foundingYear":2006,"location":"Chapel
+        Hill, North Carolina, United States, 27514","city":"Chapel Hill","state":"North
+        Carolina","postalCode":"27514","country":"United States","parentCompanyDomain":null,"phoneNumber":"919-932-6036","specialties":["consulting","faith-based","marketing","non-profit","strategy"],"facebook":null,"twitter":null,"crunchbase":null,"linkedIn":"https://www.linkedin.com/company/clarity-group_2","totalAmountInvested":0,"currentEmployeeCount":1,"currentEmployeeRange":"1-10","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"79DQKQDE","companyType":"Venture
+        Capital","name":"i2i Systems","informalName":"i2i Systems","website":"http://i2i-systems.com","domain":"i2i-systems.com","description":"i2i
+        Systems is an international information technologies company that creates
+        innovative ideas, transforms them into integration and provides the best quality
+        solutions with its highly experienced team in the Telecommunications industry.
+        It offers a variety of services in OSS and BSS domains, as well as delivering
+        System Integration projects across the whole IT Telecom domain. It integrates
+        multiple systems for inputting, processing, interpreting, storing, categorizing
+        and cleansing data by using professional program management and delivery methodologies
+        called \"PMBOX\" and \"SIBOX\".","foundingYear":2007,"location":"Istanbul,
+        Istanbul, Turkey","city":"Istanbul","state":"Istanbul","postalCode":null,"country":"Turkey","parentCompanyDomain":null,"phoneNumber":"","specialties":["consultancy
+        services","data warehouse","quality assurance and testing","software & system
+        development","system integration","telecommunications billing"],"facebook":null,"twitter":"https://twitter.com/i2isystems","crunchbase":"https://www.crunchbase.com/organization/i2i-systems","linkedIn":"https://www.linkedin.com/company/i2i-systems","totalAmountInvested":5100000,"currentEmployeeCount":263,"currentEmployeeRange":"201-500","currentJobOpenings":0,"investors":"Extraprise
+        Group Inc.","personalTags":[],"firmTags":[]},{"id":"M4O81PLR","companyType":"Private","name":"Advanced
+        Power Care Ltd.","informalName":"Advanced power care","website":"https://www.powercare.co.uk","domain":"powercare.co.uk","description":"Advanced
+        Battery Care Limited provides battery management and maintenance services
+        to a wide variety of industries and in association with our partner Global
+        Energy Innovations, supplies precision battery test, monitoring and conditioning
+        equipment and the software that goes with it. They provide these products
+        and services to telecommunication operators, power generation plants and utilities,
+        uninterruptible power system maintainers, automobile manufacturers, aviation
+        technicians, industrial battery manufacturers and many other battery users.","foundingYear":1994,"location":"Westbury,
+        England, United Kingdom, SY5","city":"Westbury","state":"England","postalCode":"SY5","country":"United
+        Kingdom","parentCompanyDomain":null,"phoneNumber":"","specialties":["advanced
+        technology battery monitoring","branch circuit monitoring","electrochemical
+        battery analysers","increasing battery management quality","installation of
+        ups","battery systems","reducing battery management cost"],"facebook":null,"twitter":null,"crunchbase":null,"linkedIn":"https://www.linkedin.com/company/advanced-power-care","totalAmountInvested":0,"currentEmployeeCount":1,"currentEmployeeRange":"1-10","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"3ED4WWON","companyType":"Private
+        Sub","name":"Aermec S.p.A.","informalName":"Aermec","website":"https://global.aermec.com","domain":"global.aermec.com","description":"Aermec
+        S.p.A. manufactures and markets air conditioning solutions for domestic and
+        commercial applications. It offers split and multi split systems, portable
+        units, dehumidifiers, water cooled air conditioners, fan coils, thermo-convectors,
+        air handling units, independent systems, air-cooled chillers and heat pumps,
+        water-cooled chillers and heat pumps, rooftops, packaged air conditioners,
+        precision air conditioning units, heat recovery units, central air handling
+        units, and components for air conditioning plants.","foundingYear":1961,"location":"Bevilacqua,
+        Veneto, Italy, 37040","city":"Bevilacqua","state":"Veneto","postalCode":"37040","country":"Italy","parentCompanyDomain":null,"phoneNumber":"","specialties":["machinery"],"facebook":"https://www.facebook.com/aermecofficial","twitter":"https://twitter.com/aermecchannel","crunchbase":null,"linkedIn":"https://www.linkedin.com/company/aermec-spa","totalAmountInvested":0,"currentEmployeeCount":136,"currentEmployeeRange":"51-200","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"MNDEQ0D4","companyType":"Private","name":"AF
+        Switchgear, Ltd.","informalName":"AF Switchgear","website":"http://www.afswitchgear.co.uk","domain":"afswitchgear.co.uk","description":"AF
+        Switchgear, Ltd. designs and manufactures switchgear and control systems for
+        electrical projects in Europe and internationally. The company offers medium
+        voltage switchgear, low voltage switchgear, package substations, power distribution
+        units (PDUs), control panels and ATS, and containerized power supplies. It
+        also provides system monitoring and controlling services; isolated, non-invasive
+        monitoring and verification, and PMS/EMS services; support and training; surveys;
+        maintenance contracts; and retrofits and extensions.","foundingYear":1974,"location":"Sutton
+        in Ashfield, England, United Kingdom, NG17","city":"Sutton in Ashfield","state":"England","postalCode":"NG17","country":"United
+        Kingdom","parentCompanyDomain":null,"phoneNumber":"","specialties":["fabrication
+        and paint","software development"],"facebook":"https://www.facebook.com/pages/af-switchgear-ltd/233346820152821","twitter":"https://twitter.com/afswitchgear","crunchbase":"https://www.crunchbase.com/organization/af-switchgear-ltd","linkedIn":"https://www.linkedin.com/company/af-switchgear-limited","totalAmountInvested":0,"currentEmployeeCount":49,"currentEmployeeRange":"51-200","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"0VD10WOX","companyType":"Private
+        Sub","name":"Medical Interactive Community, LLC","informalName":"Medical Interactive
+        Community","website":"https://www.medicalinteractive.net","domain":"medicalinteractive.net","description":"Medical
+        Interactive Community, LLC is a company that provides healthcare risk management
+        software, solutions and continuing medical and nursing education to the medical
+        community. It is a collection of up-to-date interactive tools, and educational
+        e-learning presentations, videos, manuals and consultation services.","foundingYear":2011,"location":"Metairie,
+        Louisiana, United States, 70002","city":"Metairie","state":"Louisiana","postalCode":"70002","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"855-464-7475","specialties":["continuing
+        nursing education","continuing medical education","maintenance of certification","learning
+        management system","risk management education","patient safety education","administrative
+        reporting","healthcare services","hospitals","healthcareservices",""],"facebook":"https://www.facebook.com/medicalinteractive","twitter":"https://twitter.com/medinteractive","crunchbase":null,"linkedIn":"https://www.linkedin.com/company/medical-interactive-community","totalAmountInvested":0,"currentEmployeeCount":10,"currentEmployeeRange":"11-50","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"NJOXX9O2","companyType":"Private","name":"Air@work","informalName":null,"website":"https://airatwork.com","domain":"airatwork.com","description":"Air@Work
+        is a producer for air cooling with low maintenance costs and investment which
+        cools reliable computer spaces, data centers and utility buildings with the
+        StatiqCooling Technology. The company is a manufacturer of air cooling systems,
+        which cools computer rooms, data centers and utility buildings with low investment
+        and maintenance costs.","foundingYear":2008,"location":"Woerden, Provincie
+        Utrecht, Netherlands, 1802","city":"Woerden","state":"Provincie Utrecht","postalCode":"1802","country":"Netherlands","parentCompanyDomain":null,"phoneNumber":"","specialties":["Indirecte
+        adiabatische koelsystemen","Groene koeling and Data center koeling"],"facebook":"https://www.facebook.com/airatwork","twitter":"https://twitter.com/air_atwork","crunchbase":null,"linkedIn":"https://www.linkedin.com/company/air-work","totalAmountInvested":0,"currentEmployeeCount":2,"currentEmployeeRange":"11-50","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"06O2VXO2","companyType":"Public
+        Sub","name":"Airedale International Air Conditioning, Ltd.","informalName":"Airedale
+        International Air Conditioning","website":"https://www.airedale.com","domain":"airedale.com","description":"Airedale
+        International Air Conditioning, Ltd. researches, designs, and manufactures
+        chillers, precision air conditioning (close control), and comfort products.
+        It offers air conditioning and precision air conditioning products; chillers;
+        air-cooled, water-cooled, and remote condenser chillers; chilled water cassettes;
+        IT cooling solutions; and condensers and condensing units for data center,
+        server room, ISP facility, clean room, laboratory, hospital, telecom switching
+        station, mobile telecom cabin, and process cooling applications.","foundingYear":1974,"location":"Leeds,
+        England, United Kingdom","city":"Leeds","state":"England","postalCode":null,"country":"United
+        Kingdom","parentCompanyDomain":null,"phoneNumber":"","specialties":["manufacturers
+        of integrated cooling solutions","air conditioning service & maintenance","air
+        handling units","air conditioning spares","precision air conditioning","air
+        conditioning & refrigeration training","chillers","air conditioning controls","industrialmanufacturing",""],"facebook":"https://www.facebook.com/airedaleairconditioning","twitter":"https://twitter.com/airedaleac","crunchbase":"https://www.crunchbase.com/organization/airedale-international-air-conditioning-ltd","linkedIn":"https://www.linkedin.com/company/airedale-international-air-conditioning-ltd","totalAmountInvested":0,"currentEmployeeCount":227,"currentEmployeeRange":"201-500","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"ZELPN1OY","companyType":"Private","name":"Airsys
+        Communications Technology, Ltd.","informalName":"Airsys Communications Technology","website":"https://www.airsys.co.uk","domain":"airsys.co.uk","description":"Airsys
+        Communications Technology, Ltd. is a global value-added distributor of Two-Way
+        Radio, Accessories and Network equipment. It delivers true value-added distribution
+        by providing efficient logistics, technical, sales and marketing support.
+        The company focuses on partnerships and success of its customers and manufacturers.","foundingYear":1992,"location":"Southampton,
+        England, United Kingdom","city":"Southampton","state":"England","postalCode":null,"country":"United
+        Kingdom","parentCompanyDomain":null,"phoneNumber":"","specialties":["two-way
+        radio","radio communication","distribution","motorola radio","peltor","446
+        radios","dmr","pmr","customer service","technical support","technical services","digital
+        radio","analogue radio","walkie-talkie","mobile radio","atex radio","hearing
+        protection","kenwood radio","icom","tait","industrialmanufacturing",""],"facebook":"https://www.facebook.com/airsyscommunications","twitter":"https://twitter.com/airsysuk","crunchbase":null,"linkedIn":"https://www.linkedin.com/company/airsys","totalAmountInvested":0,"currentEmployeeCount":54,"currentEmployeeRange":"11-50","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"2ZDKJXON","companyType":"Non-Profit","name":"Southcentral
+        Foundation (SCF)","informalName":"SCF","website":"https://www.southcentralfoundation.com","domain":"southcentralfoundation.com","description":"Southcentral
+        Foundation (SCF)  owns and operates healthcare centers and clinics for Native
+        and American Indian people living in Anchorage, Matanuska-Susitna Borough,
+        and nearby villages. The company''s centers and clinics provide services in
+        the areas of audiology, behavioral health, complementary medicine, dental,
+        elder programs, emergency, family health resources, family wellness warriors
+        initiative, health and wellness programs, home-based services, learning, native
+        men''s wellness, obstetrics and gynecology, optometry, pediatrics, pharmacy,
+        physical therapy, and exercise, primary care, research, traditional healing,
+        and other services.","foundingYear":1982,"location":"Anchorage, Alaska, United
+        States, 99508","city":"Anchorage","state":"Alaska","postalCode":"99508","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"907-729-4955","specialties":["health
+        care","integrated care","primary care","improvement innovation","population
+        health","value-based care","whole system transformation","membership organizations"],"facebook":"https://www.facebook.com/southcentralfoundation","twitter":"https://twitter.com/scfinsider","crunchbase":null,"linkedIn":"https://www.linkedin.com/company/southcentral-foundation","totalAmountInvested":0,"currentEmployeeCount":970,"currentEmployeeRange":"1001-5000","currentJobOpenings":158,"investors":null,"personalTags":[],"firmTags":[]},{"id":"W4L794DE","companyType":"Private","name":"AIT
+        Partnership Group, Ltd.","informalName":"AIT Partnership Group","website":"https://www.ait-pg.co.uk","domain":"ait-pg.co.uk","description":"AIT
+        Partnership Group, Ltd. is a leading provider of specialist technical knowledge
+        and system integration services for data centre facilities, wireless and network
+        infrastructures and digital signage. Services include; data centre design
+        and auditing, and data centre infrastructure management (DCIM) software, network
+        switching, wireless LAN, point-to-point laser and microwave links, real time
+        location asset tagging and digital signage solutions. AIT is committed to
+        providing customers with the best impartial advice, competitive pricing and
+        expert technical support helping them control, connect and communicate efficiently.","foundingYear":2002,"location":"Reading,
+        England, United Kingdom","city":"Reading","state":"England","postalCode":null,"country":"United
+        Kingdom","parentCompanyDomain":null,"phoneNumber":"","specialties":["broadcast
+        & control room infrastructure","byod & wireless guess access","cold aisle
+        containment","data centre audit","data centre design & build","data centre
+        infrastructure management","point to point wireless links","wired/wireless
+        network security","wireless networks"],"facebook":"https://www.facebook.com/aitpartnershipgroup","twitter":"https://twitter.com/aitpartnership","crunchbase":"https://www.crunchbase.com/organization/ait-partnership-group","linkedIn":"https://www.linkedin.com/company/ait-partnership-group-ltd","totalAmountInvested":0,"currentEmployeeCount":22,"currentEmployeeRange":"11-50","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"24OV10LV","companyType":"Private","name":"ARC:MC","informalName":null,"website":"http://www.arcmc.eu","domain":"arcmc.eu","description":"ARC:BIM
+        offers full BIM (Building Information Modelling) management, consultancy and
+        coordination duties, along with a host of supplementary services. Key to the
+        company''s successful project delivery is the full-time involvement of senior
+        management. Throughout the process its highly trained and experienced personnel
+        will assist the clients through the formative briefing process to ensure optimum,
+        world class design solutions, that exceed expectations.The company has  the
+        requisite skills to provide new build and refurbishment for private, commercial
+        and corporate entities.","foundingYear":2010,"location":"London, England,
+        United Kingdom","city":"London","state":"England","postalCode":null,"country":"United
+        Kingdom","parentCompanyDomain":null,"phoneNumber":null,"specialties":["architecture","bim
+        realisation","cdm","fit-out and refurbishment","interior design","structural
+        engineering","telecommunications"],"facebook":null,"twitter":"https://twitter.com/arcmcltd","crunchbase":null,"linkedIn":"https://www.linkedin.com/company/arc-mc-limited","totalAmountInvested":0,"currentEmployeeCount":21,"currentEmployeeRange":"11-50","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"YML0N6LW","companyType":"Non-Profit","name":"Virginia
+        Mason Institute","informalName":"Virginia Mason Institute","website":"https://www.virginiamasoninstitute.org","domain":"virginiamasoninstitute.org","description":"Virginia
+        Mason Institute provides education and training in lean tools and methods
+        proven to transform health care. Its certified lean experts help healthcare
+        leaders embed a sustainable lean culture that produces better care and improved
+        patient and staff satisfaction. The firm services include education that provides
+        a basic understanding of lean concepts and outcomes, hands-on lean training,
+        executive sessions, coaching and facilitation, hospital tours, and speakers.","foundingYear":2008,"location":"Seattle,
+        Washington, United States, 98101","city":"Seattle","state":"Washington","postalCode":"98101","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"206-341-1600","specialties":["Health
+        Care Transformation","Lean Health Care Coaching and Facilitation","Lean Education
+        and Training","CME and CNE Credits","Lean Facility Design","Patient Experience","Executive
+        Coaching","Ambulatory Flow","Patient Safety","Advanced Lean Training","Process
+        Management"],"facebook":"https://www.facebook.com/virginiamasoninstitute","twitter":"https://twitter.com/vm_institute","crunchbase":"https://www.crunchbase.com/organization/virginia-mason-institute","linkedIn":"https://www.linkedin.com/company/5236186","totalAmountInvested":0,"currentEmployeeCount":37,"currentEmployeeRange":"11-50","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"79DQ2QOE","companyType":"Private","name":"John
+        Kim & Associates","informalName":"JKA","website":"http://johnkimconsulting.com","domain":"johnkimconsulting.com","description":"John
+        Kim & Associates is an industry leaders in operations executives and lean
+        improvement experts driven to achieve results through operational excellence
+        and organizational development. The company has been implementing Lean in
+        Healthcare for 10+ years actively transforming Health Systems, Hospitals,
+        Medical Groups, Physician Practice, and many more.","foundingYear":2006,"location":"Davenport,
+        Iowa, United States, 52801","city":"Davenport","state":"Iowa","postalCode":"52801","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"563-650-3822","specialties":["healthcare","health
+        insurance","manufacturing","oil & gas","brokerageservices","insurancecarriers",""],"facebook":null,"twitter":null,"crunchbase":"https://www.crunchbase.com/organization/john-kim-associates","linkedIn":null,"totalAmountInvested":0,"currentEmployeeCount":8,"currentEmployeeRange":"1-10","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"20L5G6LX","companyType":"Private
+        Sub","name":"XpertHR USA","informalName":"XpertHR USA","website":"https://www.xperthr.com","domain":"xperthr.com","description":"XpertHR
+        USA is a leading global provider of comprehensive legal compliance services.
+        It provides comprehensive, authoritative and up-to-date guidance on employment
+        law and regulation across all jurisdictions, tailored to the needs of the
+        HR professional.","foundingYear":2012,"location":"New Providence, New Jersey,
+        United States, 07974","city":"New Providence","state":"New Jersey","postalCode":"07974","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"855-973-7847","specialties":["employment
+        law resources","hr resources","it software","other hr","hr","information technology","","publishing"],"facebook":"https://www.facebook.com/xperthr","twitter":"https://twitter.com/xperthr","crunchbase":null,"linkedIn":"https://www.linkedin.com/company/xperthr-usa","totalAmountInvested":0,"currentEmployeeCount":47,"currentEmployeeRange":"10000+","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"1VDM5KD2","companyType":"Non-Profit","name":"The
+        be.group, Inc.","informalName":"The be.group","website":"http://www.thebegroup.org","domain":"thebegroup.org","description":"The
+        be.group, Inc. a nonprofit company, operates senior living and senior housing
+        communities for older adults in California. It offers independent living,
+        residential, assisted living, memory care, skilled nursing, and rehabilitation
+        and respite services.","foundingYear":1955,"location":"Glendale, California,
+        United States, 91203","city":"Glendale","state":"California","postalCode":"91203","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"818-247-0420","specialties":["senior
+        living communities","assisted living","skilled nursing","home care","memory
+        care","affordable housing","residential living"],"facebook":"https://www.facebook.com/thebegroup","twitter":"https://twitter.com/begroupliving","crunchbase":"https://www.crunchbase.com/organization/the-be-group","linkedIn":"https://www.linkedin.com/company/the-be-group","totalAmountInvested":0,"currentEmployeeCount":102,"currentEmployeeRange":"1001-5000","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"ZELPP1LY","companyType":"Private","name":"Benchmark
+        Senior Living, LLC","informalName":"Benchmark Senior Living","website":"https://www.benchmarkseniorliving.com","domain":"benchmarkseniorliving.com","description":"Benchmark
+        Senior Living, LLC operates senior living communities. The company offers
+        various senior living options, such as independent living, assisted living
+        and respite care/short term care programs; and assisted living for memory
+        impaired.","foundingYear":1997,"location":"Wellesley, Massachusetts, United
+        States, 02482","city":"Wellesley","state":"Massachusetts","postalCode":"02482","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"781-489-7100","specialties":["creatively
+        improving the experience of senior living","independent living","assisted
+        living","memory care","skilled nursing","short stay programs","live well at
+        home programs","age in place","best place to work","healthcare services and
+        hospitals","healthcareservices","hospitals",""],"facebook":"https://www.facebook.com/benchmarkseniorliving","twitter":"https://twitter.com/benchmarksl","crunchbase":"https://www.crunchbase.com/organization/benchmark-senior-living","linkedIn":"https://www.linkedin.com/company/benchmarkseniorliving","totalAmountInvested":0,"currentEmployeeCount":1574,"currentEmployeeRange":"5001-10000","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"2ZDKPXON","companyType":"Private","name":"Bluestone
+        Physician Services, P.A.","informalName":"Bluestone Physician Services","website":"https://bluestonemd.com","domain":"bluestonemd.com","description":"Bluestone
+        Physician Services, P.A. is on the leading edge of healthcare delivery. The
+        company brings the highest-quality health care directly to residents in assisted
+        living communities, memory care, and group home communities. It specializes
+        in Physician Services, Care Coordination, Geriatrics, and Integrated Care.","foundingYear":2006,"location":"Stillwater,
+        Minnesota, United States, 55082","city":"Stillwater","state":"Minnesota","postalCode":"55082","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"877-599-1039","specialties":["physician
+        services","care coordination","geriatics","integrated care","health care","healthcare
+        services","hospitals"],"facebook":"https://www.facebook.com/bluestonephysicians","twitter":null,"crunchbase":"https://www.crunchbase.com/organization/bluestone-physician-services","linkedIn":"https://www.linkedin.com/company/bluestone-physician-services","totalAmountInvested":0,"currentEmployeeCount":203,"currentEmployeeRange":"201-500","currentJobOpenings":18,"investors":null,"personalTags":[],"firmTags":[]},{"id":"W4L7V4OE","companyType":"Private
+        Sub","name":"Creative Group, Inc.","informalName":"Creative Group","website":"https://www.creativegroupinc.com","domain":"creativegroupinc.com","description":"Creative
+        Group, Inc. operates as a performance improvement company. The company specializes
+        in engagement, incentive, and recognition solutions, and end-to-end meetings
+        and event management. It also serves automotive, healthcare/life sciences,
+        manufacturing, hospitality, financial services, technology, retail, insurance
+        and more.","foundingYear":1970,"location":"Schaumburg, Illinois, United States,
+        60173","city":"Schaumburg","state":"Illinois","postalCode":"60173","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"800-236-2800","specialties":["group
+        incentive travel","meeting & event management","strategic meetings management","sales
+        incentives","strategic sourcing & travel procurement","employee engagement","channel
+        loyalty","event technology & attendee management","behavioral analysis","rule
+        structure design","advertising&amp;marketing","","advertising","marketing"],"facebook":"https://www.facebook.com/creativegroupinc","twitter":"https://twitter.com/creativegroupin","crunchbase":"https://www.crunchbase.com/organization/creative-group-inc","linkedIn":"https://www.linkedin.com/company/creative-group-inc","totalAmountInvested":0,"currentEmployeeCount":266,"currentEmployeeRange":"201-500","currentJobOpenings":0,"investors":"","personalTags":[],"firmTags":[]},{"id":"YML0P6DW","companyType":"Private","name":"WorXsiteHR
+        Insurance Solutions, Inc. dba WorXsiteHR Administration Services","informalName":"WorXsiteHR","website":"http://www.worxsitehr.com","domain":"worxsitehr.com","description":"WorXsiteHR
+        Insurance Solutions, Inc. doing business as WorXsiteHR Administration Services
+        provides a free, integrated, web-based, private exchange and Enterprise Resource
+        Planning (ERP) solution to companies of all sizes. The company''s system includes
+        integrated payroll, scheduling, accounting, inventory management, point-of-sale,
+        and insurance. It offers a level of integration at an affordable price.","foundingYear":2013,"location":"Oxnard,
+        California, United States, 93035","city":"Oxnard","state":"California","postalCode":"93035","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"877-479-3591","specialties":["benefits
+        administration","hr administration","benefits enrollment","payroll","it software","hr","information
+        technology","core hr"],"facebook":"https://www.facebook.com/worxsitehr","twitter":"https://twitter.com/worxsitehr","crunchbase":"https://www.crunchbase.com/organization/worxsitehr","linkedIn":"https://www.linkedin.com/company/worxsitehr","totalAmountInvested":0,"currentEmployeeCount":10,"currentEmployeeRange":"51-200","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"79DQZQDE","companyType":"Private","name":"IRI
+        Consulting, LLC","informalName":"IRI Consulting","website":"http://www.iriconsulting.com","domain":"iriconsulting.com","description":"IRI
+        Consulting, LLC (IRI) is a human resources management consulting firm specializing
+        in employee engagement measurement. It offers post-survey follow-up consulting
+        services to help clients transform insights gained from employee feedback
+        into effective action plans that has a positive impact on the workplace environment,
+        and ultimately on business performance score cards.","foundingYear":1974,"location":"Plano,
+        Texas, United States, 75074","city":"Plano","state":"Texas","postalCode":"75074","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"800-552-7897","specialties":["company
+        leadership and direction","employee engagement","personal/professional fulfillment","rewards
+        & recognition","workplace environment"],"facebook":"https://www.facebook.com/iriconsulting","twitter":null,"crunchbase":null,"linkedIn":"https://www.linkedin.com/company/iri-consulting-llc","totalAmountInvested":0,"currentEmployeeCount":5,"currentEmployeeRange":"1-10","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"ZYLZ17O4","companyType":"Private","name":"2JCommerce,
+        Ltd.","informalName":"2JCommerce","website":"http://www.2jcommerce.com","domain":"2jcommerce.com","description":"2JCommerce,
+        Ltd. is a Cutting Edge Ecommerce Agency based in the heart of the UK specialists
+        in Magento Development, customization and code/performance audits working
+        with both Magento Community and Magento Enterprise. The company''s clients
+        range from smaller businesses looking to transition to the next stage of growth,
+        to much larger multinationals such as Cadbury Gifts Direct, O''Neill''s International
+        Sport, Bedeck Home and Jollye''s Pet Stores.","foundingYear":2010,"location":"Sheffield,
+        England, United Kingdom","city":"Sheffield","state":"England","postalCode":null,"country":"United
+        Kingdom","parentCompanyDomain":null,"phoneNumber":"","specialties":["Ecommerce
+        Web Design","Magento Hosting","Magento Enterprise","Magento Solution Specialist","Magento
+        Developer"],"facebook":"https://www.facebook.com/2jcommerce","twitter":"https://twitter.com/2jdesign","crunchbase":null,"linkedIn":"https://www.linkedin.com/company/3290676","totalAmountInvested":0,"currentEmployeeCount":16,"currentEmployeeRange":"51-200","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"3ED44WDN","companyType":"Private","name":"4
+        U Media, Ltd., dba A1 Media","informalName":"A1 Media","website":"https://www.a1mediamagazines.com","domain":"a1mediamagazines.com","description":"4
+        U Media, Ltd. doing business as A1 Media is an award-winning publishing company
+        publishing A1 Retail magazine. It publishes A1 Retail magazine and A1 Lighting
+        magazine. Its magazines are available to key buyers and specifiers in the
+        retail industry and are widely available at several trades shows every year.","foundingYear":2010,"location":"Essex
+        Road, England, United Kingdom, N1","city":"Essex Road","state":"England","postalCode":"N1","country":"United
+        Kingdom","parentCompanyDomain":null,"phoneNumber":"","specialties":["publishing","investmentbanking","assetmanagement"],"facebook":"https://www.facebook.com/a1retailmag","twitter":"https://twitter.com/a1retailmag","crunchbase":"https://www.crunchbase.com/organization/a1-retail-magazine","linkedIn":"https://www.linkedin.com/company/4-u-media-limited-t-a-a1-media/about","totalAmountInvested":0,"currentEmployeeCount":4,"currentEmployeeRange":"1-10","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"0VD1KWOX","companyType":"Private
+        Sub","name":"SumTotal Systems, LLC","informalName":"SumTotal Systems","website":"https://www.sumtotalsystems.com","domain":"sumtotalsystems.com","description":"SumTotal
+        Systems, LLC provides integrated human resource (HR) solutions. It offers
+        talent expansion for discovering and developing the hidden potential within
+        the workforce, sum total maestro, a learning management system, a workforce
+        management solution; and payroll, benefits, and expense management solutions.
+        The firm provides an elixir platform for workforce analytics and planning,
+        portals, and portlets, social, and mobile, employee profile, competency and
+        job model frameworks, employee directory and org charting, and development
+        planning, and integrates account management, and customer support services.","foundingYear":1985,"location":"Gainesville,
+        Florida, United States, 32606","city":"Gainesville","state":"Florida","postalCode":"32606","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"866-933-1416","specialties":["talent
+        expansion","workforce analytics","talent management","human resources","hr
+        management","learning","performance","compensation","succession planning","workforce
+        management","expense","payroll","mobile","social","human capital management","internet
+        and software","","computerhardware","software"],"facebook":"https://www.facebook.com/sumtotal.systems","twitter":"https://twitter.com/sumtotalsystems","crunchbase":"https://www.crunchbase.com/organization/sumtotal-systems","linkedIn":"https://www.linkedin.com/company/sumtotal-systems","totalAmountInvested":0,"currentEmployeeCount":1054,"currentEmployeeRange":"1001-5000","currentJobOpenings":4,"investors":"","personalTags":[],"firmTags":[]},{"id":"NJOXE9L2","companyType":"Private","name":"Advanced
+        Retail","informalName":"Advanced Retail","website":"http://artechnologies.co.uk","domain":"artechnologies.co.uk","description":"Advanced
+        Retail is an innovative UK-based company providing EPoS and supply chain software
+        and services.","foundingYear":2012,"location":"Ledbury, England, United Kingdom,
+        HR8","city":"Ledbury","state":"England","postalCode":"HR8","country":"United
+        Kingdom","parentCompanyDomain":null,"phoneNumber":null,"specialties":["epos","multi-channel
+        retail technology","supply chain software"],"facebook":null,"twitter":null,"crunchbase":null,"linkedIn":"https://www.linkedin.com/company/advanced-retail-uk-ltd","totalAmountInvested":0,"currentEmployeeCount":1,"currentEmployeeRange":"1-10","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"8ZLGJ0LE","companyType":"Venture
+        Capital","name":"Airangel, Ltd.","informalName":"Airangel","website":"https://www.airangel.com","domain":"airangel.com","description":"Airangel,
+        Ltd. is a hospitality company that provides Wi-Fi solutions for businesses.
+        It also offers cloud authentication and roaming, and Wi-Fi-as-a-Service solutions.","foundingYear":2005,"location":"Warrington,
+        England, United Kingdom","city":"Warrington","state":"England","postalCode":null,"country":"United
+        Kingdom","parentCompanyDomain":null,"phoneNumber":"","specialties":["hotel
+        wifi","apartment wifi","outdoor wifi","guest internet","mobile wifi","hospitality
+        wifi","conference and event wifi","guest wifi","wifi management","hotel wifi
+        provider","cloud managed wifi","enterprisesoftware","networksolutions",""],"facebook":"https://www.facebook.com/airangelwifi","twitter":"https://twitter.com/airangel","crunchbase":"https://www.crunchbase.com/organization/airangel-wifi","linkedIn":"https://www.linkedin.com/company/airangel","totalAmountInvested":2130000,"currentEmployeeCount":46,"currentEmployeeRange":"11-50","currentJobOpenings":0,"investors":"Santander
+        Corporate & Commercial","personalTags":[],"firmTags":[]},{"id":"06O25XO2","companyType":"Venture
+        Capital","name":"Akeneo SAS","informalName":"Akeneo","website":"https://www.akeneo.com","domain":"akeneo.com","description":"Akeneo
+        SAS develops a product information management platform designed to manage
+        in-store product information online as well as offline. The company''s cloud-based
+        open-source platform centralizes and harmonizes all the marketing and technical
+        information for product listings and catalogs. It enables retailers and corporate
+        brands to deliver an enriched customer experience across all sales channels,
+        including e-commerce, mobile, print, and retail points of sale.","foundingYear":2013,"location":"Nantes,
+        Pays de la Loire, France","city":"Nantes","state":"Pays de la Loire","postalCode":null,"country":"France","parentCompanyDomain":null,"phoneNumber":"","specialties":["product
+        information management","data quality","product experience management","customer
+        experience management","product content management","print catalogs","digital
+        catalogs","product asset management","tech services","computer hardware","software",""],"facebook":"https://www.facebook.com/akeneopim","twitter":"https://twitter.com/akeneopim","crunchbase":"https://www.crunchbase.com/organization/akeneo","linkedIn":"https://www.linkedin.com/company/akeneo","totalAmountInvested":61410104,"currentEmployeeCount":207,"currentEmployeeRange":"51-200","currentJobOpenings":0,"investors":"Alven
+        Capital, Impact USA, Kima Ventures, Nestadio Capital, Partech Ventures, Salesforce
+        Ventures, Stephan Dietrich, Summit Partners","personalTags":[],"firmTags":[]},{"id":"1VDM0KL2","companyType":"Public
+        Sub","name":"Anders Plus Kern UK, Ltd.","informalName":"Anders Plus Kern UK,
+        Ltd.","website":"https://www.anders-kern.co.uk","domain":"anders-kern.co.uk","description":"Anders
+        Plus Kern UK, Ltd. is a leading distributor & integrator of audio visual solutions.
+        A+K is the chosen distributor of many leading brands, such as Mitsubishi and
+        SMS.","foundingYear":1989,"location":"Mildenhall, England, United Kingdom,
+        SN8","city":"Mildenhall","state":"England","postalCode":"SN8","country":"United
+        Kingdom","parentCompanyDomain":null,"phoneNumber":"","specialties":["digital
+        signage","interactive whiteboards","projection screens","room booking","technical
+        services","video walls"],"facebook":null,"twitter":"https://twitter.com/anderskernukltd","crunchbase":null,"linkedIn":"https://www.linkedin.com/company/542481","totalAmountInvested":0,"currentEmployeeCount":7,"currentEmployeeRange":"11-50","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"ZELPQ1OY","companyType":"Private
+        Equity","name":"Alien Technology, LLC","informalName":"Alien Technology","website":"https://www.alientechnology.com","domain":"alientechnology.com","description":"Alien
+        Technology, LLC is a manufacturer and supplier of radio frequency identification
+        (RFID) and ultra-high frequency (UHF) products, and services. The company
+        offers UHF passive RFID transceiver chips, tags, antennas, inlays and labels
+        and fixed, and mobile readers; and professional services for item tagging,
+        retail or apparel, transportation, life sciences, and other applications.","foundingYear":1994,"location":"San
+        Jose, California, United States, 95138","city":"San Jose","state":"California","postalCode":"95138","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"408-782-3900","specialties":["UHF
+        RFID IC''s","UHF RFID Inlays/Tags","UHF Fixed Readers","UHF Handheld Readers","RFID
+        Services including \"Alien Academy\"","Alien Academy"],"facebook":"https://www.facebook.com/alien-technology-corporation-109226159150063","twitter":"https://twitter.com/alienrfid","crunchbase":"https://www.crunchbase.com/organization/alien-technology","linkedIn":"https://www.linkedin.com/company/alien-technology","totalAmountInvested":454900000,"currentEmployeeCount":120,"currentEmployeeRange":"51-200","currentJobOpenings":2,"investors":"Forsythe,
+        H&S Ventures, Lago Ventures Fund, Datalogic, DuPont, Sunbridge Partners, Advanced
+        Equities, New Enterprise Associates, Kalaari Capital, Koninklijke Philips,
+        Shanghai Ruizhang Investment, Toray Industries, Rho Ventures, CMEA Capital,
+        Rho Capital Partners, Digital Bandwidth, Miami Valley Venture Fund, TradeInvest
+        Asset Management, Equitek Capital, SunBridge Partners, Inc., Equitek Capital,
+        Inc., Horizon Ventures","personalTags":[],"firmTags":[]},{"id":"2ZDK5XON","companyType":"Private","name":"Altodigital
+        Networks, Ltd.","informalName":"Altodigital","website":"https://www.altodigital.com","domain":"altodigital.com","description":"Altodigital
+        Networks, Ltd. supplies digital print and document management solutions, and
+        equipment and software solutions for companies in public and private sectors
+        in the United Kingdom. It offers hardware products, such as photocopiers,
+        multi-function printers, duplicators, fax machines, mono and color multi-function
+        products, wide formats, production devices, and image presses; office products;
+        digital displays; and color products.","foundingYear":1975,"location":"Kingswinford,
+        United Kingdom","city":"Kingswinford","state":null,"postalCode":null,"country":"United
+        Kingdom","parentCompanyDomain":null,"phoneNumber":"","specialties":["print
+        solutions","it managed services","communication solutions","document management","office
+        supplies","full national service provision","legal",""],"facebook":"https://www.facebook.com/altodigitalnetworks","twitter":"https://twitter.com/altodigital","crunchbase":null,"linkedIn":"https://www.linkedin.com/company/altodigital","totalAmountInvested":0,"currentEmployeeCount":254,"currentEmployeeRange":"501-1000","currentJobOpenings":0,"investors":"","personalTags":[],"firmTags":[]},{"id":"XWO696OP","companyType":"Private","name":"Amica
+        Distribution","informalName":"Amica Distribution","website":"http://www.amicadistribution.co.uk","domain":"amicadistribution.co.uk","description":"Amica
+        Distribution is a EPOS specialists. With several decades worth of experience
+        working in the industry, they can assist in staying ahead of the competitors.
+        Their aim is to assist with the tools and support needed to ensure the POS
+        solutions business operates smoothly.","foundingYear":2012,"location":"Putney,
+        England, United Kingdom, SW15","city":"Putney","state":"England","postalCode":"SW15","country":"United
+        Kingdom","parentCompanyDomain":null,"phoneNumber":null,"specialties":["clientpos","hardware
+        + software","information technology and services"],"facebook":null,"twitter":null,"crunchbase":null,"linkedIn":"https://www.linkedin.com/company/amica-distribution-limited","totalAmountInvested":0,"currentEmployeeCount":3,"currentEmployeeRange":"1-10","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"07LN8JDR","companyType":"Private","name":"Ampersand
+        Commerce, Ltd.","informalName":"Ampersand Commerce","website":"https://ampersandcommerce.com","domain":"ampersandcommerce.com","description":"Ampersand
+        Commerce Ltd., is an award-winning commerce agency that helps established
+        high street retailers build better online stores. It works with multi-channel
+        retailers, such as Harvey Nichols, Poundland and Bensons for Beds to help
+        increase conversion and efficiency through the strategic use of technology.","foundingYear":2009,"location":"Manchester,
+        England, United Kingdom","city":"Manchester","state":"England","postalCode":null,"country":"United
+        Kingdom","parentCompanyDomain":null,"phoneNumber":"","specialties":["PIM","Akeneo","Fredhopper","Multichannel
+        retail","Retail consultancy","CRO","Magento","Ecommerce Replatforming","Master
+        Data Management","Systems Integration","Mobile"],"facebook":"https://www.facebook.com/ampgrads","twitter":"https://twitter.com/ampersandhq","crunchbase":"https://www.crunchbase.com/organization/ampersand-commerce","linkedIn":"https://www.linkedin.com/company/ampersand-commerce","totalAmountInvested":0,"currentEmployeeCount":36,"currentEmployeeRange":"51-200","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"4NLJ0GO0","companyType":"Private","name":"Advanced
+        Network Security Ltd","informalName":null,"website":"https://www.ansecurity.com","domain":"ansecurity.com","description":"Advanced
+        Network Security Limited is a leading Security Integrator with over a decade
+        of experience providing best-of-breed technologies to meet the challenges
+        faced by today''s businesses. The company is expert in ensuring data is protected
+        from any kind of threat. It  provides solid and reliable foundations for all
+        networks, whether simple or complex.","foundingYear":2003,"location":"Basingstoke,
+        England, United Kingdom, RG21","city":"Basingstoke","state":"England","postalCode":"RG21","country":"United
+        Kingdom","parentCompanyDomain":null,"phoneNumber":null,"specialties":["information
+        technology and services","security integrator"],"facebook":null,"twitter":"https://twitter.com/ansecurity_uk","crunchbase":null,"linkedIn":"https://www.linkedin.com/company/advanced-network-security-ltd","totalAmountInvested":0,"currentEmployeeCount":26,"currentEmployeeRange":"11-50","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"YML0K6LW","companyType":"Private","name":"Fellowes,
+        Inc.","informalName":"Fellowes","website":"https://www.fellowes.com","domain":"fellowes.com","description":"Fellowes,
+        Inc. is a global manufacturer and marketer of office products industry that
+        develops, manufactures, and markets business machines, records storage solutions,
+        workplace management products, air purification, and mobile technology accessories
+        for both commercial and residential clients. The company offers shredders,
+        air purifiers and filters, air treatment systems, binding machines, laminators,
+        cutters and trimmers.","foundingYear":1917,"location":"Itasca, Illinois, United
+        States, 60143","city":"Itasca","state":"Illinois","postalCode":"60143","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"630-893-1600","specialties":["business
+        machines","office well-being","records storage","air treatment systems","mobile
+        device accessories","industrial manufacturing","","consumerproductsmanufacturing"],"facebook":"https://www.facebook.com/fellowesaustralia","twitter":null,"crunchbase":"https://www.crunchbase.com/organization/fellowes","linkedIn":"https://www.linkedin.com/company/fellowes","totalAmountInvested":0,"currentEmployeeCount":685,"currentEmployeeRange":"1001-5000","currentJobOpenings":1,"investors":null,"personalTags":[],"firmTags":[]},{"id":"M4O8GPOR","companyType":"Private","name":"Carlton
+        Senior Living","informalName":"Carlton Senior Living","website":"https://www.carltonseniorliving.com","domain":"carltonseniorliving.com","description":"Carlton
+        Senior Living provides exceptional senior apartments, assisted living and
+        dementia memory care throughout Northern California. The company is committed
+        to empowering its residents through its continuum of care services.","foundingYear":1982,"location":"Concord,
+        California, United States, 94519","city":"Concord","state":"California","postalCode":"94519","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"800-227-5866","specialties":["Senior
+        Living","Independent Senior Living Apartments","Assisted Living","Enhanced
+        Assisted Living","Dementia Memory Care","Respite Resort Stay","Diabetes Management"],"facebook":"https://www.facebook.com/carltonseniorlivingca","twitter":"https://twitter.com/carltonsrliving","crunchbase":null,"linkedIn":"https://www.linkedin.com/company/carlton-senior-living","totalAmountInvested":0,"currentEmployeeCount":234,"currentEmployeeRange":"1001-5000","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"RPLWZ0LE","companyType":"Non-Profit","name":"Northeast
+        Disaster Recovery Information X-Change (NEDRIX)","informalName":"NEDRIX","website":"https://www.nedrix.com","domain":"nedrix.com","description":"Northeast
+        Disaster Recovery Information X-Change (NEDRIX) is a non-profit organization
+        formed, that provides continuity and crisis management professionals access
+        to real-time governmental agencies information during a crisis or event. NEDRIX
+        also provides industry best practices and an opportunity to meet and share
+        ideas and experiences with peers through conferences and symposiums held throughout
+        the year.","foundingYear":1991,"location":"Barnstable, Massachusetts, United
+        States, 02630","city":"Barnstable","state":"Massachusetts","postalCode":"02630","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"401-954-7547","specialties":["automated
+        notification tool","crisis management"],"facebook":null,"twitter":"https://twitter.com/nedrixus","crunchbase":"https://www.crunchbase.com/organization/northeast-disaster-recovery-information-exchange","linkedIn":null,"totalAmountInvested":0,"currentEmployeeCount":144,"currentEmployeeRange":"51-200","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"3ED49WON","companyType":"Private","name":"Netanium,
+        Inc.","informalName":"Netanium","website":"http://www.netanium.com","domain":"netanium.com","description":"Netanium,
+        Inc. is a consulting and solutions provider for organizations of all sizes.
+        It assists clients with architecture and design, security and risk assessment,
+        regulatory compliance, security policy and program development, product sourcing,
+        implementation, ongoing maintenance, support, and training.","foundingYear":2002,"location":"Lowell,
+        Massachusetts, United States, 01851","city":"Lowell","state":"Massachusetts","postalCode":"01851","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"888-638-6638","specialties":["firewall
+        implementation and optimization","attack detection and analysis","cloud security","security
+        program development","b2b services","ibm channel partners","value-added resellers
+        (vars)","ibm security vars","information technology",""],"facebook":"https://www.facebook.com/netanium","twitter":"https://twitter.com/Netanium","crunchbase":null,"linkedIn":"https://www.linkedin.com/company/766760","totalAmountInvested":0,"currentEmployeeCount":6,"currentEmployeeRange":"51-200","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"1QL98XD4","companyType":"Public","name":"Centric
+        Health Corp.","informalName":"Centric Health","website":"http://www.centrichealth.ca","domain":"centrichealth.ca","description":"Centric
+        Health Corp. provides a wide range of care programs and services, specializing
+        in surgical and diagnostics, surgical weight loss, cosmetic surgery, orthotics,
+        primary care and pharmacy services. It current divisions include the specialty
+        pharmacy, surgical and medical centers division.","foundingYear":2001,"location":"Toronto,
+        Ontario, Canada, M4R 1K8","city":"Toronto","state":"Ontario","postalCode":"M4R
+        1K8","country":"Canada","parentCompanyDomain":null,"phoneNumber":"416-927-8400","specialties":["specialty
+        pharmacy","medical and surgical centers and orthodontics","healthcare services
+        hospitals","health care","healthcareservices","hospitals",""],"facebook":null,"twitter":"https://twitter.com/centrichealth1","crunchbase":"https://www.crunchbase.com/organization/centric-health-corp","linkedIn":"https://www.linkedin.com/company/centric-health-management","totalAmountInvested":0,"currentEmployeeCount":213,"currentEmployeeRange":"501-1000","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"MNDEM1O4","companyType":"Public","name":"Chartwell
+        Master Care, LP dba Chartwell Retirement Residences","informalName":"Chartwell
+        Retirement Residences","website":"https://chartwell.com","domain":"chartwell.com","description":"Chartwell
+        Master Care, LP doing business as Chartwell Retirement Residences is the largest
+        participant in seniors living in Canada. The company offers a range of senior
+        living options across Canada including independent and assisted living retirement
+        homes, memory care, long-term care, and extended care residences.","foundingYear":2003,"location":"Mississauga,
+        Ontario, Canada, L5R 4H1","city":"Mississauga","state":"Ontario","postalCode":"L5R
+        4H1","country":"Canada","parentCompanyDomain":null,"phoneNumber":"855-461-0685","specialties":["hospital
+        and health care","realestate",""],"facebook":"https://www.facebook.com/chartwellretirement","twitter":null,"crunchbase":"https://www.crunchbase.com/organization/chartwell-retirement-residences","linkedIn":"https://www.linkedin.com/company/chartwell-retirement-residences","totalAmountInvested":0,"currentEmployeeCount":2496,"currentEmployeeRange":"10000+","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"1QL98ED4","companyType":"Private","name":"Techni
+        and Contact Canada, Ltd.","informalName":"Techni and Contact Canada","website":"https://www.technicontact.com","domain":"technicontact.com","description":"Techni
+        and Contact Canada, Ltd. serves retailers in consumer electronics, as well
+        as distributing audio/video equipment and accessories for the custom installation
+        market. The company distribute a wide range of in-house and sub-distributed
+        product lines to be a one stop shop for all A/V needs.","foundingYear":1979,"location":"Calgary,
+        Alberta, Canada, T2R 0N1","city":"Calgary","state":"Alberta","postalCode":"T2R
+        0N1","country":"Canada","parentCompanyDomain":null,"phoneNumber":"866-320-9451","specialties":["consumer
+        electronics","distribution & logistics","pro-sound"],"facebook":"https://www.facebook.com/technicontact","twitter":"https://twitter.com/technicontact1","crunchbase":null,"linkedIn":"https://www.linkedin.com/company/techni-contact","totalAmountInvested":0,"currentEmployeeCount":18,"currentEmployeeRange":"11-50","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"NJOXR3O2","companyType":"Private","name":"Artcom
+        Productions","informalName":"Artcom Productions","website":"https://www.artcom.fr","domain":"artcom.fr","description":"Artcom
+        is an agency communication technology. Mastering different media like web,
+        video, and immersive mobile apps on touch screens and mobile platforms (iPhone,
+        iPad, Android, Blackberry), supported by its imaging expertise synthesis and
+        combined with long experience in e-business (commercial site, e-mailing, contests)
+        provide a suitable and personalized treatment to needs.","foundingYear":1998,"location":"Lille,
+        Hauts-de-France, France, 59000","city":"Lille","state":"Hauts-de-France","postalCode":"59000","country":"France","parentCompanyDomain":null,"phoneNumber":"","specialties":["digital
+        design studio","image and film 3d","web 3d"],"facebook":null,"twitter":null,"crunchbase":null,"linkedIn":"https://www.linkedin.com/company/artcom-productions","totalAmountInvested":0,"currentEmployeeCount":15,"currentEmployeeRange":"1-10","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"1VDM1EO2","companyType":"Non-Profit","name":"Clark
+        Retirement Community","informalName":"Clark Retirement Community","website":"https://www.clarkretirement.org","domain":"clarkretirement.org","description":"Clark
+        Retirement Community is offering a full complement of services and residential
+        options from independent living and assisted living to skilled nursing.","foundingYear":1906,"location":"Grand
+        Rapids, Michigan, United States, 49503","city":"Grand Rapids","state":"Michigan","postalCode":"49503","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"616-452-1568","specialties":["hospital
+        & health care","health care",""],"facebook":"https://www.facebook.com/ClarkRetirementCommunity","twitter":"https://twitter.com/clarkretirement","crunchbase":null,"linkedIn":"https://www.linkedin.com/company/clark-retirement-community","totalAmountInvested":0,"currentEmployeeCount":167,"currentEmployeeRange":"51-200","currentJobOpenings":20,"investors":null,"personalTags":[],"firmTags":[]},{"id":"2ZDKE6DN","companyType":"Public","name":"Aures
+        Technologies S.A.","informalName":"Aures Technologies","website":"https://aures.com","domain":"aures.com","description":"Aures
+        Technologies S.A. specializes in the provision of computerized and electronic
+        point-of-sales equipment. The company distributes a range of products, including
+        bar code readers, cash drawers, printers, screens and keyboards to stores,
+        supermarkets, restaurants and hotels.","foundingYear":1989,"location":"Lisses,
+        Ile-de-France, France, 91090","city":"Lisses","state":"Ile-de-France","postalCode":"91090","country":"France","parentCompanyDomain":null,"phoneNumber":"","specialties":["epos
+        terminal","pos system","pos terminal","epos hardware","pos","oem equipment
+        and systems","digital display","kiosk","interactive kiosks","retail pcs","panel
+        pcs","scanners and card and badge readers","itservices"],"facebook":"https://www.facebook.com/aures.technologies","twitter":"https://twitter.com/auresgroupe","crunchbase":"https://www.crunchbase.com/organization/aures-technologies","linkedIn":"https://www.linkedin.com/company/aures-group","totalAmountInvested":0,"currentEmployeeCount":44,"currentEmployeeRange":"11-50","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"XWO6YGLP","companyType":"Private
+        Equity","name":"Dana Hospitality LP","informalName":"Dana Hospitality","website":"https://www.danahospitality.ca","domain":"danahospitality.ca","description":"Dana
+        Hospitality LP is a culturally diverse, energetic, entrepreneurial Canadian
+        foodservices management company passionate about cooking and serving fresh
+        food, sourced from Canadian farms. The company is committed in operating on
+        an environmentally responsible way and giving back to the communities it serve.","foundingYear":1987,"location":"Oakville,
+        Ontario, Canada, L6J 7L5","city":"Oakville","state":"Ontario","postalCode":"L6J
+        7L5","country":"Canada","parentCompanyDomain":null,"phoneNumber":"905-829-0292","specialties":["corporate
+        dining","retail healthcare food services","education dining","in-house catering
+        & event planning","food and beverages","","catering","foodservicecontractors"],"facebook":"https://www.facebook.com/danahospitality","twitter":"https://twitter.com/danahospitality","crunchbase":null,"linkedIn":"https://www.linkedin.com/company/dana-hospitality-inc","totalAmountInvested":0,"currentEmployeeCount":261,"currentEmployeeRange":"501-1000","currentJobOpenings":0,"investors":"Fulcrum
+        Capital Partners, Fulcrum Capital Partners, Inc.","personalTags":[],"firmTags":[]},{"id":"YML0JRDW","companyType":"Private","name":"Delmanor
+        Seniors Communities, Inc.","informalName":"Delmanor Seniors Communities","website":"https://www.delmanor.com","domain":"delmanor.com","description":"Delmanor
+        Seniors Communities, Inc. offers full-service retirement living located throughout
+        the Greater Toronto Area, including Richmond Hill, Oakville, North York, Don
+        Mills, and Etobicoke. The company provides full-service rental residences
+        with attention to culinary excellence, hotel style service, and an exceptional
+        team. It offers a superior active retirement lifestyle choice and unique programs
+        like LivingWell, an individual empowerment and coaching service.","foundingYear":2000,"location":"Toronto,
+        Ontario, Canada, M6K 1X1","city":"Toronto","state":"Ontario","postalCode":"M6K
+        1X1","country":"Canada","parentCompanyDomain":null,"phoneNumber":"416-736-2520","specialties":["hospitality","healthcareservices","hospitals",""],"facebook":"https://www.facebook.com/delmanorcommunities","twitter":"https://twitter.com/delmanorseniors","crunchbase":null,"linkedIn":"https://www.linkedin.com/company/delmanor-seniors-communities","totalAmountInvested":0,"currentEmployeeCount":99,"currentEmployeeRange":"201-500","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"RPLW1ZOE","companyType":"Non-Profit","name":"Elder
+        Care Alliance","informalName":"Elder Care Alliance","website":"https://eldercarealliance.org","domain":"eldercarealliance.org","description":"Elder
+        Care Alliance is an integrated system of senior living communities in the
+        San Francisco Bay Area and Southern California. As a non-profit, it focuses
+        on serving and enriching the lives of older adults by addressing all components
+        of wellness: physical, emotional, spiritual, intellectual, vocational, environmental,
+        and social. The organization provides assistance with daily tasks while allowing
+        residents to remain as independent as possible.","foundingYear":1872,"location":"Alameda,
+        California, United States, 94501","city":"Alameda","state":"California","postalCode":"94501","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"510 858-2902","specialties":["alzheimer''s
+        and dementia care","assisted living","continuing care retirement community","independent
+        living","memory care services","retirement living","senior living","skilled
+        nursing","healthcareservices&amp;hospitals","","healthcareservices","hospitals"],"facebook":"https://www.facebook.com/eldercareall","twitter":"https://twitter.com/eldercareall","crunchbase":null,"linkedIn":"https://www.linkedin.com/company/elder-care-alliance","totalAmountInvested":0,"currentEmployeeCount":75,"currentEmployeeRange":"501-1000","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"MNDEP1O4","companyType":"Public
+        Sub","name":"Bilendi, Ltd.","informalName":"Bilendi","website":"https://www.bilendi.co.uk","domain":"bilendi.co.uk","description":"Bilendi,
+        Ltd. operates an Internet-based loyalty rewards program that comprises merchants
+        waiting to reward member customers for using the services. The company allows
+        member customers to shop, register, or play with a merchant and get rewarded
+        with a certain amount of points depending on the offer, which can be exchanged
+        for various gifts from its rewards catalogue.","foundingYear":1999,"location":"London,
+        England, United Kingdom","city":"London","state":"England","postalCode":null,"country":"United
+        Kingdom","parentCompanyDomain":null,"phoneNumber":"","specialties":["mobile
+        solutions","passive measurement","survey full service","footfall generator","customer
+        engagement","data collection and processing","geolocation","cashback","loyalty","internet",""],"facebook":"https://www.facebook.com/bilendi-technology-165208670229255","twitter":"https://twitter.com/bilendifrance","crunchbase":"https://www.crunchbase.com/organization/bilendi","linkedIn":"https://www.linkedin.com/company/bilendi","totalAmountInvested":0,"currentEmployeeCount":142,"currentEmployeeRange":"201-500","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"0VD1JYLX","companyType":"Public","name":"Bixolon
+        Co., Ltd.","informalName":"Bixolon","website":"https://www.bixolon.com","domain":"bixolon.com","description":"Bixolon
+        Co., Ltd. provides printing solutions in South Korea. The company''s products
+        include POS, label, and mobile printers; POS peripherals, mobile POS products;
+        and wristbands. It also offers hospitality, ticketing, transportation and
+        logistics, healthcare, public sector, field workforce, retail, manufacturing,
+        and RFID solutions.","foundingYear":2002,"location":"Dottikon, Kanton Aargau,
+        Switzerland, 5605","city":"Dottikon","state":"Kanton Aargau","postalCode":"5605","country":"Switzerland","parentCompanyDomain":null,"phoneNumber":"","specialties":["mobile
+        printer","label printer","pos printer","receipt printer"],"facebook":"https://www.facebook.com/ibixolon","twitter":"https://twitter.com/ibixolon","crunchbase":"https://www.crunchbase.com/organization/bixolon-europe-gmbh","linkedIn":"https://www.linkedin.com/company/bixolon","totalAmountInvested":0,"currentEmployeeCount":25,"currentEmployeeRange":"51-200","currentJobOpenings":0,"investors":"","personalTags":[],"firmTags":[]},{"id":"ZKOYXJLN","companyType":"Private","name":"Bleep
+        UK plc","informalName":"Bleep UK","website":"https://www.bleepplc.co.uk","domain":"bleepplc.co.uk","description":"Bleep
+        UK plc is an award-winning designer and manufacturer of Electronic Point of
+        Sale (EPOS) systems for retail and hospitality, including bars, nightclubs,
+        pubs, restaurants, bakeries, fast food, stadia, and arenas. The company  provides
+        bespoke, innovative, flexible, and reliable EPOS solutions for any business
+        for any requirement, in any industry.","foundingYear":1981,"location":"London,
+        England, United Kingdom","city":"London","state":"England","postalCode":null,"country":"United
+        Kingdom","parentCompanyDomain":null,"phoneNumber":"","specialties":["epos
+        systems","touch screen till systems","all in one epos solutions","epos hardware","epos
+        software","handheld epos","weighing scales","tablet applications","web back
+        office","temperature control","dispense management","epos peripherals","payment
+        solutions","miscellaneousmanufacturing",""],"facebook":"https://www.facebook.com/bleepukplc","twitter":"https://twitter.com/bleepukplc","crunchbase":null,"linkedIn":"https://www.linkedin.com/company/bleep-uk-plc","totalAmountInvested":0,"currentEmployeeCount":30,"currentEmployeeRange":"51-200","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"06O2JQO2","companyType":"Private
+        Sub","name":"Elmcroft Senior Living, Inc.","informalName":"Elmcroft Senior
+        Living,","website":"https://www.elmcroft.com","domain":"elmcroft.com","description":"Elmcroft
+        Senior Living, Inc., provides residential services. The company offers assisted
+        living, alzheimers and dementia care, independent living, retirement, and
+        rehabilitation services. Elmcroft Senior Living serves customers in the United
+        States.","foundingYear":2006,"location":"Louisville, Kentucky, United States,
+        40231","city":"Louisville","state":"Kentucky","postalCode":"40231","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"502-753-6000","specialties":["assisted
+        living","senior living","retirement living","skilled nursing and rehab","healthcareservices&amp;hospitals","","health
+        care","healthcareservices","hospitals"],"facebook":"https://www.facebook.com/elmcroftliving","twitter":"https://twitter.com/elmcroftliving","crunchbase":null,"linkedIn":"https://www.linkedin.com/company/elmcroft-senior-living","totalAmountInvested":0,"currentEmployeeCount":1149,"currentEmployeeRange":"5001-10000","currentJobOpenings":9,"investors":null,"personalTags":[],"firmTags":[]},{"id":"4NLJM1L0","companyType":"Non-Profit","name":"Episcopal
+        Community Services, Inc.","informalName":"Episcopal Community Services","website":"https://www.ecscalifornia.org","domain":"ecscalifornia.org","description":"Episcopal
+        Community Services, Inc. (ECS) believes in the dignity of all humankind, providing
+        vital social services to children and adults suffering from mental illness,
+        homelessness, abuse, poverty or substance abuse. It served as a pillar of
+        support for vulnerable families and individuals. Over the past decade trends
+        have indicated an increased demand for services, while funding for programs
+        decreases. Through faithful work and the support of compassionate donors,
+        continues to respond to the ever-changing needs of the community.","foundingYear":1927,"location":"San
+        Francisco, California, United States, 94114","city":"San Francisco","state":"California","postalCode":"94114","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"619 228-2800","specialties":["early
+        childhood development","head start","homelessness","mental illness","socialassistance"],"facebook":null,"twitter":null,"crunchbase":null,"linkedIn":"https://www.linkedin.com/company/episcopal-community-services","totalAmountInvested":0,"currentEmployeeCount":159,"currentEmployeeRange":"201-500","currentJobOpenings":22,"investors":null,"personalTags":[],"firmTags":[]},{"id":"79DQVNOE","companyType":"Non-Profit","name":"Evangelical
+        Homes of Michigan","informalName":"Evangelical Homes of Michigan","website":"https://www.evangelicalhomes.org","domain":"evangelicalhomes.org","description":"Evangelical
+        Homes of Michigan (EHM) is a full service health and human service organization
+        that provides health care, housing and community services to older adults
+        and its families in Southeast Michigan. It offers in-home services that include
+        private duty home care, medicare-certified home care, technology solutions,
+        and community outreach services; LifeChoices, a continuing care at home program
+        that allows members to be cared for and receive services for life; and The
+        Great Living Meals program to help improve health through fresh, wholesome,
+        and tasting meals.","foundingYear":1879,"location":"Farmington, Michigan,
+        United States, 48335","city":"Farmington","state":"Michigan","postalCode":"48335","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"734-295-9292","specialties":["independent
+        living","assisted living","affordable housing","long-term care","skilled nursing","short-term
+        rehabilitation","memory care","respite care","adult day care","hospice care","home
+        care","wellness","continuing care at home","technology solutions","community
+        outreach","healthcareservices&amp;hospitals","","healthcareservices","hospitals"],"facebook":"https://www.facebook.com/EHMSeniorSolutions","twitter":"https://twitter.com/EHomesofMI","crunchbase":"https://www.crunchbase.com/organization/evangelical-homes-of-michigan","linkedIn":"https://www.linkedin.com/company/evangelical-homes-of-michigan","totalAmountInvested":0,"currentEmployeeCount":167,"currentEmployeeRange":"501-1000","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"M4O8KYDR","companyType":"Private","name":"BugFinders,
+        Ltd.","informalName":"BugFinders","website":"https://www.bugfinders.com","domain":"bugfinders.com","description":"BugFinders,
+        Ltd. is a worldwide leading crowdsourced software testing company. The company
+        offers exploratory and scripted functional testing, as well as usability and
+        accessibility testing. The company service helps its partners to increase
+        revenue from apps and websites whilst speeding up releases, protecting its
+        brand and reducing development costs.","foundingYear":2011,"location":"Southam,
+        England, United Kingdom, GL52","city":"Southam","state":"England","postalCode":"GL52","country":"United
+        Kingdom","parentCompanyDomain":null,"phoneNumber":"","specialties":["software
+        bug finding service","website testing","mobile app testing","eCommerce testing","functional
+        testing","usability testing","testing-as-a-service","Crowdtesting","Crowdsourced
+        software testing"],"facebook":"https://www.facebook.com/bugfinders","twitter":"https://twitter.com/bugfinders","crunchbase":"https://www.crunchbase.com/organization/bugfinders","linkedIn":"https://www.linkedin.com/company/bugfinders-ltd","totalAmountInvested":0,"currentEmployeeCount":226,"currentEmployeeRange":"11-50","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"RPLWEZLE","companyType":"Private","name":"Healthcare
+        Provider Solutions, Inc.","informalName":"Healthcare Provider Solutions","website":"https://healthcareprovidersolutions.com","domain":"healthcareprovidersolutions.com","description":"Healthcare
+        Provider Solutions, Inc. provides the highest quality of products and services
+        to healthcare providers to maximize the potential in operations and enhance
+        reimbursement. The company''s core services includes billing and collections,
+        receivable recovery projects, clinical and billing education through seminars
+        and newsletters.","foundingYear":2001,"location":"Nashville, Tennessee, United
+        States, 37214","city":"Nashville","state":"Tennessee","postalCode":"37214","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"615-399-7499","specialties":["Home
+        care billing","hospice billing","revenue cycle consulting","operations compliance
+        consulting","clinical compliance consulting","interim management","information
+        technology consulting","financial transaction processing","consulting"],"facebook":"https://www.facebook.com/healthcare-provider-solutions-inc-491257047603745","twitter":"https://twitter.com/hps_alliance","crunchbase":null,"linkedIn":"https://www.linkedin.com/company/healthcare-provider-solutions-inc-","totalAmountInvested":0,"currentEmployeeCount":17,"currentEmployeeRange":"11-50","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"1QL9KEL4","companyType":"Non-Profit","name":"Eventide
+        Senior Living Communities","informalName":null,"website":"https://eventide.org","domain":"eventide.org","description":"Eventide
+        Senior Living Communities provides exceptional service and compassionate care
+        to seniors and their families. It is one of the most experienced providers
+        of senior services in the region, offering a broad range of housing and personalized
+        care options.","foundingYear":1951,"location":"Moorhead, Minnesota, United
+        States, 56560","city":"Moorhead","state":"Minnesota","postalCode":"56560","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"218-291-2225","specialties":["lifestyle
+        service"],"facebook":null,"twitter":null,"crunchbase":null,"linkedIn":"https://www.linkedin.com/company/eventide-senior-living-communities/about","totalAmountInvested":0,"currentEmployeeCount":165,"currentEmployeeRange":"1001-5000","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"0VD11YDX","companyType":"Private","name":"Business
+        Computer Services UK, Ltd. (BCS)","informalName":"BCS","website":"http://www.bcsuk.eu","domain":"bcsuk.eu","description":"Business
+        Computer Services UK, Ltd. (BCS) is one of the UK''s leading independent IT
+        and electronic repair specialists. The company is the provider of choice for
+        OEM''s, IT Service Organisations, schools, Colleges, Health Authorities and
+        Local Government departments as well as working with a vast array of independent
+        organisations. It''s service delivery is supported by first-class technical
+        facilities, logistics as well as professional service expertise, project managers
+        and administrators.","foundingYear":1992,"location":"St Helens, England, United
+        Kingdom","city":"St Helens","state":"England","postalCode":null,"country":"United
+        Kingdom","parentCompanyDomain":null,"phoneNumber":"","specialties":["computers
+        repairs - desktop and laptops","inkjet.","laser","motherboard repairs","printers
+        - impact","retail repairs - touchscreens and epos","thermal"],"facebook":null,"twitter":null,"crunchbase":null,"linkedIn":"https://www.linkedin.com/company/business-computer-services-uk-ltd","totalAmountInvested":0,"currentEmployeeCount":7,"currentEmployeeRange":"11-50","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"NJOX93L2","companyType":"Private","name":"TNR
+        Staffing, LLC","informalName":"TNR Staffing","website":"http://www.tnresources.com","domain":"tnresources.com","description":"TNR
+        Staffing LLC is a staffing company provides certified and licensed therapeutic
+        professionals to home health agencies, facilities, corporations, and organizations
+        in the Chicago area. The company offers physical therapists, physical therapy
+        assistants, occupational therapists, certified occupational therapy assistants,
+        speech and language pathologists, and medical social workers to meet the needs
+        of various clinical environments.","foundingYear":1988,"location":"Willowbrook,
+        Illinois, United States, 60527","city":"Willowbrook","state":"Illinois","postalCode":"60527","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"630-246-5100","specialties":["Physical
+        Therapy","Occupational Therapy","Speech-Language Pathology"],"facebook":"https://www.facebook.com/tnr-staffing-llc-378907558831344","twitter":"https://twitter.com/tnresources","crunchbase":null,"linkedIn":"https://www.linkedin.com/company/therapy-network-resources-llc","totalAmountInvested":0,"currentEmployeeCount":62,"currentEmployeeRange":"51-200","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"06O2YQO2","companyType":"Venture
+        Capital","name":"Venafi, Inc.","informalName":"Venafi","website":"https://www.venafi.com","domain":"venafi.com","description":"Venafi,
+        Inc. provides enterprise key and certificate management security solutions.
+        The company offers director platform that gives organizations insight and
+        control over its keys and certificates in the data center, on desktops and
+        mobile devices and in the cloud; server certificate manager, which helps organizations
+        to secure its certificate inventory; and SSH key manager that increases organizational
+        threat intelligence by reducing challenges related to the tracking, rotation
+        and control of Secure shell (SSH) key pairs.","foundingYear":2004,"location":"Salt
+        Lake City, Utah, United States, 84111","city":"Salt Lake City","state":"Utah","postalCode":"84111","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"801-676-6900","specialties":["ssh","ssl
+        visibility","ssl","digital certificates","encryption management","cybersecurity","secure
+        certificate authorities (cas)","automatically replacing vulnerable key or
+        certificate","cybertrust","cryptographic","symmetric keys","pki","mobile","heartbleed","it
+        security"],"facebook":"https://www.facebook.com/venafi","twitter":"https://twitter.com/venafi","crunchbase":"https://www.crunchbase.com/organization/venafi","linkedIn":"https://www.linkedin.com/company/venafi","totalAmountInvested":167200000,"currentEmployeeCount":350,"currentEmployeeRange":"201-500","currentJobOpenings":7,"investors":"Foundation
+        Capital, Origin Partners, Pelion Venture Partners, Silver Lake Partners, QuestMark
+        Partners, Intel Capital, NextEquity Partners, TCV","personalTags":[],"firmTags":[]},{"id":"1VDMVED2","companyType":"Private","name":"Business
+        Insight 3","informalName":"Business Insight 3","website":"http://bi3.co.uk","domain":"bi3.co.uk","description":"Business
+        Insight 3 is a Security and Customer Intelligence solutions provider. Bi3
+        work closely with their Security and Retail customers and technology providers
+        to develop bespoke solutions.","foundingYear":2009,"location":"Preston, England,
+        United Kingdom, HR8","city":"Preston","state":"England","postalCode":"HR8","country":"United
+        Kingdom","parentCompanyDomain":null,"phoneNumber":"","specialties":["access
+        control devices","digital and network storage","facial marketing megapixel
+        cameras","facial recognition","people counting","queue management","supply
+        security and customer intelligence solutions","video analytics","investmentbanking","assetmanagement"],"facebook":null,"twitter":null,"crunchbase":null,"linkedIn":"https://www.linkedin.com/company/business-insight-3","totalAmountInvested":0,"currentEmployeeCount":11,"currentEmployeeRange":"11-50","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"0GL3XZON","companyType":"Non-Profit","name":"Hebrew
+        SeniorLife, Inc.","informalName":"Hebrew SeniorLife","website":"https://www.hebrewseniorlife.org","domain":"hebrewseniorlife.org","description":"Hebrew
+        SeniorLife, Inc. provides elder care, senior housing, and other services in
+        the Greater Boston area and beyond. It offers senior health care services,
+        such as rehabilitation, medical acute care, long-term care, long-term nursing
+        home care, and inpatient post-acute rehabilitative care services; and senior
+        community health services, including geriatric primary and specialty care,
+        senior health care, non-medical in-home care, adult day health program, outpatient
+        rehabilitative, and hospice care services.","foundingYear":1903,"location":"Boston,
+        Massachusetts, United States, 02108","city":"Boston","state":"Massachusetts","postalCode":"02108","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"617-363-8000","specialties":["nursing
+        home","long term care","senior care","assisted living","geriatrics","independent
+        living","healthcareservices&amp;hospitals","","healthcareservices","hospitals","health
+        care"],"facebook":"https://www.facebook.com/hebrewseniorlife","twitter":"https://twitter.com/h_seniorlife","crunchbase":"https://www.crunchbase.com/organization/hebrew-seniorlife","linkedIn":"https://www.linkedin.com/company/hebrew-seniorlife","totalAmountInvested":0,"currentEmployeeCount":797,"currentEmployeeRange":"1001-5000","currentJobOpenings":93,"investors":null,"personalTags":[],"firmTags":[]},{"id":"24OVM6OV","companyType":"Private","name":"HHHunt
+        Corp.","informalName":"HHHunt","website":"https://www.hhhunt.com","domain":"hhhunt.com","description":"HHHunt
+        Corp. develops and manages residential communities in Virginia, North Carolina,
+        South Carolina, Maryland, and Tennessee. It provides services in the areas
+        of community development, home building, residential and commercial sales
+        and marketing, apartment development/management, senior living development/management,
+        country club management, and community management. It operates apartment homes,
+        communities, senior living facilities, homes, and golf courses.","foundingYear":1966,"location":"Blacksburg,
+        Virginia, United States, 24060","city":"Blacksburg","state":"Virginia","postalCode":"24060","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"540-552-3515","specialties":["real
+        estate development","real estate management","single family homebuilding","apartment
+        home communities","assisted living","planned communities","healthcareservices&amp;hospitals","","healthcareservices","hospitals"],"facebook":"https://www.facebook.com/hhhuntcorporation","twitter":"https://twitter.com/hhhuntcorp","crunchbase":"https://www.crunchbase.com/organization/hhhunt-corporation-2","linkedIn":"https://www.linkedin.com/company/hhhunt-corporation","totalAmountInvested":0,"currentEmployeeCount":604,"currentEmployeeRange":"1001-5000","currentJobOpenings":158,"investors":null,"personalTags":[],"firmTags":[]},{"id":"79DQ1NLE","companyType":"Private","name":"Buzzeasy,
+        Ltd.","informalName":"Buzzeasy","website":"https://buzzeasy.com","domain":"buzzeasy.com","description":"Buzzeasy,
+        Ltd., is the innovative provider of cloud-based customer contact solutions.
+        Buzzeasy is a new name, but comes with an impressive heritage. Born out of
+        Geomant, a UK Contact Centre and Unified Communications specialist with a
+        15 year pedigree, Buzzeasy delivers customer callback solutions from the cloud.","foundingYear":2014,"location":"Alcester,
+        England, United Kingdom, B49","city":"Alcester","state":"England","postalCode":"B49","country":"United
+        Kingdom","parentCompanyDomain":null,"phoneNumber":"","specialties":["information
+        technology and services"],"facebook":"https://www.facebook.com/buzzeasycx","twitter":"https://twitter.com/buzzdefy","crunchbase":null,"linkedIn":"https://www.linkedin.com/company/buzzeasy","totalAmountInvested":0,"currentEmployeeCount":2,"currentEmployeeRange":"51-200","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"ZYLZEVL4","companyType":"Private
+        Equity","name":"Harvest Management Sub, LLC dba Holiday Retirement","informalName":"Holiday
+        Retirement","website":"https://www.holidaytouch.com","domain":"holidaytouch.com","description":"Harvest
+        Management Sub, LLC doing business as Holiday Retirement with its related
+        entities, is one of the largest owners and operators of retirement housing
+        in the world. The company and its affiliates currently manage over 85,000
+        units of senior housing primarily in the United States, Canada and the U.K.
+        its operations outside North America are not included in the transaction.","foundingYear":1971,"location":"Winter
+        Park, Florida, United States, 32789","city":"Winter Park","state":"Florida","postalCode":"32789","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"800-322-0999","specialties":["Independent
+        Living","Retirement Living","Senior Housing","Senior Living","Assistant Living","Hospitality","Property
+        Management"],"facebook":"https://www.facebook.com/holidayretirement","twitter":"https://twitter.com/holidaytouch","crunchbase":"https://www.crunchbase.com/organization/holiday-retirement","linkedIn":"https://www.linkedin.com/company/holiday-retirement","totalAmountInvested":6890000,"currentEmployeeCount":3653,"currentEmployeeRange":"10000+","currentJobOpenings":0,"investors":"Fortress
+        Investment Group LLC","personalTags":[],"firmTags":[]},{"id":"20L55GLX","companyType":"Private","name":"Cambrionix,
+        Ltd.","informalName":"Cambrionix","website":"https://www.cambrionix.com","domain":"cambrionix.com","description":"Cambrionix,
+        Ltd., is the leader in mobile technology, charging and connectivity. The company
+        specializes in USB charging and syncing. It finished products and electronic
+        components are used in a variety of locations, from hospitals, to schools,
+        to homes and businesses.","foundingYear":2007,"location":"Milton, England,
+        United Kingdom, CB4","city":"Milton","state":"England","postalCode":"CB4","country":"United
+        Kingdom","parentCompanyDomain":null,"phoneNumber":"","specialties":["charge
+        and sync","design consulting","electronic design engineering","leaders in
+        mobile technology charging and connectivity","mobile device management","multiport
+        usb charge and sync"],"facebook":"https://www.facebook.com/cambrionix","twitter":"https://twitter.com/cambrionix","crunchbase":"https://www.crunchbase.com/organization/cambrionix","linkedIn":"https://www.linkedin.com/company/cambrionix-ltd","totalAmountInvested":0,"currentEmployeeCount":1,"currentEmployeeRange":"11-50","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"M4O84YLR","companyType":"Private","name":"Captec,
+        Ltd.","informalName":"Captec","website":"https://captec-group.com","domain":"captec-group.com","description":"Captec,
+        Ltd., designs and manufactures computers. The Company offers products such
+        as industrial computers, rugged tablets and laptops, storage servers, and
+        specialist computers, as well as operational and technical services, integration,
+        and rack design.","foundingYear":1985,"location":"Whiteley, England, United
+        Kingdom, PO15","city":"Whiteley","state":"England","postalCode":"PO15","country":"United
+        Kingdom","parentCompanyDomain":null,"phoneNumber":"","specialties":["industrial","certified
+        and specialised computers","build to order and design to order","rack design
+        and integration","thermal and emc testing","electrical and electronicmanufacturing","electrical","electronicmanufacturing","","hardware"],"facebook":"https://www.facebook.com/captecgroup","twitter":"https://twitter.com/captecgroup","crunchbase":"https://www.crunchbase.com/organization/captec","linkedIn":"https://www.linkedin.com/company/captec","totalAmountInvested":0,"currentEmployeeCount":119,"currentEmployeeRange":"51-200","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"3ED4N0ON","companyType":"Private","name":"United
+        Agencies, Inc.","informalName":"United Agencies","website":"https://www.unitedagencies.com","domain":"unitedagencies.com","description":"United
+        Agencies, Inc. is a full-service insurance brokerage with offices throughout
+        Southern California and Nevada. The company provides or gives access to all
+        the wide range of products that needed without compromising the benefits of
+        personal service.","foundingYear":1963,"location":"Pasadena, California, United
+        States, 91101","city":"Pasadena","state":"California","postalCode":"91101","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"626-397-4700","specialties":["insurance
+        brokerage","insurance carrier","insurance-carriers.","insurancecarriers",""],"facebook":"https://www.facebook.com/uabenefits","twitter":"https://twitter.com/uainsurance","crunchbase":null,"linkedIn":"https://www.linkedin.com/company/united-agencies","totalAmountInvested":0,"currentEmployeeCount":253,"currentEmployeeRange":"201-500","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]},{"id":"ZKOY4JLN","companyType":"Public
+        Sub","name":"Honeywell Life Care Solutions","informalName":"Honeywell Life
+        Care Solutions","website":"https://www.honeywelllifecare.com","domain":"honeywelllifecare.com","description":"Honeywell
+        Life Care Solutions, develop and delivers digital health technologies for
+        healthcare systems, payors, employers, home health agencies, and individuals
+        to improve the quality and cost efficiency of care. The company provides its
+        solutions for remote patient monitoring, including monitoring, remote patient
+        management applications, and decision support. It serves various healthcare
+        customers, including hospital systems, integrated healthcare delivery systems,
+        and managed care organizations.","foundingYear":1999,"location":"Brookfield,
+        Wisconsin, United States, 53005","city":"Brookfield","state":"Wisconsin","postalCode":"53005","country":"United
+        States","parentCompanyDomain":null,"phoneNumber":"414-828-6198","specialties":["Digital
+        Health Technologies"],"facebook":null,"twitter":null,"crunchbase":null,"linkedIn":null,"totalAmountInvested":0,"currentEmployeeCount":1,"currentEmployeeRange":"1-10","currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]}]}'
+  recorded_at: Thu, 13 Aug 2020 11:07:43 GMT
+recorded_with: VCR 6.0.0

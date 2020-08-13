@@ -6,6 +6,6 @@ RSpec.describe Sourcescrub do
   end
 
   it 'returns the latest version number' do
-    expect(Sourcescrub::VERSION).to eq('0.0.7')
+    expect(Sourcescrub::VERSION).to eq('0.0.8')
   end
 end

@@ -18,14 +18,24 @@ module Sourcescrub
       { 'Authorization' => "Bearer #{@token}" }
     end
 
+    def companies(args = { limit: 100, offset: 0 })
+      api = companies_api(args)
+
+      Models::CompanyItems.new.parse_response_items(
+        nil,
+        api.kclass_name,
+        get(api.search_url, api.args)
+      )
+    end
+
     def company(domain, args = {})
-      api = companies_api(domain, args)
+      api = company_api(domain, args)
 
       api.sobject.parse_response get(api.request_url, api.args)
     end
 
     def company_cards(domain, args = {})
-      api = companies_api(domain, args.merge(model_type: company_card_mappings[args[:card_id]]))
+      api = company_api(domain, args.merge(model_type: company_card_mappings[args[:card_id]]))
 
       Models::CompanyItems.new.parse_response_items(
         domain,
@@ -62,8 +72,15 @@ module Sourcescrub
 
     private
 
-    def companies_api(domain, args)
+    def companies_api(args)
       @companies_api ||= Apis::Companies.new(
+        nil,
+        { model_type: 'company' }.merge(args)
+      )
+    end
+
+    def company_api(domain, args)
+      @company_api ||= Apis::Companies.new(
         domain,
         { model_type: 'company' }.merge(args)
       )

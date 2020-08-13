@@ -1,5 +1,16 @@
 # Change Log
 
+
+## [0.0.8] - 2020-08-13
+
+- Implement API to request all compnies - `client.companies`
+
+## [0.0.7] - 2020-08-04
+
+- Get source data and source compaines - `client.source_companies(source_id)`
+- Get company's employeerange data by domain -  `client.company_cards('monday.com', { card_id: 'employeerange' })`
+- Get company's employees data by domain -  `client.company_cards('monday.com', { card_id: 'employees' })`
+
 ## [0.0.3] - 2020-06-20
 
 - Implement API to request token by user certificate
