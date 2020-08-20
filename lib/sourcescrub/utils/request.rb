@@ -25,8 +25,9 @@ module Sourcescrub
           request: {
             timeout: 10,
             open_timeout: 5
-          }
-        ).get(uri, *args)
+          },
+          params: args[0] || {}
+        ).get(uri)
 
         response_body = response.body
         raise Error, response_body unless response.status == 200
