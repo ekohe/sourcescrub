@@ -73,28 +73,28 @@ module Sourcescrub
     private
 
     def companies_api(args)
-      @companies_api ||= Apis::Companies.new(
+      Apis::Companies.new(
         nil,
         { model_type: 'company' }.merge(args)
       )
     end
 
     def company_api(domain, args)
-      @company_api ||= Apis::Companies.new(
+      Apis::Companies.new(
         domain,
         { model_type: 'company' }.merge(args)
       )
     end
 
     def source_api(source_id, args)
-      @source_api ||= Apis::Sources.new(
+      Apis::Sources.new(
         source_id,
         { model_type: 'source' }.merge(args)
       )
     end
 
     def source_companies_api(source_id, args)
-      @source_companies_api ||= Apis::Sources.new(
+      Apis::Sources.new(
         source_id,
         { model_type: 'company' }.merge(args)
       )
