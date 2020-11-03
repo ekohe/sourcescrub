@@ -1,5 +1,8 @@
 # Change Log
 
+## [0.1.1] - 2020-11-03
+
+- Fixing wrong data issue of `currentEmployeeRange` in Company
 
 ## [0.0.8] - 2020-08-13
 

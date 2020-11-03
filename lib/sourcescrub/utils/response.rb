@@ -29,6 +29,7 @@ module Sourcescrub
         # Setup attributes
         attribute_names.each do |attr_name|
           attr_value = response.dig(attr_name)
+          attr_value = nil if attr_name == 'currentEmployeeRange' && attr_value.is_a?(Integer)
 
           dynamic_define_method(object, attr_name, attr_value)
         end

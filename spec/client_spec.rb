@@ -13,6 +13,16 @@ RSpec.describe Sourcescrub::Client do
       expect(response.domain).to eq('ekohe.com')
     end
 
+    it 'be able to returns processed currentEmployeeRange data' do
+      response = VCR.use_cassette('company_domain_by_thedigitalbox_net') do
+        client.company('thedigitalbox.net')
+      end
+
+      expect(response.name).to eq('The Digital Box')
+      expect(response.domain).to eq('thedigitalbox.net')
+      expect(response.currentEmployeeRange).to eq(nil)
+    end
+
     it 'raise error when the company not found' do
       expect do
         VCR.use_cassette('company_domain_with_icmoc_com') do

@@ -1,0 +1,94 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://identity.sourcescrub.com/connect/token
+    body:
+      encoding: UTF-8
+      string: grant_type=password&username=username&password=password&scope=client_api
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 03 Nov 2020 05:15:38 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Server:
+      - Kestrel
+      Cache-Control:
+      - no-store, no-cache, max-age=0
+      Pragma:
+      - no-cache
+      Transfer-Encoding:
+      - chunked
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Request-Context:
+      - appId=cid-v1:68001f3b-51a8-49d3-9e10-8bd96680dce8
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"token","expires_in":28800,"token_type":"Bearer","scope":"client_api"}'
+  recorded_at: Tue, 03 Nov 2020 05:15:38 GMT
+- request:
+    method: get
+    uri: https://api.sourcescrub.com/companies/thedigitalbox.net
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 03 Nov 2020 05:15:39 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Server:
+      - Kestrel
+      Content-Length:
+      - '1404'
+      Request-Context:
+      - appId=cid-v1:68001f3b-51a8-49d3-9e10-8bd96680dce8
+      Strict-Transport-Security:
+      - max-age=2592000
+      X-Ratelimit-Limit:
+      - '2000000'
+      X-Ratelimit-Remaining:
+      - '1999998'
+      X-Ratelimit-Reset:
+      - '2400259.1054381'
+    body:
+      encoding: UTF-8
+      string: '{"id":"D4W552WO","companyType":"Unknown","name":"The Digital Box","informalName":null,"website":"thedigitalbox.net","domain":"thedigitalbox.net","description":"Fast
+        growing and profitable, The Digital Box wants to design and develop the most
+        Innovative and Integrated Mobile Engagement Automation Platform, through the
+        use of comprehensive AI-based software suite, ADA, a platform that offers
+        a unique Push, Action Oriented, Content-Marketing System (CMS) designed specifically
+        for Mobile Device.\n\nThe platform ''ADA'' (aptly named after the first computer
+        programmer; Ada Lovelace) has been developed to help companies create long
+        term relationships with their clients by using highly personalized, cross
+        channel campaigns, with mobile-friendly content. Our mission is to enable
+        companies to successfully take advantage of the mobile revolution; Track your
+        customers'' journey from initial engagement, to conversion, to repeat business
+        and enhanced loyalty.","foundingYear":5,"location":"Not Available","city":null,"state":null,"postalCode":null,"country":null,"parentCompanyDomain":null,"phoneNumber":null,"specialties":["advertising","marketing"],"facebook":null,"twitter":null,"crunchbase":null,"linkedIn":"https://www.linkedin.com/company/thedigitalbox","totalAmountInvested":0,"currentEmployeeCount":0,"currentEmployeeRange":0,"currentJobOpenings":0,"investors":null,"personalTags":[],"firmTags":[]}'
+  recorded_at: Tue, 03 Nov 2020 05:15:40 GMT
+recorded_with: VCR 6.0.0
