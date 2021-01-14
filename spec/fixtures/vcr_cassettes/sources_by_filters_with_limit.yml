@@ -1,0 +1,107 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://identity.sourcescrub.com/connect/token
+    body:
+      encoding: UTF-8
+      string: grant_type=password&username=xxx&password=xxx&scope=client_api
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 14 Jan 2021 05:24:30 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Server:
+      - Kestrel
+      Cache-Control:
+      - no-store, no-cache, max-age=0
+      Pragma:
+      - no-cache
+      Transfer-Encoding:
+      - chunked
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Request-Context:
+      - appId=cid-v1:68001f3b-51a8-49d3-9e10-8bd96680dce8
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"xxx","expires_in":28800,"token_type":"Bearer","scope":"client_api"}'
+  recorded_at: Thu, 14 Jan 2021 05:24:31 GMT
+- request:
+    method: post
+    uri: https://api.sourcescrub.com/search/sources
+    body:
+      encoding: UTF-8
+      string: '{"limit":10,"offset":0,"orderBy":"endDate DESC"}'
+    headers:
+      Content-Type:
+      - application/json-patch+json
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 14 Jan 2021 05:24:31 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Server:
+      - Kestrel
+      Content-Length:
+      - '3728'
+      Request-Context:
+      - appId=cid-v1:68001f3b-51a8-49d3-9e10-8bd96680dce8
+      Strict-Transport-Security:
+      - max-age=2592000
+      X-Ratelimit-Limit:
+      - '50000'
+      X-Ratelimit-Remaining:
+      - '49579'
+      X-Ratelimit-Reset:
+      - '1535727.2023869'
+    body:
+      encoding: UTF-8
+      string: '{"total":10000,"items":[{"id":"4OV68R0D","officialTitle":"Microbiome
+        R&D and Business Collaboration Forum Europe 2019","nickname":"MR&DBCFEU2019","sourceType":"Industry
+        Conference","city":"London","state":"England","country":"United Kingdom","startDate":"2019-05-20","endDate":"2109-05-22","status":"None","reviewStatus":[],"companyCount":91,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"NLJ8E07L","officialTitle":"Marketing
+        Show North 2019","nickname":"MarketingShowNorth2019","sourceType":"Industry
+        Conference","city":"Manchester","state":"England","country":"United Kingdom","startDate":"2019-02-27","endDate":"2109-02-28","status":"None","reviewStatus":[],"companyCount":93,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"7LN6840L","officialTitle":"Plastic
+        Surgery The Meeting 2028","nickname":"PlasticSurgeryTheMeeting2028","sourceType":"Industry
+        Conference","city":"Los Angeles","state":"California","country":"United States","startDate":"2028-10-20","endDate":"2028-10-24","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"ZLGNQQ0O","officialTitle":"Society
+        for Maternal-Fetal Medicine (SMFM) Annual Pregnancy Meeting 2028","nickname":"SMFM2028","sourceType":"Industry
+        Conference","city":"Las Vegas","state":"Nevada","country":"United States","startDate":"2028-02-14","endDate":"2028-02-19","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"VDM8YYKD","officialTitle":"Society
+        for Laboratory Automation and Screening (SLAS) Annual Conference & Exhibition
+        2028","nickname":"SLAS2028","sourceType":"Industry Conference","city":"Boston","state":"Massachusetts","country":"United
+        States","startDate":"2028-02-05","endDate":"2028-02-09","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"NLJ7JWZD","officialTitle":"Electrical
+        Overstress and Electrostatic Discharge (EOS/ESD) Symposium & Exhibits 2027","nickname":"EOSESD2027","sourceType":"Industry
+        Conference","city":"Riverside","state":"California","country":"United States","startDate":"2027-09-13","endDate":"2027-09-24","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"ELPZY8VO","officialTitle":"American
+        Correctional Association Congress of Correction 2027","nickname":"ACA2027","sourceType":"Industry
+        Conference","city":"Columbus","state":"Ohio","country":"United States","startDate":"2027-08-19","endDate":"2027-08-24","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"NDE025JD","officialTitle":"Annual
+        Convention of the American Psychological Association (APA) 2027","nickname":"APAAC2027","sourceType":"Industry
+        Conference","city":"San Francisco","state":"California","country":"United
+        States","startDate":"2027-08-12","endDate":"2027-08-15","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"ELPZYNMO","officialTitle":"Academy
+        of Management (AOM) Annual Meeting 2027","nickname":"AOM2027","sourceType":"Industry
+        Conference","city":"Seattle","state":"Washington","country":"United States","startDate":"2027-07-30","endDate":"2027-08-03","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0},{"id":"JOXZXX9L","officialTitle":"Society
+        for Maternal-Fetal Medicine (SMFM) Annual Pregnancy Meeting 2027","nickname":"SMFM2027","sourceType":"Industry
+        Conference","city":"New Orleans","state":"Louisiana","country":"United States","startDate":"2027-02-01","endDate":"2027-02-06","status":"None","reviewStatus":[],"companyCount":0,"companiesCrmCount":0,"companiesTaggedCount":0}]}'
+  recorded_at: Thu, 14 Jan 2021 05:24:31 GMT
+recorded_with: VCR 6.0.0

@@ -117,6 +117,31 @@ RSpec.describe Sourcescrub::Client do
       expect(response.officialTitle).to eq('Software Magazine 2014 Software 500')
     end
 
+    it 'be able to search source data by filters with limit' do
+      response = VCR.use_cassette('sources_by_filters_with_limit') do
+        client.source_search({ limit: 10, offset: 0 })
+      end
+
+      expect(response.total).to eq(10_000)
+      expect(response.items.size).to eq(10)
+      expect(response.items[0].officialTitle).to eq('Microbiome R&D and Business Collaboration Forum Europe 2019')
+    end
+
+    it 'be able to search source data by filters with dates' do
+      response = VCR.use_cassette('sources_by_filters_with_dates') do
+        client.source_search(
+          limit: 10,
+          offset: 0,
+          start_date: { from: '2021-01-01', to: '2021-01-14' },
+          end_date: { from: '2021-01-01', to: '2021-01-14' },
+          order_by: 'startDate ASC'
+        )
+      end
+
+      expect(response.total).to eq(309)
+      expect(response.items[0].startDate).to eq('2021-01-01')
+    end
+
     it 'be able to get source\'s companies' do
       expect do
         VCR.use_cassette('sources_companies_with_7LNWERLR') do

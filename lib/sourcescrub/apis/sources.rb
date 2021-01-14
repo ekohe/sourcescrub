@@ -25,6 +25,13 @@ module Sourcescrub
         ].compact.join('/')
       end
 
+      def search_url
+        [
+          'search',
+          Models::Source::ENDPOINT
+        ].compact.join('/')
+      end
+
       def companies_url
         [
           Models::Source::ENDPOINT,

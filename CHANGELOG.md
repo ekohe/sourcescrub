@@ -1,5 +1,9 @@
 # Change Log
 
+## [0.1.2] - 2021-01-14
+
+- Implement search source endpoint to allow use filters to get matched sources - `client.source_search({limit: 10, offset: 0})`
+
 ## [0.1.1] - 2020-11-03
 
 - Fixing wrong data issue of `currentEmployeeRange` in Company

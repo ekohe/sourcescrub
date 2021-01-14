@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'faraday'
+require 'logger'
 
 module Sourcescrub
   # Utils
@@ -19,33 +20,28 @@ module Sourcescrub
       #
       #
       def get(uri, *args)
-        response = Faraday.new(
-          url: API_URI,
-          headers: headers,
-          request: {
-            timeout: 10,
-            open_timeout: 5
-          },
-          params: args[0] || {}
-        ).get(uri)
+        response = Faraday.new(request_options(args)) do |faraday|
+          faraday.headers['Content-Type'] = 'application/json-patch+json'
+          faraday.adapter Faraday.default_adapter
+          faraday.response :logger, ::Logger.new(STDOUT), bodies: true if debug_mode?
+        end.get(uri)
 
-        response_body = response.body
-        raise Error, response_body unless response.status == 200
+        raise Error, response.body unless response.status == 200
 
-        response_body = JSON.parse(response_body)
-        # Processing different cases for investments
-        if response_body.is_a?(Array)
-          response_body = if response_body.empty?
-                            {}
-                          else
-                            {
-                              'total' => response_body.size,
-                              'items' => response_body
-                            }
-                          end
-        end
+        parse_api_response(response.body).merge('headers' => response.headers)
+      end
 
-        response_body.merge('headers' => response.headers)
+      # Search endpoints
+      def search(uri, args)
+        response = Faraday.new(request_options(args)) do |faraday|
+          faraday.headers['Content-Type'] = 'application/json-patch+json'
+          faraday.adapter Faraday.default_adapter
+          faraday.response :logger, ::Logger.new(STDOUT), bodies: true if debug_mode?
+        end.post(uri, args.to_json)
+
+        raise Error, response.body unless response.status == 200
+
+        parse_api_response(response.body).merge('headers' => response.headers)
       end
 
       # def put(uri, args)
@@ -102,6 +98,31 @@ module Sourcescrub
       end
 
       private
+
+      def request_options(args)
+        {
+          url: API_URI,
+          headers: headers,
+          request: {
+            timeout: 10,
+            open_timeout: 5
+          },
+          params: args[0] || {}
+        }
+      end
+
+      def parse_api_response(response_body)
+        response_body = JSON.parse(response_body)
+
+        # Processing different cases for investments
+        return response_body unless response_body.is_a?(Array)
+        return {} if response_body.empty?
+
+        {
+          'total' => response_body.size,
+          'items' => response_body
+        }
+      end
 
       def debug_mode?
         Sourcescrub.account.debug || false

@@ -3,12 +3,14 @@
 require_relative './utils/request'
 require_relative './apis/companies'
 require_relative './apis/sources'
+require_relative './utils/search_params'
 
 # Root Sourcescrub
 module Sourcescrub
   # Client
   class Client
     include Utils::Request
+    include Utils::SearchParams
 
     attr_accessor :token
 
@@ -54,6 +56,15 @@ module Sourcescrub
       )
     end
 
+    def source_search(args = {})
+      api = source_search_api(source_params(args))
+
+      Models::SourceItems.new.parse_response_items(
+        api.kclass_name,
+        search(api.search_url, api.args)
+      )
+    end
+
     def sources(source_id, args = {})
       api = source_api(source_id, args)
 
@@ -89,6 +100,13 @@ module Sourcescrub
     def source_api(source_id, args)
       Apis::Sources.new(
         source_id,
+        { model_type: 'source' }.merge(args)
+      )
+    end
+
+    def source_search_api(args)
+      Apis::Sources.new(
+        nil,
         { model_type: 'source' }.merge(args)
       )
     end

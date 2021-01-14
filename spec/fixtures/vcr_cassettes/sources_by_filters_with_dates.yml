@@ -1,0 +1,87 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://identity.sourcescrub.com/connect/token
+    body:
+      encoding: UTF-8
+      string: grant_type=password&username=xxx&password=xxx&scope=client_api
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 14 Jan 2021 05:41:19 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Server:
+      - Kestrel
+      Cache-Control:
+      - no-store, no-cache, max-age=0
+      Pragma:
+      - no-cache
+      Transfer-Encoding:
+      - chunked
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Request-Context:
+      - appId=cid-v1:68001f3b-51a8-49d3-9e10-8bd96680dce8
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"xxx","expires_in":28800,"token_type":"Bearer","scope":"client_api"}'
+  recorded_at: Thu, 14 Jan 2021 05:41:19 GMT
+- request:
+    method: post
+    uri: https://api.sourcescrub.com/search/sources
+    body:
+      encoding: UTF-8
+      string: '{"filters":{"startDateRange":{"from":"2021-01-01","to":"2021-01-14"},"endDateRange":{"from":"2021-01-01","to":"2021-01-14"}},"limit":10,"offset":0,"orderBy":"startDate
+        ASC"}'
+    headers:
+      Content-Type:
+      - application/json-patch+json
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 14 Jan 2021 05:41:20 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Server:
+      - Kestrel
+      Content-Length:
+      - '3557'
+      Request-Context:
+      - appId=cid-v1:68001f3b-51a8-49d3-9e10-8bd96680dce8
+      Strict-Transport-Security:
+      - max-age=2592000
+      X-Ratelimit-Limit:
+      - '50000'
+      X-Ratelimit-Remaining:
+      - '49570'
+      X-Ratelimit-Reset:
+      - '1534718.5085912'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJ0b3RhbCI6MzA5LCJpdGVtcyI6W3siaWQiOiJQTFc3OUpWTyIsIm9mZmljaWFsVGl0bGUiOiJHbG9iYWwgTGlmZSBTY2llbmNlcyAmIEhlYWx0aGNhcmUgQ29uZmVyZW5jZSAyMDIxIiwibmlja25hbWUiOiJHTFNIQzIwMjEiLCJzb3VyY2VUeXBlIjoiSW5kdXN0cnkgQ29uZmVyZW5jZSIsImNpdHkiOiJTaW5nYXBvcmUiLCJzdGF0ZSI6bnVsbCwiY291bnRyeSI6IlNpbmdhcG9yZSIsInN0YXJ0RGF0ZSI6IjIwMjEtMDEtMDEiLCJlbmREYXRlIjoiMjAyMS0wMS0wMSIsInN0YXR1cyI6Ik5vbmUiLCJyZXZpZXdTdGF0dXMiOltdLCJjb21wYW55Q291bnQiOjAsImNvbXBhbmllc0NybUNvdW50IjowLCJjb21wYW5pZXNUYWdnZWRDb3VudCI6MH0seyJpZCI6IjBMNUdOVzJMIiwib2ZmaWNpYWxUaXRsZSI6IkludGVybmF0aW9uYWwgQ29uZmVyZW5jZSBvbiBDb21tdW5pY2F0aW9uIGFuZCBTaWduYWwgUHJvY2Vzc2luZyAoSUNDU1ApIDIwMjEiLCJuaWNrbmFtZSI6IklDQ1NQMjAyMSIsInNvdXJjZVR5cGUiOiJJbmR1c3RyeSBDb25mZXJlbmNlIiwiY2l0eSI6Ikt1YWxhIEx1bXB1ciIsInN0YXRlIjoiS3VhbGEgTHVtcHVyIiwiY291bnRyeSI6Ik1hbGF5c2lhIiwic3RhcnREYXRlIjoiMjAyMS0wMS0wMSIsImVuZERhdGUiOiIyMDIxLTAxLTAyIiwic3RhdHVzIjoiTm9uZSIsInJldmlld1N0YXR1cyI6W10sImNvbXBhbnlDb3VudCI6MCwiY29tcGFuaWVzQ3JtQ291bnQiOjAsImNvbXBhbmllc1RhZ2dlZENvdW50IjowfSx7ImlkIjoiR0wzN0owN08iLCJvZmZpY2lhbFRpdGxlIjoiUG93ZXJVcCAyMDIxIiwibmlja25hbWUiOiJQb3dlclVwMjAyMSIsInNvdXJjZVR5cGUiOiJJbmR1c3RyeSBDb25mZXJlbmNlIiwiY2l0eSI6Ik5ldyBPcmxlYW5zIiwic3RhdGUiOiJMb3Vpc2lhbmEiLCJjb3VudHJ5IjoiVW5pdGVkIFN0YXRlcyIsInN0YXJ0RGF0ZSI6IjIwMjEtMDEtMDEiLCJlbmREYXRlIjoiMjAyMS0wMS0wMSIsInN0YXR1cyI6Ik5vbmUiLCJyZXZpZXdTdGF0dXMiOltdLCJjb21wYW55Q291bnQiOjAsImNvbXBhbmllc0NybUNvdW50IjowLCJjb21wYW5pZXNUYWdnZWRDb3VudCI6MH0seyJpZCI6IjRPVlpKWjlEIiwib2ZmaWNpYWxUaXRsZSI6IkFpcnBvcnQgTWlub3JpdHkgQWR2aXNvcnkgQ291bmNpbCAoQU1BQykgQWlycG9ydCBCdXNpbmVzcyBEaXZlcnNpdHkgQ29uZmVyZW5jZSAyMDIxIiwibmlja25hbWUiOiJBTUFDQWlycG9ydEJ1c2luZXNzRGl2ZXJzaXR5Q29uMjAyMSIsInNvdXJjZVR5cGUiOiJJbmR1c3RyeSBDb25mZXJlbmNlIiwiY2l0eSI6IkF0bGFudGEiLCJzdGF0ZSI6Ikdlb3JnaWEiLCJjb3VudHJ5IjoiVW5pdGVkIFN0YXRlcyIsInN0YXJ0RGF0ZSI6IjIwMjEtMDEtMDEiLCJlbmREYXRlIjoiMjAyMS0wMS0wMSIsInN0YXR1cyI6Ik5vbmUiLCJyZXZpZXdTdGF0dXMiOltdLCJjb21wYW55Q291bnQiOjAsImNvbXBhbmllc0NybUNvdW50IjowLCJjb21wYW5pZXNUYWdnZWRDb3VudCI6MH0seyJpZCI6IkpPWFpYOTNMIiwib2ZmaWNpYWxUaXRsZSI6IlNwYXJ0YW4gSW50ZXJuYXRpb25hbCBEaXN0cmlidXRvcnMiLCJuaWNrbmFtZSI6IlNwYXJ0YW5JbnTEukRpc3RyaWJ1dG9ycyIsInNvdXJjZVR5cGUiOiJCdXllcnMgR3VpZGUiLCJjaXR5IjpudWxsLCJzdGF0ZSI6bnVsbCwiY291bnRyeSI6bnVsbCwic3RhcnREYXRlIjoiMjAyMS0wMS0wMSIsImVuZERhdGUiOiIyMDIxLTAxLTAxIiwic3RhdHVzIjoiTm9uZSIsInJldmlld1N0YXR1cyI6W10sImNvbXBhbnlDb3VudCI6MzUsImNvbXBhbmllc0NybUNvdW50IjowLCJjb21wYW5pZXNUYWdnZWRDb3VudCI6MH0seyJpZCI6IjBMNUdSSkdMIiwib2ZmaWNpYWxUaXRsZSI6IklNIFBvd2VyIDIwMjEiLCJuaWNrbmFtZSI6IklNUG93ZXIyMDIxIiwic291cmNlVHlwZSI6IlZpcnR1YWwgQ29uZmVyZW5jZSIsImNpdHkiOm51bGwsInN0YXRlIjpudWxsLCJjb3VudHJ5IjpudWxsLCJzdGFydERhdGUiOiIyMDIxLTAxLTAxIiwiZW5kRGF0ZSI6IjIwMjEtMDEtMDEiLCJzdGF0dXMiOiJOb25lIiwicmV2aWV3U3RhdHVzIjpbXSwiY29tcGFueUNvdW50Ijo0MDAsImNvbXBhbmllc0NybUNvdW50IjowLCJjb21wYW5pZXNUYWdnZWRDb3VudCI6MH0seyJpZCI6IlFMOVI3N1ZPIiwib2ZmaWNpYWxUaXRsZSI6Ik1vYmlsZSBHcm93dGggU3VtbWl0IFNpbmdhcG9yZSAoTUdTKSAyMDIxIiwibmlja25hbWUiOiJNR1NTaW5nYXBvcmUyMDIxIiwic291cmNlVHlwZSI6IkluZHVzdHJ5IENvbmZlcmVuY2UiLCJjaXR5IjoiU2luZ2Fwb3JlIiwic3RhdGUiOiJDZW50cmFsIFNpbmdhcG9yZSIsImNvdW50cnkiOiJTaW5nYXBvcmUiLCJzdGFydERhdGUiOiIyMDIxLTAxLTAxIiwiZW5kRGF0ZSI6IjIwMjEtMDEtMDEiLCJzdGF0dXMiOiJOb25lIiwicmV2aWV3U3RhdHVzIjpbXSwiY29tcGFueUNvdW50IjoxMiwiY29tcGFuaWVzQ3JtQ291bnQiOjAsImNvbXBhbmllc1RhZ2dlZENvdW50IjowfSx7ImlkIjoiTUwwN1dQV08iLCJvZmZpY2lhbFRpdGxlIjoiU01FIEJhbmtpbmcgU3VtbWl0IDIwMjEiLCJuaWNrbmFtZSI6IlNNRUJhbmtpbmcyMDIxIiwic291cmNlVHlwZSI6IkluZHVzdHJ5IENvbmZlcmVuY2UiLCJjaXR5IjoiTWlsYW4iLCJzdGF0ZSI6IkxvbWJhcmRpYSIsImNvdW50cnkiOiJJdGFseSIsInN0YXJ0RGF0ZSI6IjIwMjEtMDEtMDEiLCJlbmREYXRlIjoiMjAyMS0wMS0wMSIsInN0YXR1cyI6Ik5vbmUiLCJyZXZpZXdTdGF0dXMiOltdLCJjb21wYW55Q291bnQiOjIxLCJjb21wYW5pZXNDcm1Db3VudCI6MCwiY29tcGFuaWVzVGFnZ2VkQ291bnQiOjB9LHsiaWQiOiJWRE04S1JYRCIsIm9mZmljaWFsVGl0bGUiOiJQcml2YXRlIEVxdWl0eSBJbnNpZ2h0cyBBbm51YWwgUG9saXNoICYgQ0VFIFByaXZhdGUgRXF1aXR5IENvbmZlcmVuY2UgMjAyMSIsIm5pY2tuYW1lIjoiUEVJUENFRVBFMjAyMSIsInNvdXJjZVR5cGUiOiJJbnZlc3RtZW50IEJhbmtpbmcgQ29uZmVyZW5jZSIsImNpdHkiOiJXYXJzYXciLCJzdGF0ZSI6IldvamV3b2R6dHdvIE1hem93aWVja2llIiwiY291bnRyeSI6IlBvbGFuZCIsInN0YXJ0RGF0ZSI6IjIwMjEtMDEtMDEiLCJlbmREYXRlIjoiMjAyMS0wMS0wMSIsInN0YXR1cyI6Ik5vbmUiLCJyZXZpZXdTdGF0dXMiOltdLCJjb21wYW55Q291bnQiOjU5LCJjb21wYW5pZXNDcm1Db3VudCI6MCwiY29tcGFuaWVzVGFnZ2VkQ291bnQiOjB9LHsiaWQiOiJWRDFOVldZTyIsIm9mZmljaWFsVGl0bGUiOiJJbnRlcm5hdGlvbmFsIENvbmZlcmVuY2Ugb24gTWVkaWNhbCBhbmQgSGVhbHRoIFNjaWVuY2UgKElDTUhTKSAyMDIxIiwibmlja25hbWUiOiJJQ01IUzIwMjEiLCJzb3VyY2VUeXBlIjoiSW5kdXN0cnkgQ29uZmVyZW5jZSIsImNpdHkiOiJEaGFrYSIsInN0YXRlIjoiRGhha2EgRGl2aXNpb24iLCJjb3VudHJ5IjoiQmFuZ2xhZGVzaCIsInN0YXJ0RGF0ZSI6IjIwMjEtMDEtMDEiLCJlbmREYXRlIjoiMjAyMS0wMS0wMiIsInN0YXR1cyI6Ik5vbmUiLCJyZXZpZXdTdGF0dXMiOltdLCJjb21wYW55Q291bnQiOjExLCJjb21wYW5pZXNDcm1Db3VudCI6MCwiY29tcGFuaWVzVGFnZ2VkQ291bnQiOjB9XX0=
+  recorded_at: Thu, 14 Jan 2021 05:41:20 GMT
+recorded_with: VCR 6.0.0
