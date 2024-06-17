@@ -61,7 +61,8 @@ pry(main)> client.headers
 
 ```ruby
 <!-- Company -->
-response = client.company('ekohe.com')
+response = client.company('ekohe.com') # get data by domain
+response = client.company('LZ281NVD') # get data by SS ID
 
 <!-- Get the JSON response of Company -->
 
@@ -70,7 +71,7 @@ response.as_json
 
 ### Companies
 
-####  Get the company data
+####  Get the company data by domain or Sourcescrub ID
 
 ```ruby
 pry(main)> response = client.company('ekohe.com')
@@ -179,6 +180,7 @@ After checking out the repo, run `bin/setup` to install dependencies. Then, run 
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/ekohe/sourcescrub. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/ekohe/sourcescrub/blob/master/CODE_OF_CONDUCT.md).
 
+- [Encore](https://github.com/encoreshao)
 
 ## License
 

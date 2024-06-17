@@ -8,6 +8,7 @@ module Sourcescrub
     class Company < Entity
       ENDPOINT = 'companies'
 
+      # rubocop:disable Metrics/MethodLength
       def field_ids
         %w[
           id
@@ -32,13 +33,24 @@ module Sourcescrub
           linkedIn
           totalAmountInvested
           currentEmployeeCount
+          threeMonthsGrowthRate
+          sixMonthsGrowthRate
+          nineMonthsGrowthRate
+          twelveMonthsGrowthRate
           currentEmployeeRange
           currentJobOpenings
+          growthIntent
           investors
           personalTags
           firmTags
+          customScore
+          industries
+          modifiedDate
+          endMarkets
+          productsAndServices
         ]
       end
+      # rubocop:enable Metrics/MethodLength
     end
   end
 end

@@ -36,6 +36,7 @@ RSpec.describe Sourcescrub::Client do
         client.company_cards('ekohe.com', { card_id: 'sources' })
       end
 
+      expect(company_sources.identifier).to eq('ekohe.com')
       expect(company_sources.total).to eq(5)
       expect(company_sources.type).to eq(Sourcescrub::Models::Source)
       expect(company_sources.items.size).to eq(5)
@@ -47,6 +48,7 @@ RSpec.describe Sourcescrub::Client do
         client.company_cards('ekohe.com', { card_id: 'people' })
       end
 
+      expect(people.identifier).to eq('ekohe.com')
       expect(people.total).to eq(2)
       expect(people.type).to eq(Sourcescrub::Models::Person)
       expect(people.items.size).to eq(2)
@@ -62,6 +64,7 @@ RSpec.describe Sourcescrub::Client do
         client.company_cards('monday.com', { card_id: 'financials' })
       end
 
+      expect(company_financials.identifier).to eq('monday.com')
       expect(company_financials.total).to eq(0)
       expect(company_financials.type).to eq(Sourcescrub::Models::Financial)
       expect(company_financials.items.size).to eq(0)
@@ -72,6 +75,7 @@ RSpec.describe Sourcescrub::Client do
         client.company_cards('monday.com', { card_id: 'investments' })
       end
 
+      expect(investments.identifier).to eq('monday.com')
       expect(investments.total).to eq(7)
       expect(investments.type).to eq(Sourcescrub::Models::Investment)
       expect(investments.items.size).to eq(7)
@@ -87,6 +91,7 @@ RSpec.describe Sourcescrub::Client do
         client.company_cards('monday.com', { card_id: 'employees' })
       end
 
+      expect(employees.identifier).to eq('monday.com')
       expect(employees.total).to eq(7)
       expect(employees.type).to eq(Sourcescrub::Models::Employee)
       expect(employees.items.size).to eq(7)
@@ -99,11 +104,43 @@ RSpec.describe Sourcescrub::Client do
         client.company_cards('monday.com', { card_id: 'employeerange' })
       end
 
+      expect(employeeranges.identifier).to eq('monday.com')
       expect(employeeranges.total).to eq(7)
       expect(employeeranges.type).to eq(Sourcescrub::Models::EmployeeRange)
       expect(employeeranges.items.size).to eq(7)
       expect(employeeranges.items[0].employeeRange).to eq('201-500')
       expect(employeeranges.items[0].date).to eq('2019-12-27')
+    end
+
+    it 'able to get 10 new fields data for company' do
+      response = VCR.use_cassette('company_by_XWO6N4OP') do
+        client.company('XWO6N4OP')
+      end
+
+      expect(response.domain).to eq('nnovation.com')
+      expect(response.threeMonthsGrowthRate).to eq(nil)
+      expect(response.sixMonthsGrowthRate).to eq(nil)
+      expect(response.nineMonthsGrowthRate).to eq(nil)
+      expect(response.twelveMonthsGrowthRate).to eq(nil)
+      expect(response.growthIntent).to eq(nil)
+      expect(response.customScore).to eq(nil)
+      expect(response.industries).to eq(['Law Practice & Legal Services'])
+      expect(response.modifiedDate).to eq('2024-06-08')
+      expect(response.endMarkets).to eq(['Business Services', 'Finance', 'Healthcare'])
+      expect(response.productsAndServices).to eq(['Legal Services'])
+    end
+
+    it 'able to get company\'s employees data by SS ID' do
+      employees = VCR.use_cassette('company_employees_by_XWO6N4OP') do
+        client.company_cards('XWO6N4OP', { card_id: 'employees' })
+      end
+
+      expect(employees.identifier).to eq('XWO6N4OP')
+      expect(employees.total).to eq(57)
+      expect(employees.type).to eq(Sourcescrub::Models::Employee)
+      expect(employees.items.size).to eq(57)
+      expect(employees.items[0].count).to eq(5)
+      expect(employees.items[0].date).to eq('2016-05-03')
     end
   end
 

@@ -1,0 +1,89 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://identity.sourcescrub.com/connect/token
+    body:
+      encoding: UTF-8
+      string: grant_type=password&username=username&password=password&scope=client_api
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Faraday v2.8.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 17 Jun 2024 09:24:48 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-store, no-cache, max-age=0
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"xxxxxxxxxx","expires_in":3600,"token_type":"Bearer","scope":"client_api"}'
+  recorded_at: Mon, 17 Jun 2024 09:24:48 GMT
+- request:
+    method: get
+    uri: https://api.sourcescrub.com/companies/XWO6N4OP/employees
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json-patch+json
+      User-Agent:
+      - Faraday v2.8.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 17 Jun 2024 09:24:49 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1834'
+      Connection:
+      - keep-alive
+      X-Ratelimit-Reset:
+      - '1175709.6353952'
+      X-Ratelimit-Limit:
+      - '50000'
+      X-Ratelimit-Remaining:
+      - '45207'
+      X-Ratelimit-Companytrendslimit:
+      - '50000'
+      X-Ratelimit-Companytrendsremaining:
+      - '49998'
+      X-Traceid:
+      - '5263349197460750392'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '[{"count":5,"date":"2016-05-03"},{"count":4,"date":"2018-12-21"},{"count":4,"date":"2019-04-02"},{"count":4,"date":"2019-06-07"},{"count":3,"date":"2019-08-15"},{"count":4,"date":"2019-09-13"},{"count":4,"date":"2019-10-13"},{"count":5,"date":"2019-11-12"},{"count":5,"date":"2019-12-12"},{"count":5,"date":"2020-01-12"},{"count":4,"date":"2020-02-12"},{"count":4,"date":"2020-03-25"},{"count":6,"date":"2020-05-12"},{"count":6,"date":"2020-07-04"},{"count":7,"date":"2020-08-24"},{"count":8,"date":"2020-09-26"},{"count":9,"date":"2020-11-15"},{"count":9,"date":"2021-01-07"},{"count":9,"date":"2021-03-01"},{"count":8,"date":"2021-04-17"},{"count":8,"date":"2021-05-21"},{"count":8,"date":"2021-07-17"},{"count":9,"date":"2021-08-23"},{"count":9,"date":"2021-08-24"},{"count":9,"date":"2021-09-03"},{"count":9,"date":"2021-10-10"},{"count":8,"date":"2021-11-10"},{"count":8,"date":"2021-12-10"},{"count":9,"date":"2022-01-10"},{"count":9,"date":"2022-02-10"},{"count":9,"date":"2022-03-10"},{"count":9,"date":"2022-04-10"},{"count":9,"date":"2022-05-10"},{"count":9,"date":"2022-06-10"},{"count":8,"date":"2022-08-11"},{"count":8,"date":"2022-09-25"},{"count":8,"date":"2022-11-15"},{"count":8,"date":"2022-12-01"},{"count":8,"date":"2022-12-16"},{"count":8,"date":"2023-01-01"},{"count":8,"date":"2023-02-01"},{"count":8,"date":"2023-03-24"},{"count":8,"date":"2023-04-16"},{"count":8,"date":"2023-05-10"},{"count":8,"date":"2023-06-01"},{"count":8,"date":"2023-07-01"},{"count":9,"date":"2023-07-06"},{"count":9,"date":"2023-09-23"},{"count":10,"date":"2023-10-07"},{"count":10,"date":"2023-10-09"},{"count":10,"date":"2023-12-10"},{"count":10,"date":"2024-01-10"},{"count":12,"date":"2024-02-10"},{"count":12,"date":"2024-03-10"},{"count":12,"date":"2024-04-10"},{"count":12,"date":"2024-05-10"},{"count":11,"date":"2024-06-10"}]'
+  recorded_at: Mon, 17 Jun 2024 09:24:49 GMT
+recorded_with: VCR 6.0.0

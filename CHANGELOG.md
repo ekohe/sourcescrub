@@ -1,5 +1,20 @@
 # Change Log
 
+## [0.1.3] - 2024-06-17
+
+- Get company data by SS ID - `client.company('XWO6N4OP')`
+- Pull new fields of company
+    - threeMonthsGrowthRate
+    - sixMonthsGrowthRate
+    - nineMonthsGrowthRate
+    - twelveMonthsGrowthRate
+    - growthIntent
+    - customScore
+    - industries
+    - modifiedDate
+    - endMarkets
+    - productsAndServices
+
 ## [0.1.2] - 2021-01-14
 
 - Implement search source endpoint to allow use filters to get matched sources - `client.source_search({limit: 10, offset: 0})`
@@ -21,8 +36,8 @@
 ## [0.0.3] - 2020-06-20
 
 - Implement API to request token by user certificate
-- Get company data by domain - `client.company(ekohe.com)`
-- Get company's relationship data by domain -  `client.company(ekohe.com, {card_id: 'people'})`
+- Get company data by domain - `client.company('ekohe.com')`
+- Get company's relationship data by domain -  `client.company('ekohe.com', {card_id: 'people'})`
 - Retrieve request limit data from header
 
 ```

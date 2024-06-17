@@ -30,17 +30,17 @@ module Sourcescrub
       )
     end
 
-    def company(domain, args = {})
-      api = company_api(domain, args)
+    def company(identifier, args = {})
+      api = company_api(identifier, args)
 
       api.sobject.parse_response get(api.request_url, api.args)
     end
 
-    def company_cards(domain, args = {})
-      api = company_api(domain, args.merge(model_type: company_card_mappings[args[:card_id]]))
+    def company_cards(identifier, args = {})
+      api = company_api(identifier, args.merge(model_type: company_card_mappings[args[:card_id]]))
 
       Models::CompanyItems.new.parse_response_items(
-        domain,
+        identifier,
         api.kclass_name,
         get(api.request_url, api.args)
       )
@@ -90,9 +90,9 @@ module Sourcescrub
       )
     end
 
-    def company_api(domain, args)
+    def company_api(identifier, args)
       Apis::Companies.new(
-        domain,
+        identifier,
         { model_type: 'company' }.merge(args)
       )
     end

@@ -12,8 +12,8 @@ module Sourcescrub
 
       attr_accessor :args
 
-      def initialize(domain, args)
-        @domain     = domain
+      def initialize(identifier, args)
+        @identifier = identifier
         @model_type = args.delete(:model_type)
         @card_id    = args.delete(:card_id)
         @args       = args
@@ -22,7 +22,7 @@ module Sourcescrub
       def request_url
         [
           Models::Company::ENDPOINT,
-          @domain,
+          @identifier,
           @card_id
         ].compact.join('/')
       end
