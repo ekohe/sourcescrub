@@ -1,5 +1,10 @@
 # Change Log
 
+## [0.1.4] - 2026-01-09
+
+- Add new keys to the sources API response
+    - listWebsite, postalCode, modifiedDate
+
 ## [0.1.3] - 2024-06-17
 
 - Get company data by SS ID - `client.company('XWO6N4OP')`

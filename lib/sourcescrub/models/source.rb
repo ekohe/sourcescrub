@@ -13,9 +13,11 @@ module Sourcescrub
           officialTitle
           nickname
           sourceType
+          listWebsite
           city
           state
           country
+          postalCode
           startDate
           endDate
           status
@@ -26,6 +28,7 @@ module Sourcescrub
           boothNumber
           affiliation
           rank
+          modifiedDate
         ]
       end
     end
